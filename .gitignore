@@ -1,0 +1,5 @@
+# סודות ונתונים אישיים – לא עולים לגיטהאב
+config.json
+data/
+node_modules/
+*.log

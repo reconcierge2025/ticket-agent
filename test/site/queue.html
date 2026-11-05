@@ -1,0 +1,13 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>חדר המתנה</title>
+<h1>חדר המתנה</h1>
+<p>הנך בתור. מקומך בתור: <b id="pos">400</b></p>
+<script>
+  let pos = 400;
+  const t = setInterval(() => {
+    pos -= 40;
+    document.getElementById('pos').textContent = Math.max(pos, 0);
+    if (pos <= 0) { clearInterval(t); location.href = 'venue.html'; }
+  }, 400);
+</script>

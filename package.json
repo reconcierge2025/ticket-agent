@@ -1,0 +1,18 @@
+{
+  "name": "ticket-seat-agent",
+  "version": "2.0.0",
+  "description": "סוכן שסורק אתרי כרטיסים, מוצא את המקומות הטובים בכל אזור, מחכה בתור, בוחר מקומות עד עמוד התשלום ומתריע בטלגרם",
+  "type": "module",
+  "scripts": {
+    "start": "node src/agent.js",
+    "check": "node src/agent.js --once",
+    "sale": "node src/agent.js --sale",
+    "login": "node src/login.js",
+    "inspect": "node src/inspect.js",
+    "telegram-test": "node src/telegram.js",
+    "test": "node --test test/seats.test.js test/unit.test.js"
+  },
+  "dependencies": {
+    "playwright": "1.48.2"
+  }
+}

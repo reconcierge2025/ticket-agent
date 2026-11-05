@@ -1,0 +1,63 @@
+{
+  "telegram": {
+    "botToken": "PUT_BOT_TOKEN_HERE",
+    "chatIds": ["PUT_YOUR_CHAT_ID_HERE"]
+  },
+  "headless": true,
+  "browserChannel": "msedge",
+  "checkEveryMinutes": 60,
+
+  "defaults": {
+    "quantities": [2, 3, 4, 5],
+    "quantity": 2,
+    "targetRow": 4,
+    "seatStep": 1,
+    "maxPrice": 0,
+    "autoSelect": false,
+    "autoSelectOnSale": true,
+    "liveMinutes": 30,
+    "refreshSeconds": 20,
+    "zones": [
+      { "name": "VIP / תאים", "match": ["VIP", "ויאיפי", "תא "] },
+      { "name": "רחבה / אורקסטרה", "match": ["אורקסטרה", "רחבה", "floor"] },
+      { "name": "אולם", "match": ["אולם", "parterre"] },
+      { "name": "יציע", "match": ["יציע", "balcony", "גלריה"] }
+    ]
+  },
+
+  "queue": {
+    "notifyAtPositions": [1000, 300, 50],
+    "notifyEtaMinutes": 5,
+    "pollSeconds": 10,
+    "maxHours": 6
+  },
+
+  "sites": [
+    {
+      "name": "קופת ת\"א",
+      "listUrl": "https://www.kupat.co.il/",
+      "pageLinkPattern": "^https://www\\.kupat\\.co\\.il/[a-z0-9_]+/?$",
+      "eventLinkPattern": "/booking/features/\\d+\\?.*prsntId=\\d+",
+      "keywords": [],
+      "maxPages": 40,
+      "maxEvents": 80
+    },
+    {
+      "name": "Ticketmaster",
+      "listUrl": "https://www.ticketmaster.co.il/homepage/ALL/iw",
+      "eventLinkPattern": "ticketmaster\\.co\\.il/event/[A-Z0-9]+/",
+      "keywords": [],
+      "maxEvents": 40
+    },
+    {
+      "name": "טיקצ'אק LIVE",
+      "enabled": false,
+      "listUrl": "https://live.tickchak.co.il/shows",
+      "pageLinkPattern": "live\\.tickchak\\.co\\.il/shows/event/",
+      "eventLinkPattern": "(/booking/features/\\d+\\?.*prsntId=|ticketmaster\\.co\\.il/event/)",
+      "maxPages": 30
+    }
+  ],
+
+  "events": []
+}

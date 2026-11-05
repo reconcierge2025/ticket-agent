@@ -1,0 +1,36 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>מפת מושבים</title>
+<style>.seat{display:inline-block;width:14px;height:14px;margin:1px;background:#ccc}.available{background:#4c4}.selected{background:#36f}</style>
+<div id="map"></div>
+<button id="go">המשך לתשלום</button>
+<script>
+  // VIP: שורה 1 פנויים 1,2,3,5,6 · שורה 2 פנויים 1,2
+  // אולם: שורה 1 מלאה · שורה 2 פנויים 4,5
+  // יציע: רק שורה 4 פנויה (מעבר ל-maxRow)
+  const layout = {
+    'VIP':  { 1: [1,2,3,5,6], 2: [1,2] },
+    'אולם': { 1: [], 2: [4,5] },
+    'יציע': { 4: [1,2,3] },
+  };
+  const map = document.getElementById('map');
+  for (const [section, rows] of Object.entries(layout)) {
+    const sec = document.createElement('div');
+    sec.dataset.section = section;
+    for (const [row, free] of Object.entries(rows)) {
+      for (let n = 1; n <= 10; n++) {
+        const s = document.createElement('span');
+        s.className = 'seat' + (free.includes(n) ? ' available' : '');
+        Object.assign(s.dataset, { row, seat: n, price: section === 'VIP' ? 600 : 250 });
+        s.onclick = () => s.classList.contains('available') && s.classList.toggle('selected');
+        sec.appendChild(s);
+      }
+    }
+    map.appendChild(sec);
+  }
+  document.getElementById('go').onclick = () => {
+    const picked = [...document.querySelectorAll('.selected')].map(
+      (s) => `${s.closest('[data-section]').dataset.section}-${s.dataset.row}-${s.dataset.seat}`);
+    if (picked.length) location.href = 'checkout.html?seats=' + encodeURIComponent(picked.join(','));
+  };
+</script>

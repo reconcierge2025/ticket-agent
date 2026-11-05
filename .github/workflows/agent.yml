@@ -1,0 +1,49 @@
+# הסוכן בענן – רץ כל חצי שעה בלי שהמחשב דלוק.
+# סודות (Settings → Secrets and variables → Actions):
+#   TELEGRAM_BOT_TOKEN  – הטוקן מ-BotFather
+#   TELEGRAM_CHAT_IDS   – מספרי הצ'אט, מופרדים בפסיק (למשל 444349705,123456789)
+name: ticket-agent
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ticket-agent
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+
+      - name: Run agent
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_IDS: ${{ secrets.TELEGRAM_CHAT_IDS }}
+          AGENT_DATA_DIR: state
+        run: node src/cloud.js
+
+      - name: Save state
+        if: always()
+        run: |
+          git config user.name "ticket-agent"
+          git config user.email "ticket-agent@users.noreply.github.com"
+          git add state/found.json state/watches.json state/telegram-offset.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "state update [skip ci]" && git push)
