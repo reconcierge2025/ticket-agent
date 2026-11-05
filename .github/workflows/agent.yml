@@ -45,5 +45,9 @@ jobs:
         run: |
           git config user.name "ticket-agent"
           git config user.email "ticket-agent@users.noreply.github.com"
-          git add state/found.json state/watches.json state/telegram-offset.json 2>/dev/null || true
-          git diff --cached --quiet || (git commit -m "state update [skip ci]" && git push)
+          # שומר את כל מה שקיים ב-state/ (agent.log מוחרג ב-.gitignore)
+          git add state || true
+          if ! git diff --cached --quiet; then
+            git commit -m "state update [skip ci]"
+            for i in 1 2 3; do git pull --rebase origin main && git push && break; sleep 5; done
+          fi
