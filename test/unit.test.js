@@ -46,6 +46,8 @@ test('פירוק פקודות טלגרם: כמות, מחיר ושעה', () => {
   const s2 = parseCommand('/sale https://t.co/e/123 2 10:00');
   assert.deepEqual([s2.quantity, s2.time], [2, '10:00']);
   assert.equal(parseCommand('/follow שלמה ארצי').rest, 'שלמה ארצי');
+  assert.deepEqual([parseCommand('עקוב אחרי נועה קירל').cmd, parseCommand('עקוב אחרי נועה קירל').rest], ['follow', 'נועה קירל']);
+  assert.equal(parseCommand('הפסק לעקוב אחרי נועה קירל').cmd, 'unfollow');
   const w = parseCommand('https://t.co/e/9 3 עד 300');
   assert.equal(w.cmd, 'watch');
   assert.equal(w.quantity, 3);

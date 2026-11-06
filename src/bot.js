@@ -15,14 +15,24 @@ export const HELP = `👋 <b>אני סוכן הכרטיסים שלך</b>
 /sale &lt;קישור&gt; &lt;כמות&gt; 10:00 – מצב קנייה בשעה שהמכירה נפתחת
 /remove &lt;מספר&gt; – הסרה מהמעקב
 /check – לבדוק הכל עכשיו
-/follow &lt;אמן&gt; – הודעה כשעולה לו מופע חדש · /follows – הרשימה
+/follow &lt;אמן&gt; – הודעה כשעולה לו מופע חדש (או פשוט: <code>עקוב אחרי שלמה ארצי</code>) · /follows – הרשימה
 /sites – האתרים שאני מכיר (כולל מה שלמדתי ומצאתי לבד)
 /status – מצב המערכת
 /myid – מספר הצ'אט שלך`;
 
+/** כתיבה חופשית בעברית → פקודה ("עקוב אחרי נועה קירל" = /follow נועה קירל). */
+const HEBREW = [
+  [/^(?:תעקוב|עקוב|לעקוב)(?:\s+אחרי)?\s+(.+)$/, 'follow'],
+  [/^(?:הפסק|תפסיק|להפסיק)\s+לעקוב(?:\s+אחרי)?\s+(.+)$/, 'unfollow'],
+];
+
 /** מפרק הודעה: פקודה, קישור, כמות, מחיר מקסימלי ושעה. מחזיר null אם לא זוהתה. */
 export function parseCommand(text) {
-  const t = String(text || '').trim();
+  let t = String(text || '').trim();
+  for (const [re, cmd] of HEBREW) {
+    const m = t.match(re);
+    if (m && !/https?:\/\//.test(t)) t = `/${cmd} ${m[1]}`;
+  }
   const url = t.match(/https?:\/\/\S+/)?.[0] || null;
   let rest = t.replace(url || '', ' ');
 
@@ -40,6 +50,9 @@ export function parseCommand(text) {
   const freeText = t.replace(/^\/\S+\s*/, '').replace(url || '', '').trim(); // טקסט חופשי אחרי הפקודה (לשם אמן)
   return { cmd, url, quantity: nums ? Number(nums[nums.length - 1]) : null, arg: nums ? Number(nums[0]) : null, maxPrice, time, rest: freeText };
 }
+
+/** פקודה שנשלחה בלי שם (למשל /follow מהתפריט) – ההודעה הבאה של אותו אדם היא השם. */
+const awaiting = new Map();
 
 /** מטפל ברשימת עדכונים מטלגרם (הודעות + לחיצות על כפתורים). מחזיר את ה-offset הבא. */
 export async function handleUpdates(cfg, updates, h, offset = 0) {
@@ -72,7 +85,16 @@ export async function handleUpdates(cfg, updates, h, offset = 0) {
         continue;
       }
       log(`טלגרם (${msg.from?.first_name || from}): ${msg.text}`);
-      const c = parseCommand(msg.text);
+      let c = parseCommand(msg.text);
+      // תשובה לשאלה "איזה אמן?" אחרי /follow או /unfollow בלי שם
+      const waiting = awaiting.get(from);
+      awaiting.delete(from);
+      if (waiting && (!c || (c.cmd === 'watch' && !c.url)) && !msg.text.startsWith('/')) c = { cmd: waiting, rest: msg.text.trim() };
+      if (c && ['follow', 'unfollow'].includes(c.cmd) && !c.rest) {
+        awaiting.set(from, c.cmd);
+        await reply(c.cmd === 'follow' ? '⭐ איזה אמן לעקוב? כתוב את השם בהודעה הבאה (למשל: <code>שלמה ארצי</code>)' : 'אחרי איזה אמן להפסיק לעקוב? כתוב את השם בהודעה הבאה.');
+        continue;
+      }
       const ctx = { from, maxPrice: c?.maxPrice, time: c?.time };
       if (!c || c.cmd === 'start' || c.cmd === 'help') await reply(HELP);
       else if (c.cmd === 'myid') await reply(`מספר הצ'אט שלך: <code>${from}</code>`);
@@ -95,8 +117,23 @@ export async function handleUpdates(cfg, updates, h, offset = 0) {
   return offset;
 }
 
+/** תפריט הפקודות שטלגרם מציג כשמקלידים "/" (עם הסברים בעברית). */
+export const COMMANDS = [
+  ['list', 'המופעים שלי במעקב'],
+  ['follow', 'לעקוב אחרי אמן – הודעה כשעולה לו מופע'],
+  ['follows', 'האמנים שאני עוקב אחריהם'],
+  ['unfollow', 'להפסיק לעקוב אחרי אמן'],
+  ['sale', 'מצב קנייה: קישור + כמות (+ שעה)'],
+  ['hot', 'מעקב צפוף למופע: מספר מהרשימה'],
+  ['check', 'לבדוק הכל עכשיו'],
+  ['sites', 'האתרים שהסוכן מכיר'],
+  ['status', 'מצב המערכת'],
+  ['help', 'עזרה ורשימת פקודות'],
+];
+
 export function startBot(cfg, h) {
   if (!isConfigured(cfg.telegram)) return log('טלגרם לא מוגדר – הבוט לא פעיל');
+  api(cfg.telegram, 'setMyCommands', { commands: COMMANDS.map(([command, description]) => ({ command, description })) }).catch((e) => log(`תפריט פקודות: ${e.message}`));
   let offset = 0;
   (async () => {
     for (;;) {
