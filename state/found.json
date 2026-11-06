@@ -1,0 +1,1164 @@
+{
+  "seen": {},
+  "best": {
+    "https://www.ticketmaster.co.il/performance/MTA71/001/ALL/iw": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם ה'",
+        "row": "4",
+        "seats": [
+          45,
+          46
+        ],
+        "prices": [
+          null,
+          null
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-06T03:31:06.486Z"
+      },
+      "יציע|2": {
+        "quantity": 2,
+        "zone": "יציע",
+        "section": "יציע ה'",
+        "row": "25",
+        "seats": [
+          57,
+          58
+        ],
+        "prices": [
+          null,
+          null
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T03:31:06.486Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם ה'",
+        "row": "4",
+        "seats": [
+          45,
+          46,
+          47
+        ],
+        "prices": [
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T03:31:06.486Z"
+      },
+      "יציע|3": {
+        "quantity": 3,
+        "zone": "יציע",
+        "section": "יציע ה'",
+        "row": "25",
+        "seats": [
+          56,
+          57,
+          58
+        ],
+        "prices": [
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-06T03:31:06.486Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם ה'",
+        "row": "7",
+        "seats": [
+          48,
+          49,
+          50,
+          51
+        ],
+        "prices": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T03:31:06.486Z"
+      },
+      "יציע|4": {
+        "quantity": 4,
+        "zone": "יציע",
+        "section": "יציע ה'",
+        "row": "25",
+        "seats": [
+          56,
+          57,
+          58,
+          59
+        ],
+        "prices": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T03:31:06.486Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם א'",
+        "row": "9",
+        "seats": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "prices": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-06T03:31:06.486Z"
+      },
+      "יציע|5": {
+        "quantity": 5,
+        "zone": "יציע",
+        "section": "יציע ה'",
+        "row": "25",
+        "seats": [
+          55,
+          56,
+          57,
+          58,
+          59
+        ],
+        "prices": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-06T03:31:06.486Z"
+      }
+    },
+    "https://www.ticketmaster.co.il/performance/MTA73/001/ALL/iw": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם ה'",
+        "row": "16",
+        "seats": [
+          50,
+          51
+        ],
+        "prices": [
+          null,
+          null
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T03:31:13.529Z"
+      },
+      "יציע|2": {
+        "quantity": 2,
+        "zone": "יציע",
+        "section": "יציע ה'",
+        "row": "29",
+        "seats": [
+          60,
+          61
+        ],
+        "prices": [
+          null,
+          null
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-06T03:31:13.529Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם ה'",
+        "row": "16",
+        "seats": [
+          49,
+          50,
+          51
+        ],
+        "prices": [
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-06T03:31:13.529Z"
+      },
+      "יציע|3": {
+        "quantity": 3,
+        "zone": "יציע",
+        "section": "יציע ה'",
+        "row": "29",
+        "seats": [
+          60,
+          61,
+          62
+        ],
+        "prices": [
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T03:31:13.529Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם ה'",
+        "row": "16",
+        "seats": [
+          49,
+          50,
+          51,
+          52
+        ],
+        "prices": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T03:31:13.529Z"
+      },
+      "יציע|4": {
+        "quantity": 4,
+        "zone": "יציע",
+        "section": "יציע ה'",
+        "row": "29",
+        "seats": [
+          59,
+          60,
+          61,
+          62
+        ],
+        "prices": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-06T03:31:13.529Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם ה'",
+        "row": "17",
+        "seats": [
+          50,
+          51,
+          52,
+          53,
+          54
+        ],
+        "prices": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T03:31:13.529Z"
+      },
+      "יציע|5": {
+        "quantity": 5,
+        "zone": "יציע",
+        "section": "יציע ה'",
+        "row": "29",
+        "seats": [
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "prices": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T03:31:13.529Z"
+      }
+    },
+    "https://www.ticketmaster.co.il/performance/MBH09/001/ALL/iw": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם ל'",
+        "row": "22",
+        "seats": [
+          2,
+          3
+        ],
+        "prices": [
+          null,
+          null
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T03:31:21.830Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם ל'",
+        "row": "22",
+        "seats": [
+          1,
+          2,
+          3
+        ],
+        "prices": [
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-06T03:31:21.830Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם ל'",
+        "row": "22",
+        "seats": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "prices": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T03:31:21.830Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם ל'",
+        "row": "23",
+        "seats": [
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "prices": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "centerDist": 11.5,
+        "foundAt": "2026-11-06T03:31:21.830Z"
+      }
+    },
+    "https://www.ticketmaster.co.il/performance/MTA74/001/ALL/iw": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם ב'",
+        "row": "1",
+        "seats": [
+          15,
+          16
+        ],
+        "prices": [
+          null,
+          null
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T03:32:17.153Z"
+      },
+      "יציע|2": {
+        "quantity": 2,
+        "zone": "יציע",
+        "section": "יציע א'",
+        "row": "25",
+        "seats": [
+          4,
+          5
+        ],
+        "prices": [
+          null,
+          null
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-06T03:32:17.153Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם ה'",
+        "row": "5",
+        "seats": [
+          45,
+          46,
+          47
+        ],
+        "prices": [
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T03:32:17.153Z"
+      },
+      "יציע|3": {
+        "quantity": 3,
+        "zone": "יציע",
+        "section": "יציע א'",
+        "row": "25",
+        "seats": [
+          4,
+          5,
+          6
+        ],
+        "prices": [
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T03:32:17.153Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם א'",
+        "row": "6",
+        "seats": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "prices": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T03:32:17.153Z"
+      },
+      "יציע|4": {
+        "quantity": 4,
+        "zone": "יציע",
+        "section": "יציע א'",
+        "row": "26",
+        "seats": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "prices": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T03:32:17.153Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם א'",
+        "row": "7",
+        "seats": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "prices": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-06T03:32:17.153Z"
+      },
+      "יציע|5": {
+        "quantity": 5,
+        "zone": "יציע",
+        "section": "יציע ה'",
+        "row": "26",
+        "seats": [
+          55,
+          56,
+          57,
+          58,
+          59
+        ],
+        "prices": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T03:32:17.153Z"
+      }
+    }
+  },
+  "history": [
+    {
+      "foundAt": "2026-11-06T03:31:06.486Z",
+      "event": "Ticketmaster: ברי סחרוף",
+      "url": "https://www.ticketmaster.co.il/performance/MTA71/001/ALL/iw",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם ה'",
+      "row": "4",
+      "seats": [
+        45,
+        46
+      ],
+      "prices": [
+        null,
+        null
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-06T03:31:06.486Z",
+      "event": "Ticketmaster: ברי סחרוף",
+      "url": "https://www.ticketmaster.co.il/performance/MTA71/001/ALL/iw",
+      "quantity": 2,
+      "zone": "יציע",
+      "section": "יציע ה'",
+      "row": "25",
+      "seats": [
+        57,
+        58
+      ],
+      "prices": [
+        null,
+        null
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T03:31:06.486Z",
+      "event": "Ticketmaster: ברי סחרוף",
+      "url": "https://www.ticketmaster.co.il/performance/MTA71/001/ALL/iw",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם ה'",
+      "row": "4",
+      "seats": [
+        45,
+        46,
+        47
+      ],
+      "prices": [
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T03:31:06.486Z",
+      "event": "Ticketmaster: ברי סחרוף",
+      "url": "https://www.ticketmaster.co.il/performance/MTA71/001/ALL/iw",
+      "quantity": 3,
+      "zone": "יציע",
+      "section": "יציע ה'",
+      "row": "25",
+      "seats": [
+        56,
+        57,
+        58
+      ],
+      "prices": [
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-06T03:31:06.486Z",
+      "event": "Ticketmaster: ברי סחרוף",
+      "url": "https://www.ticketmaster.co.il/performance/MTA71/001/ALL/iw",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם ה'",
+      "row": "7",
+      "seats": [
+        48,
+        49,
+        50,
+        51
+      ],
+      "prices": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T03:31:06.486Z",
+      "event": "Ticketmaster: ברי סחרוף",
+      "url": "https://www.ticketmaster.co.il/performance/MTA71/001/ALL/iw",
+      "quantity": 4,
+      "zone": "יציע",
+      "section": "יציע ה'",
+      "row": "25",
+      "seats": [
+        56,
+        57,
+        58,
+        59
+      ],
+      "prices": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T03:31:06.486Z",
+      "event": "Ticketmaster: ברי סחרוף",
+      "url": "https://www.ticketmaster.co.il/performance/MTA71/001/ALL/iw",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם א'",
+      "row": "9",
+      "seats": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-06T03:31:06.486Z",
+      "event": "Ticketmaster: ברי סחרוף",
+      "url": "https://www.ticketmaster.co.il/performance/MTA71/001/ALL/iw",
+      "quantity": 5,
+      "zone": "יציע",
+      "section": "יציע ה'",
+      "row": "25",
+      "seats": [
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-06T03:31:13.529Z",
+      "event": "Ticketmaster: חנן יובל",
+      "url": "https://www.ticketmaster.co.il/performance/MTA73/001/ALL/iw",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם ה'",
+      "row": "16",
+      "seats": [
+        50,
+        51
+      ],
+      "prices": [
+        null,
+        null
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T03:31:13.529Z",
+      "event": "Ticketmaster: חנן יובל",
+      "url": "https://www.ticketmaster.co.il/performance/MTA73/001/ALL/iw",
+      "quantity": 2,
+      "zone": "יציע",
+      "section": "יציע ה'",
+      "row": "29",
+      "seats": [
+        60,
+        61
+      ],
+      "prices": [
+        null,
+        null
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-06T03:31:13.529Z",
+      "event": "Ticketmaster: חנן יובל",
+      "url": "https://www.ticketmaster.co.il/performance/MTA73/001/ALL/iw",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם ה'",
+      "row": "16",
+      "seats": [
+        49,
+        50,
+        51
+      ],
+      "prices": [
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-06T03:31:13.529Z",
+      "event": "Ticketmaster: חנן יובל",
+      "url": "https://www.ticketmaster.co.il/performance/MTA73/001/ALL/iw",
+      "quantity": 3,
+      "zone": "יציע",
+      "section": "יציע ה'",
+      "row": "29",
+      "seats": [
+        60,
+        61,
+        62
+      ],
+      "prices": [
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T03:31:13.529Z",
+      "event": "Ticketmaster: חנן יובל",
+      "url": "https://www.ticketmaster.co.il/performance/MTA73/001/ALL/iw",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם ה'",
+      "row": "16",
+      "seats": [
+        49,
+        50,
+        51,
+        52
+      ],
+      "prices": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T03:31:13.529Z",
+      "event": "Ticketmaster: חנן יובל",
+      "url": "https://www.ticketmaster.co.il/performance/MTA73/001/ALL/iw",
+      "quantity": 4,
+      "zone": "יציע",
+      "section": "יציע ה'",
+      "row": "29",
+      "seats": [
+        59,
+        60,
+        61,
+        62
+      ],
+      "prices": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-06T03:31:13.529Z",
+      "event": "Ticketmaster: חנן יובל",
+      "url": "https://www.ticketmaster.co.il/performance/MTA73/001/ALL/iw",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם ה'",
+      "row": "17",
+      "seats": [
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T03:31:13.529Z",
+      "event": "Ticketmaster: חנן יובל",
+      "url": "https://www.ticketmaster.co.il/performance/MTA73/001/ALL/iw",
+      "quantity": 5,
+      "zone": "יציע",
+      "section": "יציע ה'",
+      "row": "29",
+      "seats": [
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T03:31:21.830Z",
+      "event": "Ticketmaster: אביתר בנאי",
+      "url": "https://www.ticketmaster.co.il/performance/MBH09/001/ALL/iw",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם ל'",
+      "row": "22",
+      "seats": [
+        2,
+        3
+      ],
+      "prices": [
+        null,
+        null
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T03:31:21.830Z",
+      "event": "Ticketmaster: אביתר בנאי",
+      "url": "https://www.ticketmaster.co.il/performance/MBH09/001/ALL/iw",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם ל'",
+      "row": "22",
+      "seats": [
+        1,
+        2,
+        3
+      ],
+      "prices": [
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-06T03:31:21.830Z",
+      "event": "Ticketmaster: אביתר בנאי",
+      "url": "https://www.ticketmaster.co.il/performance/MBH09/001/ALL/iw",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם ל'",
+      "row": "22",
+      "seats": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "prices": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T03:31:21.830Z",
+      "event": "Ticketmaster: אביתר בנאי",
+      "url": "https://www.ticketmaster.co.il/performance/MBH09/001/ALL/iw",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם ל'",
+      "row": "23",
+      "seats": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "centerDist": 11.5
+    },
+    {
+      "foundAt": "2026-11-06T03:32:17.153Z",
+      "event": "Ticketmaster: Three Legends. One Stage",
+      "url": "https://www.ticketmaster.co.il/performance/MTA74/001/ALL/iw",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם ב'",
+      "row": "1",
+      "seats": [
+        15,
+        16
+      ],
+      "prices": [
+        null,
+        null
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T03:32:17.153Z",
+      "event": "Ticketmaster: Three Legends. One Stage",
+      "url": "https://www.ticketmaster.co.il/performance/MTA74/001/ALL/iw",
+      "quantity": 2,
+      "zone": "יציע",
+      "section": "יציע א'",
+      "row": "25",
+      "seats": [
+        4,
+        5
+      ],
+      "prices": [
+        null,
+        null
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-06T03:32:17.153Z",
+      "event": "Ticketmaster: Three Legends. One Stage",
+      "url": "https://www.ticketmaster.co.il/performance/MTA74/001/ALL/iw",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם ה'",
+      "row": "5",
+      "seats": [
+        45,
+        46,
+        47
+      ],
+      "prices": [
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T03:32:17.153Z",
+      "event": "Ticketmaster: Three Legends. One Stage",
+      "url": "https://www.ticketmaster.co.il/performance/MTA74/001/ALL/iw",
+      "quantity": 3,
+      "zone": "יציע",
+      "section": "יציע א'",
+      "row": "25",
+      "seats": [
+        4,
+        5,
+        6
+      ],
+      "prices": [
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T03:32:17.153Z",
+      "event": "Ticketmaster: Three Legends. One Stage",
+      "url": "https://www.ticketmaster.co.il/performance/MTA74/001/ALL/iw",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם א'",
+      "row": "6",
+      "seats": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "prices": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T03:32:17.153Z",
+      "event": "Ticketmaster: Three Legends. One Stage",
+      "url": "https://www.ticketmaster.co.il/performance/MTA74/001/ALL/iw",
+      "quantity": 4,
+      "zone": "יציע",
+      "section": "יציע א'",
+      "row": "26",
+      "seats": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "prices": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T03:32:17.153Z",
+      "event": "Ticketmaster: Three Legends. One Stage",
+      "url": "https://www.ticketmaster.co.il/performance/MTA74/001/ALL/iw",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם א'",
+      "row": "7",
+      "seats": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-06T03:32:17.153Z",
+      "event": "Ticketmaster: Three Legends. One Stage",
+      "url": "https://www.ticketmaster.co.il/performance/MTA74/001/ALL/iw",
+      "quantity": 5,
+      "zone": "יציע",
+      "section": "יציע ה'",
+      "row": "26",
+      "seats": [
+        55,
+        56,
+        57,
+        58,
+        59
+      ],
+      "prices": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "centerDist": 0
+    }
+  ],
+  "outbox": [
+    {
+      "text": "📰 <b>סריקה כללית – 2 מופעים עם מקומות בשורות 1–4</b>\n\n🎟️ <b>Three Legends. One Stage</b> · 02/03/2027\n   👥 2: אולם ב' · שורה 1\n   <a href=\"https://www.ticketmaster.co.il/performance/MTA74/001/ALL/iw\">לעמוד המופע</a>\n\n🎟️ <b>ברי סחרוף</b> · 24/11/2026\n   👥 2: אולם ה' · שורה 4\n   👥 3: אולם ה' · שורה 4\n   <a href=\"https://www.ticketmaster.co.il/performance/MTA71/001/ALL/iw\">לעמוד המופע</a>\n\n💡 למעקב צמוד אחרי מופע – שלח לי את הקישור שלו.",
+      "to": null
+    }
+  ],
+  "health": {
+    "סריקה: קופת ת\"א": {
+      "fails": 1,
+      "lastError": "לא נמצאו מופעים בעמוד הראשי",
+      "lastErrorAt": "2026-11-06T03:30:55.842Z"
+    },
+    "סריקה: Ticketmaster": {
+      "fails": 0,
+      "lastOk": "2026-11-06T03:30:55.842Z"
+    },
+    "ticketmaster": {
+      "fails": 0,
+      "lastOk": "2026-11-06T03:32:17.162Z"
+    }
+  },
+  "stats": {
+    "since": "2026-11-06T03:30:46.986Z",
+    "cycles": 1,
+    "checks": 40,
+    "errors": 1,
+    "alerts": 0
+  },
+  "lastCycle": "2026-11-06T03:47:07.264Z"
+}
