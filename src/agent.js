@@ -8,6 +8,7 @@ import path from 'node:path';
 import { loadRuntimeConfig, resolveEvent, log, israelNow, dataDir } from './config.js';
 import { load, save } from './storage.js';
 import { createMessenger } from './messenger.js';
+import { sendPhoto } from './telegram.js';
 import { runLive, esc } from './check.js';
 import { startBot } from './bot.js';
 import { createAgent, withQuantity } from './core.js';
@@ -24,11 +25,27 @@ const { notify, flush } = createMessenger(cfg, db);
 
 // ---------- מצב קנייה (רק במחשב: חלון גלוי שבו אתה מחובר ומשלם) ----------
 const live = new Map();
+const sessions = new Map(); // מזהה קצר → לשונית ההזמנה (לכפתור הביטול)
+let nextSession = 1;
 function startLive(ev) {
   if (live.has(ev.url)) return live.get(ev.url);
   log(`[live] מתחיל: ${ev.name}`);
   const p = runLive(ev, { cfg, db, notify })
-    .then((r) => log(`[live] ${ev.name}: ${r.status}`))
+    .then(async (r) => {
+      log(`[live] ${ev.name}: ${r.status}`);
+      if (!r.page || !['checkout', 'selected', 'ready'].includes(r.status)) return;
+      // צילום מסך של ההזמנה לטלגרם + כפתור ביטול
+      const id = nextSession++;
+      sessions.set(String(id), r.page);
+      const png = await r.page.screenshot({ fullPage: false }).catch(() => null);
+      const caption =
+        r.status === 'checkout'
+          ? `🛒 <b>ההזמנה ממתינה לתשלום</b>\n${esc(ev.name)}\n\nזה מה שפתוח עכשיו בחלון במחשב. שלם שם – או לחץ ❌ כדי לבטל.`
+          : `🖥️ <b>החלון במחשב פתוח על המופע</b>\n${esc(ev.name)}\n\nבחר את המושבים שבהודעה הקודמת ושלם – או לחץ ❌ כדי לסגור.`;
+      const buttons = [[{ text: '❌ בטל וסגור את החלון', data: `cancel:${id}` }]];
+      if (png) await sendPhoto(cfg.telegram, png, caption, ev.owner, { buttons }).catch((e) => log(`שגיאה בשליחת צילום: ${e.message}`));
+      else await notify(caption, { to: ev.owner, buttons });
+    })
     .catch((e) => notify(`❌ <b>שגיאה במצב קנייה</b>\n${esc(ev.url)}\n<i>${esc(e.message.split('\n')[0])}</i>`))
     .finally(() => live.delete(ev.url));
   live.set(ev.url, p);
@@ -81,7 +98,19 @@ const onSale = SERVER
       return `🚀 <b>מצב קנייה הופעל</b> · ${ev.quantity} כרטיסים\nפותח חלון במחשב, אחכה בתור אם יש, ואעדכן אותך בכל שלב.`;
     };
 
-const agent = createAgent({ cfg, db, notify, onSale, mode: SERVER ? 'server' : 'pc' });
+// תפיסה אוטומטית (רק במופעים שסימנת 🤖) – רק במחשב
+const onGrab = SERVER ? null : (ev) => startLive({ ...ev, autoSelect: true, quantity: ev.quantity || cfg.defaults?.quantity || 2, quantities: [ev.quantity || cfg.defaults?.quantity || 2] });
+const onCancel = SERVER
+  ? null
+  : async (id) => {
+      const page = sessions.get(String(id));
+      if (!page) return 'ההזמנה הזאת כבר נסגרה.';
+      sessions.delete(String(id));
+      await page.close().catch(() => {});
+      return '❌ <b>בוטל</b> – החלון נסגר בלי תשלום.\nהמושבים ישתחררו באתר תוך כמה דקות (כשתוקף השמירה שלהם נגמר).';
+    };
+
+const agent = createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode: SERVER ? 'server' : 'pc' });
 const pending = [];
 let draining = false;
 async function drain() {

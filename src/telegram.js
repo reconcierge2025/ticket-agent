@@ -34,15 +34,37 @@ export async function sendTelegram(tg, text, to, { buttons } = {}) {
     console.log('[telegram לא מוגדר] ההודעה הייתה:\n' + stripTags(text));
     return;
   }
-  const reply_markup = buttons?.length
-    ? { inline_keyboard: buttons.map((row) => row.map((b) => (b.url ? { text: b.text, url: b.url } : { text: b.text, callback_data: b.data }))) }
-    : undefined;
+  const reply_markup = markup(buttons);
   for (const id of to ? [to] : chatIds(tg)) {
     try {
       await api(tg, 'sendMessage', { chat_id: id, text, parse_mode: 'HTML', disable_web_page_preview: true, reply_markup });
     } catch (e) {
       if (!/parse entities/i.test(e.message)) throw e;
       await api(tg, 'sendMessage', { chat_id: id, text: stripTags(text), disable_web_page_preview: true, reply_markup });
+    }
+  }
+}
+
+const markup = (buttons) =>
+  buttons?.length ? { inline_keyboard: buttons.map((row) => row.map((b) => (b.url ? { text: b.text, url: b.url } : { text: b.text, callback_data: b.data }))) } : undefined;
+
+/** שולח צילום מסך (למשל של ההזמנה שהסוכן תפס) עם כיתוב וכפתורים. */
+export async function sendPhoto(tg, png, caption, to, { buttons } = {}) {
+  if (!isConfigured(tg)) {
+    console.log('[telegram לא מוגדר] תמונה עם הכיתוב:\n' + stripTags(caption));
+    return;
+  }
+  for (const id of to ? [to] : chatIds(tg)) {
+    for (const html of [true, false]) {
+      const fd = new FormData();
+      fd.append('chat_id', id);
+      fd.append('caption', (html ? caption : stripTags(caption)).slice(0, 1000));
+      if (html) fd.append('parse_mode', 'HTML');
+      if (buttons?.length) fd.append('reply_markup', JSON.stringify(markup(buttons)));
+      fd.append('photo', new Blob([png], { type: 'image/png' }), 'order.png');
+      const json = await (await fetch(`https://api.telegram.org/bot${tg.botToken}/sendPhoto`, { method: 'POST', body: fd })).json();
+      if (json.ok) break;
+      if (!html || !/parse entities/i.test(json.description)) throw new Error(`Telegram sendPhoto: ${json.description}`);
     }
   }
 }

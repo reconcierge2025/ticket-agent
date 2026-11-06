@@ -5,7 +5,8 @@ import { formatReport, formatDigest, formatAvail } from './telegram.js';
 import { siteFor, sitesText, LEVELS } from './sites.js';
 import { launchScanner } from './browser.js';
 import { checkEvent, pickAdapter, targetRowOf, esc } from './check.js';
-import { discover, eventKey } from './discover.js';
+import { rowNum } from './seats.js';
+import { discover, eventKey, explainEmpty } from './discover.js';
 import * as watches from './watches.js';
 
 /** כמות ספציפית אם ביקשת, אחרת כל הטווח (ברירת מחדל 2–5). */
@@ -18,13 +19,13 @@ const SITE_NAMES = { kupat: 'קופת ת"א', ticketmaster: 'Ticketmaster', gene
 
 /** אירוע מתוך רשומת מעקב. */
 export const watchEvent = (cfg, w) =>
-  withQuantity(resolveEvent(cfg, { url: w.url, watchId: w.id, owner: w.owner, hot: w.hot, ...(w.maxPrice ? { maxPrice: w.maxPrice } : {}) }), w.quantity);
+  withQuantity(resolveEvent(cfg, { url: w.url, watchId: w.id, owner: w.owner, hot: w.hot, autoGrab: w.autoGrab, ...(w.maxPrice ? { maxPrice: w.maxPrice } : {}) }), w.quantity);
 
 /**
  * notify(text, { to, urgent, buttons }) – מגיע מ-messenger.js
  * onSale(url, qty, ctx) – מצב קנייה (רק במחשב); בלעדיו הכפתור והפקודה מסבירים שזה במחשב בלבד.
  */
-export function createAgent({ cfg, db, notify, onSale, mode = 'pc' }) {
+export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 'pc' }) {
   const target = targetRowOf(cfg.defaults || {});
   db.health ||= {};
   db.stats ||= { since: new Date().toISOString(), cycles: 0, checks: 0, errors: 0, alerts: 0 };
@@ -37,7 +38,11 @@ export function createAgent({ cfg, db, notify, onSale, mode = 'pc' }) {
         { text: '🔄 בדוק עכשיו', data: `chk:${event.watchId}` },
         { text: w?.hot ? '🐢 מעקב רגיל' : '🔥 מעקב צפוף', data: `hot:${event.watchId}` },
       ],
-      [{ text: '🛒 מצב קנייה', data: `sale:${event.watchId}` }, { text: '🔕 הפסק מעקב', data: `stop:${event.watchId}` }],
+      [
+        { text: w?.autoGrab ? '🤖 תפיסה אוטומטית: פועלת' : '🤖 תפוס לי אוטומטית', data: `grab:${event.watchId}` },
+        { text: '🛒 מצב קנייה עכשיו', data: `sale:${event.watchId}` },
+      ],
+      [{ text: '🔕 הפסק מעקב', data: `stop:${event.watchId}` }],
       [{ text: '🔗 לעמוד המופע', url: event.url }],
     ];
   };
@@ -105,9 +110,11 @@ export function createAgent({ cfg, db, notify, onSale, mode = 'pc' }) {
       db.stats.alerts++;
       await notify(formatReport(part.event, part.improved, { improvedOnly: true, targetRow: target }), {
         to: part.event.owner,
-        urgent: !!part.event.hot, // מעקב צפוף = דחוף גם בשעות השקט
+        urgent: !!part.event.hot || !!part.event.autoGrab, // מעקב צפוף / תפיסה אוטומטית = דחוף גם בשעות השקט
         buttons: buttonsFor(part.event),
       });
+      // תפיסה אוטומטית: רק במופעים שסימנת, ורק כשנמצא משהו בשורות היעד
+      if (part.event.autoGrab && onGrab && part.improved.some((o) => rowNum(o.row) <= target)) onGrab(part.event);
     }
   }
 
@@ -141,7 +148,7 @@ export function createAgent({ cfg, db, notify, onSale, mode = 'pc' }) {
       const found = await discover(browser, cfg);
       for (const site of (cfg.sites || []).filter((s) => s.listUrl && s.enabled !== false)) {
         const n = found.filter((e) => e.name.startsWith(`${site.name}:`)).length;
-        track(`סריקה: ${site.name}`, n > 0, n ? null : 'לא נמצאו מופעים בעמוד הראשי');
+        track(`סריקה: ${site.name}`, n > 0, n ? null : explainEmpty(site.listUrl));
       }
       const myKeys = new Set(mine.map((e) => eventKey(e.url)));
       const events = [...mine, ...found.filter((e) => !myKeys.has(eventKey(e.url)))];
@@ -264,6 +271,7 @@ export function createAgent({ cfg, db, notify, onSale, mode = 'pc' }) {
     onStatus: () => statusText(),
     onSites: () => sitesText(),
     onButton: (action, id, from) => {
+      if (action === 'cancel') return onCancel ? onCancel(id) : 'אין הזמנה פתוחה.';
       const w = watches.get(id);
       if (!w) return 'המופע הזה כבר לא במעקב.';
       if (action === 'stop') return handlers(pending).onRemove(id, from);
@@ -280,6 +288,15 @@ export function createAgent({ cfg, db, notify, onSale, mode = 'pc' }) {
           : `🐢 #${w.id} חזר למעקב רגיל (כל שעה).`;
       }
       if (action === 'sale') return onSale ? onSale(w.url, w.quantity, { from }) : saleUnavailable;
+      if (action === 'grab') {
+        if (!onGrab) return `🤖 <b>תפיסה אוטומטית עובדת רק במחשב</b>\nהיא צריכה את חלון הדפדפן שבו אתה מחובר ומשלם.\nהפעל את הסוכן במחשב (npm start) ולחץ שם על הכפתור.`;
+        const on = !w.autoGrab;
+        watches.update(id, { autoGrab: on });
+        const q = w.quantity || cfg.defaults?.quantity || 2;
+        return on
+          ? `🤖 <b>תפיסה אוטומטית הופעלה</b> ל-#${w.id} · ${q} כרטיסים\n\nכשאמצא מקומות בשורות 1–${target}:\n1. אפתח חלון במחשב (שבו אתה מחובר)\n2. אתפוס את המקומות – ב-Ticketmaster עד עמוד התשלום, בשאר האתרים אפתח את המפה ואגיד על מה ללחוץ\n3. אשלח לך צילום מסך + כפתור ❌ ביטול\n\nאם לא תשלם – ההזמנה מתבטלת לבד אחרי כמה דקות. לשינוי הכמות שלח את הקישור שוב עם כמות.`
+          : `🤖 תפיסה אוטומטית כבויה ל-#${w.id}. אמשיך רק להתריע.`;
+      }
       return null;
     },
   });

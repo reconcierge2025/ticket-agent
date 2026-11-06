@@ -9,17 +9,35 @@ export function eventKey(url) {
   return m ? `${m[1]}|${m[2]}` : url;
 }
 
+/** מידע על הדף כשלא נמצאו בו מופעים – כדי להבין אם האתר חוסם (למשל גלישה מחוץ לישראל). */
+export const lastPageInfo = {};
+
 async function linksOf(browser, url) {
   const page = await browser.newPage({ locale: 'he-IL' });
   try {
-    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
-    await page.waitForTimeout(2500); // אתרים שטוענים את הרשימה ב-JavaScript
+    const res = await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+    await page.waitForLoadState('networkidle', { timeout: 10000 }).catch(() => {});
+    await page.waitForTimeout(1500); // אתרים שטוענים את הרשימה ב-JavaScript
+    lastPageInfo[url] = {
+      status: res?.status(),
+      title: (await page.title().catch(() => '')).slice(0, 60),
+      textLength: await page.evaluate(() => document.body?.innerText?.length || 0).catch(() => 0),
+    };
     return await page.$$eval('a[href]', (els) =>
       els.map((a) => ({ url: a.href.split('#')[0], text: (a.innerText || a.title || '').trim().replace(/\s+/g, ' ') }))
     );
   } finally {
     await page.close();
   }
+}
+
+/** הסבר אנושי למה לא נמצאו מופעים בעמוד. */
+export function explainEmpty(url) {
+  const i = lastPageInfo[url];
+  if (!i) return 'לא נמצאו מופעים בעמוד הראשי';
+  const blocked = (i.status && i.status >= 400) || /denied|forbidden|blocked|just a moment|attention required|רק רגע/i.test(i.title) || i.textLength < 300;
+  const info = `HTTP ${i.status ?? '?'} · "${i.title}" · ${i.textLength} תווים`;
+  return blocked ? `האתר חסם את הגישה (${info}) – כנראה חוסם שרתים מחוץ לישראל` : `לא נמצאו מופעים בעמוד (${info})`;
 }
 
 export async function discover(browser, cfg) {

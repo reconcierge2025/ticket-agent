@@ -26,25 +26,25 @@ const cfg = {
       name: 'מדומה',
       host: '', // קבצים מקומיים – אין דומיין
       listUrl: site('events.html'),
-      eventLinkSelector: 'a.event',
+      eventLinkPattern: '(venue|queue)\\.html$',
       generic: { seatSelector: '.seat', availableSelector: '.available', priceAttr: 'data-price' },
     },
   ],
 };
 const msgs = [];
 const notify = async (t) => msgs.push(t);
-const db = { seen: {}, history: [] };
+const db = { seen: {}, best: {}, history: [] };
 
 const browser = await launchScanner(cfg);
-const found = await discover(browser, cfg);
-assert.deepEqual(found.map((e) => e.name), ['הופעה גדולה בהיכל', 'מכירה עם תור']);
+const found = (await discover(browser, cfg)).map((e) => ({ ...e, generic: cfg.sites[0].generic, quantities: [2] }));
+assert.deepEqual(found.map((e) => e.name), ['מדומה: הופעה גדולה בהיכל', 'מדומה: מכירה עם תור']);
 console.log('✔ סריקת אתר: נמצאו 2 אירועים (קישור "אודות" סונן)');
 
 const r1 = await checkEvent(browser, found[0], { cfg, db, notify });
-assert.deepEqual(r1.results.map((b) => `${b.zone} ${b.row}:${b.seats}`), ['VIP 1:5,6', 'VIP 1:2,3', 'VIP 2:1,2', 'אולם 2:4,5']);
-console.log('✔ מקומות טובים בכל אזור:', r1.results.map((b) => `${b.zone} שורה ${b.row} [${b.seats}]`).join(' | '));
+assert.deepEqual(r1.options.map((b) => `${b.zone} ${b.row}:${b.seats}`), ['VIP 1:5,6', 'אולם 2:4,5']);
+console.log('✔ מקומות טובים בכל אזור:', r1.options.map((b) => `${b.zone} שורה ${b.row} [${b.seats}]`).join(' | '));
 const r2 = await checkEvent(browser, found[0], { cfg, db, notify });
-assert.equal(r2.fresh.length, 0);
+assert.equal(r2.improved.length, 0);
 console.log('✔ בדיקה חוזרת: אין התראה כפולה');
 
 const r3 = await checkEvent(browser, found[1], { cfg, db, notify });
