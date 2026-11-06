@@ -1,0 +1,45 @@
+# בדיקות: בכל שינוי בקוד – בדיקות הלוגיקה.
+# כל לילה – בדיקה מול האתרים האמיתיים; אם משהו נשבר, תגיע הודעה בטלגרם.
+name: tests
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['state/**', '**.md']
+  pull_request: {}
+  schedule:
+    - cron: '30 2 * * *' # 04:30/05:30 בישראל
+  workflow_dispatch: {}
+
+jobs:
+  unit:
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+
+  smoke:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: |
+          npm ci
+          npx playwright install --with-deps chromium
+      - name: Live smoke test
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_IDS: ${{ secrets.TELEGRAM_CHAT_IDS }}
+          AGENT_DATA_DIR: /tmp/smoke
+        run: node test/smoke.js

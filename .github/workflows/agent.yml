@@ -18,6 +18,9 @@ concurrency:
 
 jobs:
   run:
+    # כשהשרת ב-Railway פועל: Settings → Secrets and variables → Actions → Variables → USE_SERVER = true
+    # (אחרת שניהם יקראו את אותן הודעות מהבוט)
+    if: vars.USE_SERVER != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 55
     steps:

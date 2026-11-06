@@ -25,18 +25,24 @@ export async function api(tg, method, body) {
 
 const stripTags = (t) => t.replace(/<[^>]+>/g, '').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
 
-/** שולח לכל האנשים שברשימה (או לאחד מסוים אם ניתן `to`). אם ה-HTML נשבר – שולח כטקסט רגיל. */
-export async function sendTelegram(tg, text, to) {
+/**
+ * שולח לכל האנשים שברשימה (או לאחד מסוים אם ניתן `to`). אם ה-HTML נשבר – שולח כטקסט רגיל.
+ * buttons: [[{ text, data }]] – כפתורים מתחת להודעה (data עד 64 תווים).
+ */
+export async function sendTelegram(tg, text, to, { buttons } = {}) {
   if (!isConfigured(tg)) {
     console.log('[telegram לא מוגדר] ההודעה הייתה:\n' + stripTags(text));
     return;
   }
+  const reply_markup = buttons?.length
+    ? { inline_keyboard: buttons.map((row) => row.map((b) => (b.url ? { text: b.text, url: b.url } : { text: b.text, callback_data: b.data }))) }
+    : undefined;
   for (const id of to ? [to] : chatIds(tg)) {
     try {
-      await api(tg, 'sendMessage', { chat_id: id, text, parse_mode: 'HTML', disable_web_page_preview: true });
+      await api(tg, 'sendMessage', { chat_id: id, text, parse_mode: 'HTML', disable_web_page_preview: true, reply_markup });
     } catch (e) {
       if (!/parse entities/i.test(e.message)) throw e;
-      await api(tg, 'sendMessage', { chat_id: id, text: stripTags(text), disable_web_page_preview: true });
+      await api(tg, 'sendMessage', { chat_id: id, text: stripTags(text), disable_web_page_preview: true, reply_markup });
     }
   }
 }

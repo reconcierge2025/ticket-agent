@@ -1,6 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { findBestPerZone, rowNum } from '../src/seats.js';
+import { findBestPerZone, findBestOptions, rowNum } from '../src/seats.js';
+import { inQuietHours } from '../src/messenger.js';
+import { israelNow } from '../src/config.js';
 import { parseCommand } from '../src/bot.js';
 import { parseQueueText } from '../src/queue.js';
 
@@ -34,12 +36,41 @@ test('המקומות הטובים בכל אזור: שורה קרובה, מרכז
   );
 });
 
-test('פירוק פקודות טלגרם', () => {
-  assert.deepEqual(parseCommand('/sale https://t.co/e/123 4'), { cmd: 'sale', url: 'https://t.co/e/123', quantity: 4, arg: 4 });
+test('פירוק פקודות טלגרם: כמות, מחיר ושעה', () => {
+  assert.deepEqual(parseCommand('/sale https://t.co/e/123 4'), { cmd: 'sale', url: 'https://t.co/e/123', quantity: 4, arg: 4, maxPrice: null, time: null });
+  assert.deepEqual(parseCommand('/sale https://t.co/e/123 2 10:00'), { cmd: 'sale', url: 'https://t.co/e/123', quantity: 2, arg: 2, maxPrice: null, time: '10:00' });
+  const w = parseCommand('https://t.co/e/9 3 עד 300');
+  assert.equal(w.cmd, 'watch');
+  assert.equal(w.quantity, 3);
+  assert.equal(w.maxPrice, 300);
+  assert.equal(parseCommand('https://t.co/e/9 250₪').maxPrice, 250);
+  assert.equal(parseCommand('/hot 7').arg, 7);
   assert.equal(parseCommand('https://t.co/e/99').cmd, 'watch');
   assert.equal(parseCommand('https://t.co/e/99').quantity, null);
   assert.equal(parseCommand('/remove 2').arg, 2);
   assert.equal(parseCommand('שלום'), null);
+});
+
+test('שעות שקט (גם מעבר לחצות)', () => {
+  const q = { from: 23, to: 8 };
+  assert.equal(inQuietHours(q, 23), true);
+  assert.equal(inQuietHours(q, 3), true);
+  assert.equal(inQuietHours(q, 8), false);
+  assert.equal(inQuietHours(q, 15), false);
+  assert.equal(inQuietHours(undefined, 3), false);
+});
+
+test('מחיר מקסימלי מסנן מקומות יקרים', () => {
+  const seats = [1, 2, 3, 4].map((n) => ({ section: 'אולם', row: 1, seat: n, available: true, price: 500 }))
+    .concat([1, 2].map((n) => ({ section: 'אולם', row: 3, seat: n, available: true, price: 200 })));
+  const r = findBestOptions(seats, { quantities: [2], maxPrice: 300, zones: [{ name: 'אולם', match: ['אולם'] }] });
+  assert.equal(r[0].row, 3);
+});
+
+test('תאריך ושעה לפי שעון ישראל', () => {
+  const n = israelNow(new Date('2026-11-06T22:30:00Z')); // 00:30 בישראל (חורף, UTC+2)
+  assert.equal(n.date, '2026-11-07');
+  assert.equal(n.hour, 0);
 });
 
 test('קריאת מיקום בתור', () => {

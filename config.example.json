@@ -6,6 +6,12 @@
   "headless": true,
   "browserChannel": "msedge",
   "checkEveryMinutes": 60,
+  "hotEveryMinutes": 3,
+  "politeDelayMs": 1500,
+  "heartbeatHour": 9,
+  "quietHours": { "from": 23, "to": 8 },
+  "saleLeadMinutes": 10,
+  "healthFailThreshold": 3,
 
   "defaults": {
     "quantities": [2, 3, 4, 5],
