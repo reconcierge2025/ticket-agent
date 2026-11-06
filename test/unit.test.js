@@ -6,6 +6,7 @@ import { israelNow } from '../src/config.js';
 import { siteFor, SITES, sitesText } from '../src/sites.js';
 import { readAvailability } from '../src/adapters/avail.js';
 import { parseListings } from '../src/adapters/ticketnetwork.js';
+import { announceNewShows, follow, unfollow } from '../src/scout.js';
 import { parseCommand } from '../src/bot.js';
 import { parseQueueText } from '../src/queue.js';
 
@@ -40,8 +41,11 @@ test('המקומות הטובים בכל אזור: שורה קרובה, מרכז
 });
 
 test('פירוק פקודות טלגרם: כמות, מחיר ושעה', () => {
-  assert.deepEqual(parseCommand('/sale https://t.co/e/123 4'), { cmd: 'sale', url: 'https://t.co/e/123', quantity: 4, arg: 4, maxPrice: null, time: null });
-  assert.deepEqual(parseCommand('/sale https://t.co/e/123 2 10:00'), { cmd: 'sale', url: 'https://t.co/e/123', quantity: 2, arg: 2, maxPrice: null, time: '10:00' });
+  const s1 = parseCommand('/sale https://t.co/e/123 4');
+  assert.deepEqual([s1.cmd, s1.url, s1.quantity, s1.maxPrice, s1.time], ['sale', 'https://t.co/e/123', 4, null, null]);
+  const s2 = parseCommand('/sale https://t.co/e/123 2 10:00');
+  assert.deepEqual([s2.quantity, s2.time], [2, '10:00']);
+  assert.equal(parseCommand('/follow שלמה ארצי').rest, 'שלמה ארצי');
   const w = parseCommand('https://t.co/e/9 3 עד 300');
   assert.equal(w.cmd, 'watch');
   assert.equal(w.quantity, 3);
@@ -96,6 +100,22 @@ test('זמינות: מחירים, אזל, אפשר לקנות', () => {
 test('TicketNetwork: פירוק מודעות', () => {
   const text = 'Section 400 Level 402\n400 Level 402\nRow 4\n2 Tickets available\n • 2 Tickets\nTicket US$277 + Fee\nUS$319 each\nContinue';
   assert.deepEqual(parseListings(text), [{ section: '400 Level 402', row: '4', count: 2, price: 319 }]);
+});
+
+test('מופעים חדשים: לומד בפעם הראשונה, מתריע לעוקבים אחר כך', async () => {
+  const db = {};
+  const sent = [];
+  const notify = async (text, opts = {}) => sent.push({ text, ...opts });
+  const ev = (name, url) => ({ name: `קופת ת"א: ${name}`, url });
+  await announceNewShows(db, {}, [ev('שלמה ארצי', 'https://a.co/booking/features/1?prsntId=1')], notify);
+  assert.equal(sent.length, 0, 'בפעם הראשונה רק לומד');
+  follow(db, '111', 'עומר אדם');
+  await announceNewShows(db, {}, [ev('שלמה ארצי', 'https://a.co/booking/features/1?prsntId=1'), ev('עומר אדם', 'https://a.co/booking/features/2?prsntId=5')], notify);
+  const personal = sent.find((m) => m.to === '111');
+  assert.match(personal.text, /עומר אדם/);
+  assert.ok(personal.buttons[0][0].data.startsWith('w:'));
+  assert.match(sent.find((m) => !m.to).text, /עלו 1 מופעים חדשים/);
+  assert.equal(unfollow(db, '111', 'עומר  אדם'.replace('  ', ' ')), true);
 });
 
 test('קריאת מיקום בתור', () => {

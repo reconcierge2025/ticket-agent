@@ -31,6 +31,34 @@ async function linksOf(browser, url) {
   }
 }
 
+/**
+ * דומיינים של אתרי כרטיסים אחרים שהסוכן נתקל בהם בדרך (קישורים החוצה) – מועמדים ל"אתר חדש".
+ * דומיין → { from, sample }
+ */
+export const externalDomains = new Map();
+const TICKETY = /ticket|tix|kupa|kupat|booking|event|show|concert|live|כרטיס|seat|box-?office/i;
+const NOT_TICKET = /facebook|instagram|twitter|youtube|google|whatsapp|tiktok|apple|waze|linkedin|wikipedia|spotify|max\.co\.il|isracard|cal-store|leumi|elal|powercard|accessib|cookie|ketch|onetrust|gov\.il|business\./i;
+
+function noteExternal(fromUrl, links) {
+  let fromHost;
+  try {
+    fromHost = new URL(fromUrl).hostname.replace(/^www\./, '');
+  } catch {
+    return;
+  }
+  for (const l of links) {
+    let host;
+    try {
+      host = new URL(l.url).hostname.replace(/^www\./, '');
+    } catch {
+      continue;
+    }
+    if (!host || host === fromHost || host.endsWith('.' + fromHost) || NOT_TICKET.test(host)) continue;
+    // רק דומיין שבעצמו נראה כמו אתר כרטיסים (לא כל קישור שיש בו "event")
+    if (TICKETY.test(host) && !externalDomains.has(host)) externalDomains.set(host, { from: fromHost, sample: l.url });
+  }
+}
+
 /** הסבר אנושי למה לא נמצאו מופעים בעמוד. */
 export function explainEmpty(url) {
   const i = lastPageInfo[url];
@@ -51,13 +79,16 @@ export async function discover(browser, cfg) {
 
       const found = new Map();
       const top = await linksOf(browser, site.listUrl);
+      noteExternal(site.listUrl, top);
       for (const l of top) if (eventRe.test(l.url) && wanted(l)) found.set(l.url, l.text);
 
       if (pageRe) {
         const pages = [...new Map(top.filter((l) => pageRe.test(l.url) && l.url !== site.listUrl && wanted(l)).map((l) => [l.url, l])).values()];
         for (const p of pages.slice(0, site.maxPages ?? 30)) {
           try {
-            for (const l of await linksOf(browser, p.url)) {
+            const links = await linksOf(browser, p.url);
+            noteExternal(p.url, links);
+            for (const l of links) {
               if (eventRe.test(l.url) && !found.has(l.url)) found.set(l.url, `${p.text || ''} ${l.text}`.trim());
             }
           } catch (e) {
@@ -69,7 +100,8 @@ export async function discover(browser, cfg) {
       // אירוע אחד = קישור אחד (כל התאריכים שלו נבדקים בכל מקרה)
       const byEvent = new Map();
       for (const [url, text] of found) if (!byEvent.has(eventKey(url))) byEvent.set(eventKey(url), [url, text]);
-      const list = [...byEvent.values()].slice(0, site.maxEvents ?? 60);
+      // scoutOnly: אתר שמשמש רק למציאת אתרי כרטיסים חדשים (למשל אינדקס כמו טיקצ'אק LIVE)
+      const list = site.scoutOnly ? [] : [...byEvent.values()].slice(0, site.maxEvents ?? 60);
       for (const [url, text] of list) {
         events.push(resolveEvent(cfg, { name: `${site.name}: ${text || url}`.slice(0, 120), url, discovered: true }));
       }

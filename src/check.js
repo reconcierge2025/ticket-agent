@@ -18,7 +18,9 @@ export async function pickAdapter(event) {
     const mod = await import(`./adapters/${name}.js`);
     if (mod.matches(event.url)) return mod;
   }
-  return import('./adapters/generic.js');
+  // אתר שהסוכן לא מכיר: אם הוגדרו לו סלקטורים – הכללי; אחרת זיהוי אוטומטי
+  // (מפת vivenu אם יש, ואם לא – זמינות ומחיר)
+  return import(event.generic ? './adapters/generic.js' : './adapters/avail.js');
 }
 
 export async function checkEvent(browser, event, ctx) {

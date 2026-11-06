@@ -6,6 +6,7 @@ import { siteFor, sitesText, LEVELS } from './sites.js';
 import { launchScanner } from './browser.js';
 import { checkEvent, pickAdapter, targetRowOf, esc } from './check.js';
 import { rowNum } from './seats.js';
+import { announceNewShows, probeNewSites, follow, unfollow, followsOf, linkFor } from './scout.js';
 import { discover, eventKey, explainEmpty } from './discover.js';
 import * as watches from './watches.js';
 
@@ -74,6 +75,21 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
     }
   }
 
+  /** אתר שלא היה במאגר ועבד – נזכר בו (מופיע ב-/sites כ"🧠 למדתי לבד"). */
+  function learn(url, level, adapter) {
+    if (siteFor(url)) return;
+    let host;
+    try {
+      host = new URL(url).hostname.replace(/^www\./, '');
+    } catch {
+      return;
+    }
+    db.learned ||= {};
+    const isNew = !db.learned[host];
+    db.learned[host] = { level: db.learned[host]?.level === 'seats' ? 'seats' : level, adapter, lastOk: new Date().toISOString() };
+    if (isNew) notify(`🧠 <b>למדתי לעבוד עם אתר חדש:</b> ${esc(host)}\n${level === 'seats' ? 'מצאתי בו מפת מושבים – אני יודע להביא את השורות הכי קרובות.' : 'אין בו מקומות מסומנים – אני עוקב אחרי זמינות ומחיר.'}`, { urgent: false });
+  }
+
   /** בדיקה של אירוע עם ניסיון חוזר, מעקב בריאות והפסקה מנומסת בין בקשות. */
   async function checkTracked(browser, ev) {
     const site = (await pickAdapter(ev)).name;
@@ -86,10 +102,19 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
         const readOk = seats > 0 || parts.some((p) => p.avail?.checked);
         // תור או אין תאריכים פתוחים = לא תקלה
         if (r.status !== 'queue' && parts.length) track(site, readOk, readOk ? null : 'האתר החזיר 0 מושבים');
+        if (readOk) learn(ev.url, seats > 0 ? 'seats' : 'avail', site);
         return r;
       } catch (e) {
         if (attempt >= 2) {
           track(site, false, e.message);
+          // תיקון עצמי: השיטה הרגילה נכשלה → מנסים שיטה חלופית (זמינות ומחיר / מפת vivenu)
+          if (site !== 'avail') {
+            try {
+              const r = await checkEvent(browser, { ...ev, site: 'avail' }, { cfg, db, notify });
+              log(`  [תיקון עצמי] ${ev.name}: השיטה של ${site} נכשלה, עברתי לזמינות ומחיר`);
+              return r;
+            } catch {}
+          }
           throw e;
         }
         await sleep(5000);
@@ -146,10 +171,11 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
     try {
       const mine = [...(cfg.events || []).map((e) => withQuantity(resolveEvent(cfg, e), e.quantity)), ...watches.list().map((w) => watchEvent(cfg, w))];
       const found = await discover(browser, cfg);
-      for (const site of (cfg.sites || []).filter((s) => s.listUrl && s.enabled !== false)) {
+      for (const site of (cfg.sites || []).filter((s) => s.listUrl && s.enabled !== false && !s.scoutOnly)) {
         const n = found.filter((e) => e.name.startsWith(`${site.name}:`)).length;
         track(`סריקה: ${site.name}`, n > 0, n ? null : explainEmpty(site.listUrl));
       }
+      await announceNewShows(db, cfg, found, notify).catch((e) => log(`שגיאה במופעים חדשים: ${e.message}`));
       const myKeys = new Set(mine.map((e) => eventKey(e.url)));
       const events = [...mine, ...found.filter((e) => !myKeys.has(eventKey(e.url)))];
       log(`סבב בדיקה: ${mine.length} במעקב + ${events.length - mine.length} מהסריקה הכללית`);
@@ -168,6 +194,7 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
       }
       const digest = formatDigest(discovered, target);
       if (digest) await notify(digest, { urgent: false });
+      if (cfg.discoverNewSites !== false) await probeNewSites(browser, db, notify).catch((e) => log(`שגיאה בסייר: ${e.message}`));
       db.lastCycle = new Date().toISOString();
       db.stats.cycles++;
       await healthAlerts();
@@ -269,9 +296,24 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
       return '🔍 בודק את כל המופעים עכשיו...';
     },
     onStatus: () => statusText(),
-    onSites: () => sitesText(),
+    onSites: () => sitesText(db),
+    onFollow: (kw, from) => {
+      if (!kw) return 'כתוב את שם האמן אחרי הפקודה, למשל:\n<code>/follow שלמה ארצי</code>';
+      follow(db, from, kw);
+      save(db);
+      return `⭐ <b>עוקב אחרי ${esc(kw)}</b>\nכשיעלה מופע חדש שלו באחד האתרים – אשלח לך הודעה מיד.\n\nהרשימה שלך: /follows`;
+    },
+    onUnfollow: (kw, from) => (unfollow(db, from, kw) ? (save(db), `הפסקתי לעקוב אחרי ${esc(kw)}.`) : 'לא מצאתי את זה ברשימה שלך. שלח /follows.'),
+    onFollows: (from) => {
+      const f = followsOf(db, from);
+      return f.length ? '⭐ <b>אמנים שאתה עוקב אחריהם:</b>\n' + f.map((x) => `• ${esc(x.kw)}`).join('\n') + '\n\nלהסרה: <code>/unfollow שם</code>' : 'אתה לא עוקב אחרי אף אמן.\nלדוגמה: <code>/follow עומר אדם</code>';
+    },
     onButton: (action, id, from) => {
       if (action === 'cancel') return onCancel ? onCancel(id) : 'אין הזמנה פתוחה.';
+      if (action === 'w') {
+        const url = linkFor(db, id);
+        return url ? handlers(pending).onWatch(url, null, { from }) : 'הקישור כבר לא זמין – שלח אותו שוב.';
+      }
       const w = watches.get(id);
       if (!w) return 'המופע הזה כבר לא במעקב.';
       if (action === 'stop') return handlers(pending).onRemove(id, from);

@@ -89,8 +89,8 @@ export function siteFor(url) {
   return SITES.find((s) => s.domains.some((d) => host === d || host.endsWith('.' + d))) || null;
 }
 
-/** הודעת /sites – כל האתרים לפי אזור ורמת תמיכה. */
-export function sitesText() {
+/** הודעת /sites – כל האתרים לפי אזור ורמת תמיכה, כולל מה שהסוכן למד ומצא לבד. */
+export function sitesText(db = {}) {
   const lines = ['🌐 <b>האתרים שאני מכיר</b>', ''];
   for (const [lvl, { icon, he }] of Object.entries(LEVELS)) if (lvl !== 'seats') lines.push(`${icon} ${he}`);
   for (const [region, title] of Object.entries(REGIONS)) {
@@ -100,8 +100,18 @@ export function sitesText() {
       lines.push(`${LEVELS[s.level].icon} ${s.name}${s.note ? ` – <i>${s.note}</i>` : ''}`);
     }
   }
+  const learned = Object.entries(db.learned || {});
+  if (learned.length) {
+    lines.push('', '<b>🧠 למדתי לבד</b> (אתרים ששלחת ועבדו)');
+    for (const [host, l] of learned) lines.push(`${LEVELS[l.level]?.icon || '🟡'} ${host}`);
+  }
+  const cands = Object.entries(db.candidates || {}).filter(([, c]) => !['blocked', 'down', 'not-tickets'].includes(c.kind));
+  if (cands.length) {
+    lines.push('', '<b>🔎 מצאתי לבד</b> (עוד לא נוסו על מופע – שלח קישור)');
+    for (const [host, c] of cands.slice(-15)) lines.push(`${c.kind === 'avail' ? '🟡' : '🟢'} ${host}${c.title ? ` – <i>${c.title.slice(0, 40)}</i>` : ''}`);
+  }
   const n = (l) => SITES.filter((s) => l.includes(s.level)).length;
   lines.push('', `סה"כ ${SITES.length} אתרים: ${n(['full', 'seats'])} עם מושבים, ${n(['listings', 'avail'])} זמינות/רשימות, ${n(['guide'])} מנועי חיפוש, ${n(['blocked', 'down'])} חוסמים/לא נגישים.`);
-  lines.push('', '💡 שלח לי קישור למופע מכל אתר 🟢/🟡 ואתחיל לעקוב.');
+  lines.push('', '💡 שלח לי קישור למופע מכל אתר 🟢/🟡 – וגם מאתר שלא ברשימה: אנסה לזהות אותו לבד.');
   return lines.join('\n');
 }

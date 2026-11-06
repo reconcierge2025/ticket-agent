@@ -57,11 +57,11 @@
     },
     {
       "name": "טיקצ'אק LIVE",
-      "enabled": false,
+      "scoutOnly": true,
       "listUrl": "https://live.tickchak.co.il/shows",
       "pageLinkPattern": "live\\.tickchak\\.co\\.il/shows/event/",
       "eventLinkPattern": "(/booking/features/\\d+\\?.*prsntId=|ticketmaster\\.co\\.il/event/)",
-      "maxPages": 30
+      "maxPages": 8
     }
   ],
 

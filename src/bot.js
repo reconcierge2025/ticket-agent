@@ -15,7 +15,8 @@ export const HELP = `👋 <b>אני סוכן הכרטיסים שלך</b>
 /sale &lt;קישור&gt; &lt;כמות&gt; 10:00 – מצב קנייה בשעה שהמכירה נפתחת
 /remove &lt;מספר&gt; – הסרה מהמעקב
 /check – לבדוק הכל עכשיו
-/sites – האתרים שאני מכיר ומה אני יודע לעשות בכל אחד
+/follow &lt;אמן&gt; – הודעה כשעולה לו מופע חדש · /follows – הרשימה
+/sites – האתרים שאני מכיר (כולל מה שלמדתי ומצאתי לבד)
 /status – מצב המערכת
 /myid – מספר הצ'אט שלך`;
 
@@ -36,7 +37,8 @@ export function parseCommand(text) {
   const nums = rest.match(/\b\d{1,2}\b/g);
   const cmd = t.startsWith('/') ? t.slice(1).split(/[\s@]/)[0].toLowerCase() : url ? 'watch' : null;
   if (!cmd) return null;
-  return { cmd, url, quantity: nums ? Number(nums[nums.length - 1]) : null, arg: nums ? Number(nums[0]) : null, maxPrice, time };
+  const freeText = t.replace(/^\/\S+\s*/, '').replace(url || '', '').trim(); // טקסט חופשי אחרי הפקודה (לשם אמן)
+  return { cmd, url, quantity: nums ? Number(nums[nums.length - 1]) : null, arg: nums ? Number(nums[0]) : null, maxPrice, time, rest: freeText };
 }
 
 /** מטפל ברשימת עדכונים מטלגרם (הודעות + לחיצות על כפתורים). מחזיר את ה-offset הבא. */
@@ -82,6 +84,9 @@ export async function handleUpdates(cfg, updates, h, offset = 0) {
       else if (c.cmd === 'check') await reply(await h.onCheck(from));
       else if (c.cmd === 'status') await reply(await h.onStatus(from));
       else if (c.cmd === 'sites') await reply(await h.onSites(from));
+      else if (c.cmd === 'follow') await reply(await h.onFollow(c.rest, from));
+      else if (c.cmd === 'unfollow') await reply(await h.onUnfollow(c.rest, from));
+      else if (c.cmd === 'follows') await reply(await h.onFollows(from));
       else await reply('לא הבנתי 🤔\n\n' + HELP);
     } catch (e) {
       log(`שגיאה בטיפול בהודעה: ${e.message}`);

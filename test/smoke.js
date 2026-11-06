@@ -18,8 +18,8 @@ const browser = await launchScanner(cfg);
 const problems = [];
 const ok = [];
 try {
-  const found = await discover(browser, { ...cfg, sites: cfg.sites.filter((s) => s.enabled !== false).map((s) => ({ ...s, maxPages: 3, maxEvents: 3 })) });
-  for (const site of cfg.sites.filter((s) => s.enabled !== false)) {
+  const found = await discover(browser, { ...cfg, sites: cfg.sites.filter((s) => s.enabled !== false && !s.scoutOnly).map((s) => ({ ...s, maxPages: 3, maxEvents: 3 })) });
+  for (const site of cfg.sites.filter((s) => s.enabled !== false && !s.scoutOnly)) {
     const events = found.filter((e) => e.name.startsWith(`${site.name}:`));
     if (!events.length) {
       problems.push(`${site.name}: לא נמצאו מופעים בעמוד הראשי`);
