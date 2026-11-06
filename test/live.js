@@ -1,12 +1,12 @@
 // בדיקה מול האתרים האמיתיים – רק קריאה, בלי טלגרם ובלי קנייה.
 // הרצה: node test/live.js <קישור> [<קישור> ...]
 //       DRY_SELECT=1 → גם בחירה אוטומטית ב-Ticketmaster עד לפני "לרכישה" (לא תופס מושבים)
-import { loadConfig, resolveEvent } from '../src/config.js';
+import { loadRuntimeConfig, resolveEvent } from '../src/config.js';
 import { launchScanner } from '../src/browser.js';
 import { checkEvent, describe, pickTarget, pickAdapter } from '../src/check.js';
 import { formatReport, formatAvail } from '../src/telegram.js';
 
-const cfg = { ...loadConfig('config.example.json'), telegram: {} };
+const cfg = { ...loadRuntimeConfig('config.example.json'), telegram: {} }; // BROWSER_CHANNEL= → Chromium (בענן)
 const db = { seen: {}, best: {}, history: [] };
 const browser = await launchScanner(cfg);
 const flat = (r) => (r.parts ? r.parts.flatMap(flat) : [r]);
