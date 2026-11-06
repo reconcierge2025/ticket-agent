@@ -140,6 +140,12 @@ if (args.includes('--once')) {
   if (!SERVER) setInterval(saleTick, 20000);
   safe(() => agent.runCycle())();
   notify(`🟢 <b>סוכן הכרטיסים פועל</b> (${SERVER ? 'שרת – פועל 24/7' : 'מחשב – כולל מצב קנייה'})\nשלח /help לרשימת פקודות.`);
+  // ב-Railway בלי Volume כל עדכון גרסה מוחק את רשימת המעקב – מזהירים
+  if (SERVER && process.env.RAILWAY_ENVIRONMENT_NAME !== undefined && !process.env.RAILWAY_VOLUME_MOUNT_PATH) {
+    notify(
+      '⚠️ <b>אין לשרת דיסק קבוע (Volume)</b>\nרשימת המעקב, האמנים והשיאים יימחקו בכל עדכון או הפעלה מחדש של השרת.\n\nלתיקון ב-Railway: קליק ימני על השירות ← <b>Attach Volume</b> ← Mount path: <code>/data</code>'
+    );
+  }
   // סגירה מסודרת (Railway שולח SIGTERM בעדכון גרסה)
   for (const sig of ['SIGTERM', 'SIGINT']) process.on(sig, () => (save(db), process.exit(0)));
 }
