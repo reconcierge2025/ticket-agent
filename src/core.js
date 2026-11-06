@@ -7,7 +7,8 @@ import { launchScanner } from './browser.js';
 import { checkEvent, pickAdapter, targetRowOf, esc } from './check.js';
 import { rowNum } from './seats.js';
 import { announceNewShows, announceStars, probeNewSites, follow, unfollow, followsOf, linkFor, saveCatalog, existingShowsMessage } from './scout.js';
-import { starsText } from './artists.js';
+import { starsText, STARS } from './artists.js';
+import { intlEnabled, searchArtistAbroad, diffShows, formatChanges, formatExisting } from './intl.js';
 import { discover, eventKey, explainEmpty } from './discover.js';
 import * as watches from './watches.js';
 
@@ -200,6 +201,7 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
       const digest = formatDigest(discovered, target);
       if (digest) await notify(digest, { urgent: false });
       if (cfg.discoverNewSites !== false) await probeNewSites(browser, db, notify).catch((e) => log(`שגיאה בסייר: ${e.message}`));
+      await scanAbroad().catch((e) => log(`שגיאה בחו"ל: ${e.message}`));
       db.lastCycle = new Date().toISOString();
       db.stats.cycles++;
       await healthAlerts();
@@ -209,6 +211,44 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
       await browser.close();
       running = false;
     }
+  }
+
+  // ---------- הופעות בחו"ל (ממשקים רשמיים) ----------
+  /** כל כמה שעות: אמנים שעוקבים אחריהם + אמנים מובילים מהעולם → הופעות חדשות, מכירה בקרוב, מחיר יורד. */
+  async function scanAbroad(force = false) {
+    if (!intlEnabled(cfg)) return;
+    const every = (cfg.intl?.everyHours ?? 4) * 3600 * 1000;
+    if (!force && db.intlLastScan && Date.now() - Date.parse(db.intlLastScan) < every) return;
+    db.intlLastScan = new Date().toISOString();
+    db.intlSeen ||= {};
+    const followers = new Map(); // אמן → מי עוקב
+    for (const f of db.follows || []) followers.set(f.kw, [...(followers.get(f.kw) || []), f.owner]);
+    const starList = cfg.stars === false ? [] : STARS.filter((s) => s.region === 'world' || cfg.intl?.israeliStars).map((s) => s.name);
+    const artists = [...new Set([...followers.keys(), ...starList])];
+    log(`[חו"ל] בודק ${artists.length} אמנים`);
+    for (const artist of artists) {
+      const shows = await searchArtistAbroad(cfg, artist);
+      const firstRun = !db.intlSeen[artist];
+      db.intlSeen[artist] = new Date().toISOString();
+      const changes = diffShows(db, shows, { firstRun });
+      if (!changes.length) continue;
+      const urgent = changes.some((c) => ['onsale', 'presale'].includes(c.kind));
+      const text = formatChanges(artist, changes);
+      const to = followers.get(artist);
+      if (to) for (const owner of new Set(to)) await notify(text, { to: owner, urgent });
+      else await notify(text, { urgent });
+      save(db);
+    }
+  }
+
+  /** חיפוש מיידי בחו"ל לאמן (ל-/follow ול-/abroad). */
+  async function abroadNow(artist, to) {
+    const shows = await searchArtistAbroad(cfg, artist);
+    db.intlSeen ||= {};
+    db.intlSeen[artist] = new Date().toISOString();
+    diffShows(db, shows, { firstRun: true }); // מכאן והלאה – רק שינויים
+    save(db);
+    await notify(formatExisting(artist, shows), { to });
   }
 
   let hotRunning = false;
@@ -265,6 +305,9 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
   const handlers = (pending) => ({
     onWatch: (url, q, { from, maxPrice } = {}) => {
       const site = siteFor(url);
+      if (site?.level === 'api') {
+        return `🌍 <b>${esc(site.name)}</b> חוסם גלישה אוטומטית, אבל אני עוקב אחריו דרך הממשק הרשמי שלו.\nשלח: <code>/abroad שם האמן</code> או <code>עקוב אחרי שם האמן</code> – ואקבל תאריכים, מתי נפתחת המכירה ומחירים.${intlEnabled(cfg) ? '' : '\n\n⚠️ צריך קודם מפתח חינמי – ההסבר במדריך, סעיף "הופעות בחו"ל".'}`;
+      }
       if (site && ['blocked', 'down', 'guide'].includes(site.level)) {
         const why = { blocked: 'חוסם סוכנים אוטומטיים, ואני לא עוקף הגנות כאלה', down: 'לא נגיש מהסוכן', guide: 'הוא מנוע חיפוש שמפנה לאתרים אחרים – שלח לי את הקישור לאתר המכירה עצמו' }[site.level];
         return `${LEVELS[site.level].icon} <b>${esc(site.name)}</b> ${why}.\n\nלרשימת האתרים שאני עובד איתם: /sites`;
@@ -301,7 +344,7 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
       return '🔍 בודק את כל המופעים עכשיו...';
     },
     onStatus: () => statusText(),
-    onSites: () => sitesText(db),
+    onSites: () => sitesText(db, cfg),
     onStars: () => starsText(),
     onFollow: (kw, from) => {
       if (!kw) return 'כתוב את שם האמן אחרי הפקודה, למשל:\n<code>/follow שלמה ארצי</code>';
@@ -322,7 +365,14 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
           const m = existingShowsMessage(db, kw);
           if (m) await notify(m.text, { to: from, buttons: m.buttons });
         });
-      return `⭐ <b>עוקב אחרי ${esc(kw)}</b>\nכשיעלה מופע חדש שלו באחד האתרים – אשלח לך הודעה מיד.\nאזהה אותו גם כשהשם כתוב באנגלית או בעברית (לפי הצליל).\n\n🔍 ${existing ? 'בודק אם יש לו הופעות קיימות...' : 'סורק עכשיו את האתרים לחפש הופעות קיימות (כמה דקות)...'}\n\nהרשימה שלך: /follows`;
+      if (intlEnabled(cfg)) pending.push(() => abroadNow(kw, from));
+      return `⭐ <b>עוקב אחרי ${esc(kw)}</b>\nכשיעלה מופע חדש שלו באחד האתרים – אשלח לך הודעה מיד.\nאזהה אותו גם כשהשם כתוב באנגלית או בעברית (לפי הצליל).\n\n🔍 ${existing ? 'בודק אם יש לו הופעות קיימות...' : 'סורק עכשיו את האתרים לחפש הופעות קיימות (כמה דקות)...'}${intlEnabled(cfg) ? '\n🌍 בודק גם הופעות בחו"ל (Ticketmaster / SeatGeek)...' : ''}\n\nהרשימה שלך: /follows`;
+    },
+    onAbroad: (artist, from) => {
+      if (!artist) return 'כתוב שם אמן, למשל: <code>/abroad Coldplay</code>';
+      if (!intlEnabled(cfg)) return `🌍 <b>חיפוש בחו"ל עוד לא מחובר</b>\nצריך מפתח חינמי של Ticketmaster ו/או SeatGeek – ההסבר במדריך (README) בסעיף "הופעות בחו"ל".`;
+      pending.push(() => abroadNow(artist, from));
+      return `🌍 מחפש את ${esc(artist)} בחו"ל...`;
     },
     onUnfollow: (kw, from) => (unfollow(db, from, kw) ? (save(db), `הפסקתי לעקוב אחרי ${esc(kw)}.`) : 'לא מצאתי את זה ברשימה שלך. שלח /follows.'),
     onFollows: (from) => {

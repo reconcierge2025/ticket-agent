@@ -11,6 +11,7 @@ import { matchesArtist } from '../src/translit.js';
 import { STARS, starFor } from '../src/artists.js';
 import { artistOfPage } from '../src/discover.js';
 import { saveCatalog, existingShowsMessage } from '../src/scout.js';
+import { parseTicketmaster, parseSeatgeek, diffShows, formatChanges } from '../src/intl.js';
 import { parseCommand } from '../src/bot.js';
 import { parseQueueText } from '../src/queue.js';
 
@@ -180,6 +181,41 @@ test('הופעות קיימות כשמוסיפים אמן', () => {
   assert.ok(m.buttons[0][0].data.startsWith('w:'));
   assert.match(existingShowsMessage(db, 'עומר אדם').text, /אין הופעות/);
   assert.equal(existingShowsMessage({}, 'x'), null);
+});
+
+test('חו"ל: Ticketmaster + SeatGeek, שינויים והודעות', () => {
+  const tmJson = {
+    _embedded: {
+      events: [
+        {
+          id: 'G5v', name: 'Coldplay: Music of the Spheres World Tour', url: 'https://www.ticketmaster.co.uk/x',
+          dates: { start: { localDate: '2027-06-12', localTime: '19:30:00' }, status: { code: 'onsale' } },
+          sales: { public: { startDateTime: '2026-11-07T09:00:00Z' }, presales: [{ name: 'Artist Presale', startDateTime: '2026-11-06T20:00:00Z' }] },
+          priceRanges: [{ min: 85, max: 250, currency: 'GBP' }],
+          _embedded: { venues: [{ name: 'Wembley Stadium', city: { name: 'London' }, country: { countryCode: 'GB' } }], attractions: [{ name: 'Coldplay' }] },
+        },
+        { id: 'X', name: 'Coldplay Tribute Night', url: 'u', dates: { start: { localDate: '2027-01-01' } }, _embedded: { venues: [{}], attractions: [{ name: 'Viva la Vida Band' }] } },
+      ],
+    },
+  };
+  const tm = parseTicketmaster(tmJson, 'Coldplay');
+  assert.equal(tm.length, 1, 'מופע מחווה מסונן')
+  assert.deepEqual([tm[0].city, tm[0].country, tm[0].minPrice, tm[0].currency], ['London', 'GB', 85, 'GBP']);
+  const sg = parseSeatgeek({ events: [{ id: 1, title: 'Coldplay', datetime_local: '2027-07-01T20:00:00', url: 'https://seatgeek.com/x', venue: { name: 'MetLife Stadium', city: 'East Rutherford', country: 'US' }, stats: { lowest_price: 120, highest_price: 900, listing_count: 340 }, performers: [{ name: 'Coldplay' }] }] }, 'קולדפליי');
+  assert.equal(sg.length, 1, 'שם בעברית מוצא את Coldplay');
+  assert.equal(sg[0].listings, 340);
+
+  const db = {};
+  const now = Date.parse('2026-11-06T12:00:00Z');
+  assert.equal(diffShows(db, [tm[0]], { firstRun: true, now: now - 2 * 86400000 }).length, 0, 'פעם ראשונה – רק לומד');
+  const ch = diffShows(db, [{ ...tm[0], minPrice: 70 }, sg[0]], { now });
+  const kinds = ch.map((c) => c.kind).sort();
+  assert.deepEqual(kinds, ['cheaper', 'new', 'onsale', 'presale']);
+  const text = formatChanges('Coldplay', ch);
+  assert.match(text, /המכירה נפתחת בקרוב/);
+  assert.match(text, /Wembley Stadium, London/);
+  assert.match(text, /🇬🇧/);
+  assert.equal(diffShows(db, [{ ...tm[0], minPrice: 70 }], { now }).length, 0, 'לא מזכיר פעמיים');
 });
 
 test('קריאת מיקום בתור', () => {

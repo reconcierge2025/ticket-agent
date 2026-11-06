@@ -13,6 +13,7 @@ export const LEVELS = {
   full: { icon: '🟢', he: 'מלאה: מושבים, שורות קרובות ומצב קנייה' },
   seats: { icon: '🟢', he: 'מושבים ושורות קרובות' },
   listings: { icon: '🟡', he: 'כרטיסים למכירה לפי אזור ושורה' },
+  api: { icon: '🌍', he: 'דרך ממשק רשמי: תאריכים, פתיחת מכירה, מחירים (בלי מפת מושבים)' },
   avail: { icon: '🟡', he: 'זמינות ומחיר' },
   guide: { icon: '🔵', he: 'מנוע חיפוש – מפנה לאתרים' },
   blocked: { icon: '⛔', he: 'חוסם סוכנים אוטומטיים' },
@@ -42,8 +43,8 @@ export const SITES = [
   { name: 'Etix', domains: ['etix.com'], region: 'us', level: 'avail', adapter: 'avail' },
   { name: 'ShowClix / Leap', domains: ['showclix.com', 'leapevents.com'], region: 'us', level: 'avail', adapter: 'avail' },
   { name: 'Gametime', domains: ['gametime.co'], region: 'us', level: 'avail', adapter: 'avail', note: 'שוק משני' },
-  { name: 'Ticketmaster', domains: ['ticketmaster.com'], region: 'us', level: 'blocked' },
-  { name: 'Live Nation', domains: ['livenation.com'], region: 'us', level: 'blocked' },
+  { name: 'Ticketmaster', domains: ['ticketmaster.com', 'ticketmaster.ca', 'ticketmaster.de', 'ticketmaster.nl', 'ticketmaster.fr', 'ticketmaster.es', 'ticketmaster.com.au'], region: 'us', level: 'api', note: 'Ticketmaster Discovery API · /abroad' },
+  { name: 'Live Nation', domains: ['livenation.com'], region: 'us', level: 'api', note: 'דרך Ticketmaster API' },
   { name: 'AXS', domains: ['axs.com'], region: 'us', level: 'blocked' },
   { name: 'Dice', domains: ['dice.fm'], region: 'us', level: 'blocked' },
   { name: 'TicketWeb', domains: ['ticketweb.com'], region: 'us', level: 'blocked' },
@@ -56,7 +57,7 @@ export const SITES = [
   { name: 'MyTicket', domains: ['myticket.co.uk', 'myticket.de'], region: 'eu', level: 'avail', adapter: 'avail' },
   { name: 'Ents24', domains: ['ents24.com'], region: 'eu', level: 'guide' },
   { name: 'Eventim', domains: ['eventim.com', 'eventim.de'], region: 'eu', level: 'blocked' },
-  { name: 'Ticketmaster UK', domains: ['ticketmaster.co.uk'], region: 'eu', level: 'blocked' },
+  { name: 'Ticketmaster UK', domains: ['ticketmaster.co.uk', 'ticketmaster.ie'], region: 'eu', level: 'api', note: 'Ticketmaster Discovery API' },
   { name: 'See Tickets UK', domains: ['seetickets.com'], region: 'eu', level: 'blocked' },
   { name: 'Gigs and Tours', domains: ['gigsandtours.com'], region: 'eu', level: 'blocked' },
   { name: 'Skiddle', domains: ['skiddle.com'], region: 'eu', level: 'blocked' },
@@ -69,7 +70,7 @@ export const SITES = [
   { name: 'Songkick', domains: ['songkick.com'], region: 'resale', level: 'guide' },
   { name: 'StubHub', domains: ['stubhub.com'], region: 'resale', level: 'blocked' },
   { name: 'Viagogo', domains: ['viagogo.com'], region: 'resale', level: 'blocked' },
-  { name: 'SeatGeek', domains: ['seatgeek.com'], region: 'resale', level: 'blocked' },
+  { name: 'SeatGeek', domains: ['seatgeek.com'], region: 'resale', level: 'api', note: 'SeatGeek API: מחיר הכי זול + כמות כרטיסים' },
   { name: 'TickPick', domains: ['tickpick.com'], region: 'resale', level: 'blocked' },
   { name: 'Vivid Seats', domains: ['vividseats.com'], region: 'resale', level: 'blocked' },
   { name: 'TicketSwap', domains: ['ticketswap.com'], region: 'resale', level: 'blocked' },
@@ -90,7 +91,7 @@ export function siteFor(url) {
 }
 
 /** הודעת /sites – כל האתרים לפי אזור ורמת תמיכה, כולל מה שהסוכן למד ומצא לבד. */
-export function sitesText(db = {}) {
+export function sitesText(db = {}, cfg = {}) {
   const lines = ['🌐 <b>האתרים שאני מכיר</b>', ''];
   for (const [lvl, { icon, he }] of Object.entries(LEVELS)) if (lvl !== 'seats') lines.push(`${icon} ${he}`);
   for (const [region, title] of Object.entries(REGIONS)) {
@@ -110,6 +111,9 @@ export function sitesText(db = {}) {
     lines.push('', '<b>🔎 מצאתי לבד</b> (עוד לא נוסו על מופע – שלח קישור)');
     for (const [host, c] of cands.slice(-15)) lines.push(`${c.kind === 'avail' ? '🟡' : '🟢'} ${host}${c.title ? ` – <i>${c.title.slice(0, 40)}</i>` : ''}`);
   }
+  const tm = process.env.TICKETMASTER_API_KEY || cfg.apis?.ticketmasterKey;
+  const sg = process.env.SEATGEEK_CLIENT_ID || cfg.apis?.seatgeekClientId;
+  lines.push('', `<b>🌍 ממשקים רשמיים:</b> Ticketmaster ${tm ? '✅ מחובר' : '⚪ צריך מפתח'} · SeatGeek ${sg ? '✅ מחובר' : '⚪ צריך מפתח'}`);
   const n = (l) => SITES.filter((s) => l.includes(s.level)).length;
   lines.push('', `סה"כ ${SITES.length} אתרים: ${n(['full', 'seats'])} עם מושבים, ${n(['listings', 'avail'])} זמינות/רשימות, ${n(['guide'])} מנועי חיפוש, ${n(['blocked', 'down'])} חוסמים/לא נגישים.`);
   lines.push('', '💡 שלח לי קישור למופע מכל אתר 🟢/🟡 – וגם מאתר שלא ברשימה: אנסה לזהות אותו לבד.');

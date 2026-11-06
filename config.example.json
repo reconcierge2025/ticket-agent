@@ -6,6 +6,8 @@
   "headless": true,
   "browserChannel": "msedge",
   "checkEveryMinutes": 60,
+  "apis": { "ticketmasterKey": "", "seatgeekClientId": "" },
+  "intl": { "everyHours": 4, "countries": [], "israeliStars": false },
   "hotEveryMinutes": 3,
   "politeDelayMs": 1500,
   "heartbeatHour": 9,
