@@ -16,6 +16,7 @@ export const HELP = `👋 <b>אני סוכן הכרטיסים שלך</b>
 /remove &lt;מספר&gt; – הסרה מהמעקב
 /check – לבדוק הכל עכשיו
 /follow &lt;אמן&gt; – הודעה כשעולה לו מופע חדש (או פשוט: <code>עקוב אחרי שלמה ארצי</code>) · /follows – הרשימה
+/stars – 100 אמנים מובילים שאני עוקב אחריהם אוטומטית
 /sites – האתרים שאני מכיר (כולל מה שלמדתי ומצאתי לבד)
 /status – מצב המערכת
 /myid – מספר הצ'אט שלך`;
@@ -109,6 +110,7 @@ export async function handleUpdates(cfg, updates, h, offset = 0) {
       else if (c.cmd === 'follow') await reply(await h.onFollow(c.rest, from));
       else if (c.cmd === 'unfollow') await reply(await h.onUnfollow(c.rest, from));
       else if (c.cmd === 'follows') await reply(await h.onFollows(from));
+      else if (c.cmd === 'stars') await reply(await h.onStars(from));
       else await reply('לא הבנתי 🤔\n\n' + HELP);
     } catch (e) {
       log(`שגיאה בטיפול בהודעה: ${e.message}`);
@@ -122,6 +124,7 @@ export const COMMANDS = [
   ['list', 'המופעים שלי במעקב'],
   ['follow', 'לעקוב אחרי אמן – הודעה כשעולה לו מופע'],
   ['follows', 'האמנים שאני עוקב אחריהם'],
+  ['stars', '100 האמנים המובילים שהסוכן עוקב אחריהם'],
   ['unfollow', 'להפסיק לעקוב אחרי אמן'],
   ['sale', 'מצב קנייה: קישור + כמות (+ שעה)'],
   ['hot', 'מעקב צפוף למופע: מספר מהרשימה'],

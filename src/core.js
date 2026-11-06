@@ -6,7 +6,8 @@ import { siteFor, sitesText, LEVELS } from './sites.js';
 import { launchScanner } from './browser.js';
 import { checkEvent, pickAdapter, targetRowOf, esc } from './check.js';
 import { rowNum } from './seats.js';
-import { announceNewShows, probeNewSites, follow, unfollow, followsOf, linkFor } from './scout.js';
+import { announceNewShows, announceStars, probeNewSites, follow, unfollow, followsOf, linkFor, saveCatalog, existingShowsMessage } from './scout.js';
+import { starsText } from './artists.js';
 import { discover, eventKey, explainEmpty } from './discover.js';
 import * as watches from './watches.js';
 
@@ -175,7 +176,11 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
         const n = found.filter((e) => e.name.startsWith(`${site.name}:`)).length;
         track(`סריקה: ${site.name}`, n > 0, n ? null : explainEmpty(site.listUrl));
       }
-      await announceNewShows(db, cfg, found, notify).catch((e) => log(`שגיאה במופעים חדשים: ${e.message}`));
+      saveCatalog(db, found);
+      // אמנים מובילים (גם הופעות קיימות) – ואז "מופעים חדשים" בלי מה שכבר דווח כאן
+      const starShows = await announceStars(db, cfg, found, notify).catch((e) => (log(`שגיאה באמנים מובילים: ${e.message}`), []));
+      const starKeys = new Set(starShows.map((e) => eventKey(e.url)));
+      await announceNewShows(db, cfg, found, notify, starKeys).catch((e) => log(`שגיאה במופעים חדשים: ${e.message}`));
       const myKeys = new Set(mine.map((e) => eventKey(e.url)));
       const events = [...mine, ...found.filter((e) => !myKeys.has(eventKey(e.url)))];
       log(`סבב בדיקה: ${mine.length} במעקב + ${events.length - mine.length} מהסריקה הכללית`);
@@ -297,11 +302,27 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
     },
     onStatus: () => statusText(),
     onSites: () => sitesText(db),
+    onStars: () => starsText(),
     onFollow: (kw, from) => {
       if (!kw) return 'כתוב את שם האמן אחרי הפקודה, למשל:\n<code>/follow שלמה ארצי</code>';
       follow(db, from, kw);
       save(db);
-      return `⭐ <b>עוקב אחרי ${esc(kw)}</b>\nכשיעלה מופע חדש שלו באחד האתרים – אשלח לך הודעה מיד.\nאזהה אותו גם כשהשם כתוב באנגלית או בעברית (לפי הצליל).\n\nהרשימה שלך: /follows`;
+      // חיפוש מיידי של הופעות קיימות: מהקטלוג, ואם אין עדיין קטלוג – סריקה עכשיו
+      const existing = existingShowsMessage(db, kw);
+      if (existing) pending.push(() => notify(existing.text, { to: from, buttons: existing.buttons }));
+      else
+        pending.push(async () => {
+          const browser = await launchScanner(cfg);
+          try {
+            saveCatalog(db, await discover(browser, cfg));
+            save(db);
+          } finally {
+            await browser.close();
+          }
+          const m = existingShowsMessage(db, kw);
+          if (m) await notify(m.text, { to: from, buttons: m.buttons });
+        });
+      return `⭐ <b>עוקב אחרי ${esc(kw)}</b>\nכשיעלה מופע חדש שלו באחד האתרים – אשלח לך הודעה מיד.\nאזהה אותו גם כשהשם כתוב באנגלית או בעברית (לפי הצליל).\n\n🔍 ${existing ? 'בודק אם יש לו הופעות קיימות...' : 'סורק עכשיו את האתרים לחפש הופעות קיימות (כמה דקות)...'}\n\nהרשימה שלך: /follows`;
     },
     onUnfollow: (kw, from) => (unfollow(db, from, kw) ? (save(db), `הפסקתי לעקוב אחרי ${esc(kw)}.`) : 'לא מצאתי את זה ברשימה שלך. שלח /follows.'),
     onFollows: (from) => {

@@ -54,7 +54,9 @@ function dist(a, b) {
     for (let j = 1; j <= b.length; j++) d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
   return d[a.length][b.length];
 }
-const close = (a, b) => a === b || (Math.min(a.length, b.length) >= 2 && dist(a, b) <= 1);
+// התאמה של מילה: זהה; או זהה בלי K בהתחלה (h באנגלית מול ה שקטה: Hadag/הדג);
+// או – רק במילים ארוכות (4+ עיצורים) – הבדל של אות אחת. מילים קצרות חייבות להיות זהות.
+const close = (a, b) => a === b || a.replace(/^K/, '') === b.replace(/^K/, '') || (Math.min(a.length, b.length) >= 4 && dist(a, b) <= 1);
 
 const plain = (s) => String(s).toLowerCase().replace(/["'״׳]/g, '').replace(/\s+/g, ' ').trim();
 
@@ -66,8 +68,10 @@ export function matchesArtist(artist, eventName) {
   if (plain(eventName).includes(plain(artist))) return true;
   const a = keys(artist);
   if (!a.length || a.join('').length < 2) return false;
-  // שם קצר (Rita = RT) – רק התאמה מדויקת של הצליל, בלי סבילות לאות שונה
+  // שם קצר (Rita = RT) – רק התאמה מדויקת של הצליל
   const same = a.join('').length < 4 ? (x, y) => x === y : close;
+  // שם של מילה אחת – רק כשהשלד ארוך מספיק כדי לא לתפוס מילים מקריות
+  if (a.length === 1 && a[0].length < 2) return false;
   const e = keys(eventName);
   for (let i = 0; i + a.length <= e.length; i++) if (a.every((k, j) => same(k, e[i + j]))) return true;
   return false;

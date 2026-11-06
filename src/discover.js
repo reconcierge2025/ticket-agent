@@ -23,12 +23,25 @@ async function linksOf(browser, url) {
       title: (await page.title().catch(() => '')).slice(0, 60),
       textLength: await page.evaluate(() => document.body?.innerText?.length || 0).catch(() => 0),
     };
-    return await page.$$eval('a[href]', (els) =>
-      els.map((a) => ({ url: a.href.split('#')[0], text: (a.innerText || a.title || '').trim().replace(/\s+/g, ' ') }))
+    const links = await page.$$eval('a[href]', (els) =>
+      els.map((a) => ({ url: a.href.split('#')[0], text: (a.innerText || a.title || a.querySelector('img')?.alt || '').trim().replace(/\s+/g, ' ') }))
     );
+    // שם האמן מהכותרת הראשית של העמוד (בעמוד אמן, הקישורים לתאריכים מכילים רק תאריך ואולם)
+    links.heading = await page
+      .evaluate(() => (document.querySelector('h1')?.innerText || '').trim().split('\n')[0])
+      .catch(() => '');
+    links.title = lastPageInfo[url].title;
+    return links;
   } finally {
     await page.close();
   }
+}
+
+/** שם האמן מעמוד אמן: הכותרת הראשית, ואם אין – תחילת כותרת הדף ("שלמה ארצי הופעות - ..." → "שלמה ארצי"). */
+export function artistOfPage(heading, title) {
+  const h = String(heading || '').trim();
+  if (h && h.length <= 60 && !/^(כרטיסים|הופעות|tickets?)\b/i.test(h)) return h;
+  return String(title || '').split(/\s+הופעות|\s+כרטיסים|\s[|–-]\s/)[0].trim().slice(0, 60);
 }
 
 /**
@@ -80,16 +93,29 @@ export async function discover(browser, cfg) {
       const found = new Map();
       const top = await linksOf(browser, site.listUrl);
       noteExternal(site.listUrl, top);
-      for (const l of top) if (eventRe.test(l.url) && wanted(l)) found.set(l.url, l.text);
+      // אותו קישור מופיע לפעמים כמה פעמים (תמונה בלי טקסט + כותרת) – לוקחים את הטקסט הארוך
+      const keep = (url, text) => {
+        if (!found.has(url) || (text || '').length > (found.get(url) || '').length) found.set(url, text || '');
+      };
+      for (const l of top) if (eventRe.test(l.url) && wanted(l)) keep(l.url, l.text);
 
       if (pageRe) {
-        const pages = [...new Map(top.filter((l) => pageRe.test(l.url) && l.url !== site.listUrl && wanted(l)).map((l) => [l.url, l])).values()];
-        for (const p of pages.slice(0, site.maxPages ?? 30)) {
+        const byUrl = new Map();
+        for (const l of top.filter((l) => pageRe.test(l.url) && l.url !== site.listUrl && wanted(l))) {
+          if (!byUrl.has(l.url) || l.text.length > byUrl.get(l.url).text.length) byUrl.set(l.url, l);
+        }
+        for (const p of [...byUrl.values()].slice(0, site.maxPages ?? 30)) {
           try {
             const links = await linksOf(browser, p.url);
             noteExternal(p.url, links);
+            const artist = artistOfPage(links.heading, links.title) || p.text;
             for (const l of links) {
-              if (eventRe.test(l.url) && !found.has(l.url)) found.set(l.url, `${p.text || ''} ${l.text}`.trim());
+              if (!eventRe.test(l.url)) continue;
+              // קישור של האמן עצמו = רק תאריך/אולם ("27.11 שישי 13:00 ...") → מוסיפים את שם האמן.
+              // קישור עם שם משלו (המלצה על מופע אחר באותו עמוד) – נשאר עם השם שלו.
+              const dateOnly = !l.text || /^\d{1,2}[./]\d{1,2}/.test(l.text);
+              if (dateOnly) found.set(l.url, [artist, l.text].filter(Boolean).join(' · '));
+              else keep(l.url, l.text);
             }
           } catch (e) {
             log(`  ${site.name}: דילוג על ${p.url} (${e.message.split('\n')[0]})`);

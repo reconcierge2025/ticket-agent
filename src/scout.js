@@ -4,6 +4,7 @@ import { siteFor } from './sites.js';
 import { esc } from './check.js';
 import { log } from './config.js';
 import { matchesArtist } from './translit.js';
+import { starFor } from './artists.js';
 
 const norm = (s) => String(s || '').toLowerCase().replace(/["'״׳]/g, '').trim();
 
@@ -40,9 +41,9 @@ function shortId(db, url) {
  * - מי שעוקב אחרי אמן מקבל הודעה אישית כשעולה לו מופע
  * - כולם מקבלים סיכום "🆕 עלו מופעים חדשים" (אפשר לכבות: newShowsDigest=false)
  */
-export async function announceNewShows(db, cfg, found, notify) {
+export async function announceNewShows(db, cfg, found, notify, skipKeys = new Set()) {
   db.known ||= {};
-  const fresh = found.filter((e) => !db.known[eventKey(e.url)]);
+  const fresh = found.filter((e) => !db.known[eventKey(e.url)] && !skipKeys.has(eventKey(e.url)));
   const firstRun = !db.knownSeeded;
   for (const e of found) db.known[eventKey(e.url)] ||= new Date().toISOString();
   db.knownSeeded = true;
@@ -72,6 +73,62 @@ export async function announceNewShows(db, cfg, found, notify) {
 }
 
 export const linkFor = (db, id) => db.links?.[id] || null;
+
+/** הקטלוג: כל המופעים מהסריקה האחרונה (לחיפוש מיידי כשמוסיפים אמן). */
+export function saveCatalog(db, found) {
+  db.catalog = { at: new Date().toISOString(), events: found.map((e) => ({ name: e.name, url: e.url })) };
+}
+
+/** הופעות קיימות של אמן בקטלוג → הודעה + כפתורי "👀 עקוב". null אם אין קטלוג עדיין. */
+export function existingShowsMessage(db, artist) {
+  if (!db.catalog?.events?.length) return null;
+  const hits = db.catalog.events.filter((e) => matchesArtist(artist, e.name));
+  const nameOf = (e) => e.name.split(': ').slice(1).join(': ') || e.name;
+  if (!hits.length) return { text: `🔍 כרגע אין הופעות של ${esc(artist)} באתרים שאני סורק.\nאודיע לך ברגע שתעלה הופעה.` };
+  return {
+    text:
+      `🎤 <b>מצאתי ${hits.length === 1 ? 'הופעה קיימת' : `${hits.length} הופעות קיימות`} של ${esc(artist)}:</b>\n\n` +
+      hits.slice(0, 10).map((e) => `🎟️ <a href="${esc(e.url)}">${esc(nameOf(e).slice(0, 60))}</a> · ${esc(e.name.split(': ')[0])}`).join('\n') +
+      '\n\nלחץ 👀 ואבדוק את המקומות הכי קרובים בכל התאריכים.',
+    buttons: hits.slice(0, 5).map((e) => [{ text: `👀 ${nameOf(e).slice(0, 30)}`, data: `w:${shortId(db, e.url)}` }]),
+  };
+}
+
+// ---------- אמנים מובילים ----------
+/**
+ * הופעות של אמנים מהרשימה המובנית (artists.js) – גם קיימות וגם חדשות.
+ * כל מופע מדווח פעם אחת בלבד. מחזיר את המופעים שדווחו (כדי שלא יופיעו שוב ב"מופעים חדשים").
+ */
+export async function announceStars(db, cfg, found, notify) {
+  if (cfg.stars === false) return [];
+  db.starSeen ||= {};
+  const hits = [];
+  for (const e of found) {
+    const key = eventKey(e.url);
+    if (db.starSeen[key]) continue;
+    const star = starFor(e.name);
+    if (!star) continue;
+    db.starSeen[key] = new Date().toISOString();
+    hits.push({ e, star });
+  }
+  if (!hits.length) return [];
+  const nameOf = (e) => e.name.split(': ').slice(1).join(': ') || e.name;
+  const site = (e) => e.name.split(': ')[0];
+  const byStar = new Map();
+  for (const h of hits) byStar.set(h.star.name, [...(byStar.get(h.star.name) || []), h.e]);
+  const lines = [`⭐ <b>הופעות של אמנים מובילים (${byStar.size})</b>`];
+  for (const [name, evs] of [...byStar].slice(0, 15)) {
+    lines.push('', `🎤 <b>${esc(name)}</b>`);
+    for (const e of evs.slice(0, 3)) lines.push(`   <a href="${esc(e.url)}">${esc(nameOf(e).slice(0, 55))}</a> · ${esc(site(e))}`);
+  }
+  if (byStar.size > 15) lines.push('', `ועוד ${byStar.size - 15} אמנים...`);
+  lines.push('', 'לחץ 👀 כדי שאבדוק את המקומות הכי קרובים ואעקוב אחרי המופע.');
+  await notify(lines.join('\n'), {
+    urgent: false,
+    buttons: hits.slice(0, 6).map(({ e, star }) => [{ text: `👀 ${star.name}: ${nameOf(e).slice(0, 22)}`, data: `w:${shortId(db, e.url)}` }]),
+  });
+  return hits.map((h) => h.e);
+}
 
 // ---------- אתרים חדשים שהסוכן מוצא לבד ----------
 const BLOCK = /access denied|attention required|verify you are human|captcha|just a moment|forbidden|blocked|רק רגע/i;

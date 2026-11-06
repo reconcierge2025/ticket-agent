@@ -8,6 +8,9 @@ import { readAvailability } from '../src/adapters/avail.js';
 import { parseListings } from '../src/adapters/ticketnetwork.js';
 import { announceNewShows, follow, unfollow } from '../src/scout.js';
 import { matchesArtist } from '../src/translit.js';
+import { STARS, starFor } from '../src/artists.js';
+import { artistOfPage } from '../src/discover.js';
+import { saveCatalog, existingShowsMessage } from '../src/scout.js';
 import { parseCommand } from '../src/bot.js';
 import { parseQueueText } from '../src/queue.js';
 
@@ -145,6 +148,38 @@ test('שם אמן בעברית ↔ אנגלית לפי צליל', () => {
     ['Coldplay', 'Cold War Kids'],
   ];
   for (const [a, e] of no) assert.equal(matchesArtist(a, e), false, `${a} ≠ ${e}`);
+});
+
+test('אמנים מובילים: זיהוי בשתי השפות בלי התאמות שגויות', () => {
+  assert.ok(STARS.length >= 100);
+  assert.equal(starFor('ביונסה - Renaissance Tour')?.name, 'Beyoncé');
+  assert.equal(starFor('Ed Sheeran: Mathematics Tour')?.name, 'Ed Sheeran');
+  assert.equal(starFor('אד שירן בפארק הירקון')?.name, 'Ed Sheeran');
+  assert.equal(starFor('Coldplay')?.name, 'Coldplay');
+  assert.equal(starFor('עומר אדם · 31.12 21:00 היכל מנורה')?.name, 'עומר אדם');
+  assert.equal(starFor('Omer Adam Live')?.name, 'עומר אדם');
+  assert.equal(starFor('אודיה בקיסריה')?.name, 'אודיה');
+  assert.equal(starFor('Lana Del Rey')?.name, 'Lana Del Rey'); // לא Adele
+  assert.equal(starFor('ערב שירי ארץ ישראל'), null);
+  assert.equal(starFor('ECHOES PINK FLOYD - GREATEST HITS'), null);
+  assert.equal(starFor('DIRTY POP - מופע מחווה לסצינת הפופ'), null);
+  assert.equal(starFor('Pink - Summer Carnival')?.name, 'Pink');
+  assert.equal(starFor('פסטיבל הפסנתר'), null);
+});
+
+test('שם אמן מעמוד אמן', () => {
+  assert.equal(artistOfPage('שלמה ארצי', 'שלמה ארצי הופעות - הזמנת כרטיסים'), 'שלמה ארצי');
+  assert.equal(artistOfPage('', 'שלמה ארצי הופעות - הזמנת כרטיסים באתר הרשמי'), 'שלמה ארצי');
+});
+
+test('הופעות קיימות כשמוסיפים אמן', () => {
+  const db = {};
+  saveCatalog(db, [{ name: 'קופת ת"א: שלמה ארצי · 31.12 היכל מנורה', url: 'https://a.co/booking/features/441?prsntId=1' }, { name: 'Ticketmaster: ברי סחרוף', url: 'https://tm/event/X' }]);
+  const m = existingShowsMessage(db, 'Shlomo Artzi');
+  assert.match(m.text, /מצאתי הופעה קיימת/);
+  assert.ok(m.buttons[0][0].data.startsWith('w:'));
+  assert.match(existingShowsMessage(db, 'עומר אדם').text, /אין הופעות/);
+  assert.equal(existingShowsMessage({}, 'x'), null);
 });
 
 test('קריאת מיקום בתור', () => {
