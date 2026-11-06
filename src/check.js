@@ -2,15 +2,18 @@
 // checkEvent – סריקה שקטה (כל שעה): המקומות הכי קרובים בכל אזור, לכל כמות (2–5), ושומר "שיא".
 // runLive    – מצב קנייה: חלון גלוי עם ההתחברות שלך, מחכה בתור, מוצא מקומות ומביא אותך אליהם.
 import { findBestOptions, rowNum } from './seats.js';
-import { updateBest, once, save } from './storage.js';
+import { updateBest, updateAvail, once, save } from './storage.js';
+import { siteFor } from './sites.js';
 import { inQueue, waitThroughQueue } from './queue.js';
 import { getBuyContext } from './browser.js';
 import { log } from './config.js';
 
-const SITE_ADAPTERS = ['kupat', 'ticketmaster'];
+const SITE_ADAPTERS = ['kupat', 'ticketmaster', 'bravo', 'leaan', 'ticketnetwork'];
 
 export async function pickAdapter(event) {
   if (event.site && !['auto', 'generic'].includes(event.site)) return import(`./adapters/${event.site}.js`);
+  const known = siteFor(event.url);
+  if (known?.adapter) return import(`./adapters/${known.adapter}.js`);
   for (const name of SITE_ADAPTERS) {
     const mod = await import(`./adapters/${name}.js`);
     if (mod.matches(event.url)) return mod;
@@ -54,7 +57,17 @@ export async function checkEvent(browser, event, ctx) {
     }
 
     const seats = await adapter.getSeats(page, event, data);
-    const options = findBestOptions(seats, event);
+
+    // אתר בלי מקומות מסומנים → זמינות ומחיר
+    if (adapter.kind === 'avail' && !seats.length) {
+      const avail = await adapter.getAvailability(page, event);
+      const availChange = updateAvail(db, event, avail);
+      return { event, status: avail.available ? 'available' : avail.soldOut ? 'soldout' : 'none', seats: [], options: [], improved: [], avail, availChange };
+    }
+
+    if (adapter.zonesFor) event = { ...event, zones: adapter.zonesFor(seats) };
+    let options = findBestOptions(seats, event);
+    if (adapter.kind === 'listings') options = options.map((o) => ({ ...o, listing: true, currency: o.items?.[0]?.currency }));
     const improved = updateBest(db, event, options);
     return { event, status: options.length ? 'found' : 'none', seats, options, improved };
   } finally {
@@ -64,8 +77,11 @@ export async function checkEvent(browser, event, ctx) {
 
 /** תיאור קצר של אפשרות: "אולם 5 · שורה 2 · מושבים 7–8 · 329 ₪" */
 export function describe(o) {
+  const cur = o.currency || '₪';
+  const p = o.prices?.find(Boolean);
+  const price = p ? ` · ${cur === '₪' ? `${p} ₪` : `${cur}${p}`}` : '';
+  if (o.listing) return `${o.section} · שורה ${o.row} · ${o.seats.length} כרטיסים יחד${price}`;
   const seats = o.seats.length > 2 ? `${o.seats[0]}–${o.seats[o.seats.length - 1]}` : o.seats.join(', ');
-  const price = o.prices?.find(Boolean) ? ` · ${o.prices.find(Boolean)} ₪` : '';
   return `${o.section} · שורה ${o.row} · מושבים ${seats}${price}`;
 }
 
@@ -147,8 +163,19 @@ export async function runLive(event, { cfg, db, notify }) {
 /** אם לאירוע אין שם (רק כתובת) – לוקח את שם המופע מכותרת הדף. */
 async function withSiteName(page, event) {
   if (!/^[\w.-]+\.[a-z]{2,}\//i.test(event.name)) return event;
-  const title = (await page.title().catch(() => '')).split(/ כרטיסים|\s[|–-]\s/)[0].trim();
-  return title && !/^(קופת|ticketmaster)/i.test(title) ? { ...event, name: title } : event;
+  let title = (await page.title().catch(() => '')).split(/ כרטיסים|\s[|–-]\s/)[0].trim();
+  // כותרת כללית של האתר ("כרטיסים להופעות") → שם המופע מהכותרת הראשית בדף
+  if (!title || /^(כרטיסים|tickets?\b|קופת|ticketmaster)/i.test(title)) {
+    title = await page
+      .evaluate(() => {
+        const og = document.querySelector('meta[property="og:title"]')?.content;
+        const h = [...document.querySelectorAll('h1, h2')].map((e) => e.innerText.trim()).find((t) => t && t.length > 3 && !/^כרטיסים/.test(t));
+        return (h || og || '').split('\n')[0];
+      })
+      .catch(() => '');
+    title = title.split(/\s[–-]\s(GoShow|Eventer|GetIn)/i)[0].trim().slice(0, 80);
+  }
+  return title ? { ...event, name: title } : event;
 }
 
 /** האפשרות הכי קרובה לבמה (שורה נמוכה), ובשוויון – לפי סדר האזורים ב-config. */

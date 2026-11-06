@@ -15,6 +15,7 @@ export const HELP = `👋 <b>אני סוכן הכרטיסים שלך</b>
 /sale &lt;קישור&gt; &lt;כמות&gt; 10:00 – מצב קנייה בשעה שהמכירה נפתחת
 /remove &lt;מספר&gt; – הסרה מהמעקב
 /check – לבדוק הכל עכשיו
+/sites – האתרים שאני מכיר ומה אני יודע לעשות בכל אחד
 /status – מצב המערכת
 /myid – מספר הצ'אט שלך`;
 
@@ -80,6 +81,7 @@ export async function handleUpdates(cfg, updates, h, offset = 0) {
       else if (c.cmd === 'hot' && c.arg) await reply(await h.onButton('hot', c.arg, from));
       else if (c.cmd === 'check') await reply(await h.onCheck(from));
       else if (c.cmd === 'status') await reply(await h.onStatus(from));
+      else if (c.cmd === 'sites') await reply(await h.onSites(from));
       else await reply('לא הבנתי 🤔\n\n' + HELP);
     } catch (e) {
       log(`שגיאה בטיפול בהודעה: ${e.message}`);

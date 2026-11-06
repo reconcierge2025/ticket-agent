@@ -3,6 +3,9 @@ import assert from 'node:assert/strict';
 import { findBestPerZone, findBestOptions, rowNum } from '../src/seats.js';
 import { inQuietHours } from '../src/messenger.js';
 import { israelNow } from '../src/config.js';
+import { siteFor, SITES, sitesText } from '../src/sites.js';
+import { readAvailability } from '../src/adapters/avail.js';
+import { parseListings } from '../src/adapters/ticketnetwork.js';
 import { parseCommand } from '../src/bot.js';
 import { parseQueueText } from '../src/queue.js';
 
@@ -71,6 +74,28 @@ test('תאריך ושעה לפי שעון ישראל', () => {
   const n = israelNow(new Date('2026-11-06T22:30:00Z')); // 00:30 בישראל (חורף, UTC+2)
   assert.equal(n.date, '2026-11-07');
   assert.equal(n.hour, 0);
+});
+
+test('מאגר האתרים: זיהוי לפי דומיין ורמות', () => {
+  assert.equal(siteFor('https://www.bravo.org.il/announce/1').adapter, 'bravo');
+  assert.equal(siteFor('https://tickets.comy.co.il/booking/features/1?prsntId=2').adapter, 'kupat');
+  assert.equal(siteFor('https://www.stubhub.com/x').level, 'blocked');
+  assert.equal(siteFor('https://example.com/x'), null);
+  assert.ok(SITES.length >= 50);
+  assert.match(sitesText(), /האתרים שאני מכיר/);
+});
+
+test('זמינות: מחירים, אזל, אפשר לקנות', () => {
+  const a = readAvailability('כרטיס רגיל 120 ₪\nVIP 350 ₪\nלרכישה');
+  assert.deepEqual([a.available, a.minPrice, a.maxPrice, a.currency], [true, 120, 350, '₪']);
+  const b = readAvailability('Early bird SOLD OUT · $45');
+  assert.equal(b.available, false);
+  assert.equal(b.soldOut, true);
+});
+
+test('TicketNetwork: פירוק מודעות', () => {
+  const text = 'Section 400 Level 402\n400 Level 402\nRow 4\n2 Tickets available\n • 2 Tickets\nTicket US$277 + Fee\nUS$319 each\nContinue';
+  assert.deepEqual(parseListings(text), [{ section: '400 Level 402', row: '4', count: 2, price: 319 }]);
 });
 
 test('קריאת מיקום בתור', () => {

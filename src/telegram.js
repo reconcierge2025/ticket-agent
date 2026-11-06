@@ -83,6 +83,26 @@ export function formatReport(event, options, { improvedOnly = false, targetRow =
   return lines.join('\n');
 }
 
+/** הודעה לאתר בלי מקומות מסומנים: זמינות ומחיר. */
+export function formatAvail(event, a, change) {
+  const money = (n) => (a.currency === '₪' || !a.currency ? `${n} ₪` : `${a.currency}${n}`);
+  const range = a.minPrice ? (a.maxPrice && a.maxPrice !== a.minPrice ? `${money(a.minPrice)} – ${money(a.maxPrice)}` : money(a.minPrice)) : '';
+  const head = {
+    opened: '🟢 <b>נפתחו כרטיסים!</b>',
+    cheaper: '⬇️ <b>המחיר ירד!</b>',
+    closed: '🔴 <b>הכרטיסים אזלו</b>',
+  }[change] || (a.available ? '✅ <b>יש כרטיסים למכירה</b>' : a.soldOut ? '🔴 <b>אזל כרגע</b>' : '❔ <b>לא מצאתי כרטיסים למכירה בעמוד</b>');
+  return [
+    ...header(event),
+    '',
+    head,
+    ...(range ? [`💰 ${range}`] : []),
+    '',
+    '<i>באתר הזה אין מקומות מסומנים – אני עוקב אחרי זמינות ומחיר ואודיע כשמשהו משתנה.</i>',
+    link(event.url),
+  ].join('\n');
+}
+
 /** סיכום אחד לכל המופעים מהסריקה הכללית – רק מה שבשורות 1–targetRow. */
 export function formatDigest(results, targetRow = 4) {
   const rows = results

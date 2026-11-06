@@ -4,7 +4,7 @@
 import { loadConfig, resolveEvent } from '../src/config.js';
 import { launchScanner } from '../src/browser.js';
 import { checkEvent, describe, pickTarget, pickAdapter } from '../src/check.js';
-import { formatReport } from '../src/telegram.js';
+import { formatReport, formatAvail } from '../src/telegram.js';
 
 const cfg = { ...loadConfig('config.example.json'), telegram: {} };
 const db = { seen: {}, best: {}, history: [] };
@@ -19,7 +19,7 @@ for (const url of process.argv.slice(2)) {
     for (const p of flat(r)) {
       const free = p.seats?.filter((s) => s.available).length;
       console.log(`\n== ${p.event.date || ''} ${p.event.url}\n   ${p.status} · ${p.seats?.length ?? 0} מושבים · ${free ?? 0} פנויים · ${((Date.now() - t) / 1000).toFixed(1)}s`);
-      console.log('--- הודעה ---\n' + strip(formatReport(p.event, p.options)));
+      console.log('--- הודעה ---\n' + strip(p.avail ? formatAvail(p.event, p.avail) : formatReport(p.event, p.options)));
 
       if (process.env.DRY_SELECT && /ticketmaster/.test(p.event.url) && p.options.length) {
         const best = pickTarget(p.options.filter((o) => o.quantity === 2));

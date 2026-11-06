@@ -1,7 +1,8 @@
 // הלוגיקה המשותפת למחשב, לשרת ולענן: בדיקות, מעקב, בריאות האתרים, סיכום יומי, פקודות וכפתורים.
 import { resolveEvent, log, israelNow } from './config.js';
 import { save, once } from './storage.js';
-import { formatReport, formatDigest } from './telegram.js';
+import { formatReport, formatDigest, formatAvail } from './telegram.js';
+import { siteFor, sitesText, LEVELS } from './sites.js';
 import { launchScanner } from './browser.js';
 import { checkEvent, pickAdapter, targetRowOf, esc } from './check.js';
 import { discover, eventKey } from './discover.js';
@@ -77,8 +78,9 @@ export function createAgent({ cfg, db, notify, onSale, mode = 'pc' }) {
         db.stats.checks++;
         const parts = flat(r);
         const seats = parts.reduce((n, p) => n + (p.seats?.length || 0), 0);
+        const readOk = seats > 0 || parts.some((p) => p.avail?.checked);
         // תור או אין תאריכים פתוחים = לא תקלה
-        if (r.status !== 'queue' && parts.length) track(site, seats > 0, seats ? null : 'האתר החזיר 0 מושבים');
+        if (r.status !== 'queue' && parts.length) track(site, readOk, readOk ? null : 'האתר החזיר 0 מושבים');
         return r;
       } catch (e) {
         if (attempt >= 2) {
@@ -94,6 +96,11 @@ export function createAgent({ cfg, db, notify, onSale, mode = 'pc' }) {
 
   async function reportImprovements(r) {
     for (const part of flat(r)) {
+      if (part.avail && ['opened', 'cheaper'].includes(part.availChange)) {
+        db.stats.alerts++;
+        await notify(formatAvail(part.event, part.avail, part.availChange), { to: part.event.owner, urgent: true, buttons: buttonsFor(part.event) });
+        continue;
+      }
       if (!part.improved.length) continue;
       db.stats.alerts++;
       await notify(formatReport(part.event, part.improved, { improvedOnly: true, targetRow: target }), {
@@ -111,7 +118,10 @@ export function createAgent({ cfg, db, notify, onSale, mode = 'pc' }) {
       const r = await checkTracked(browser, ev);
       const parts = flat(r).filter((p) => p.status !== 'queue');
       if (!parts.length && r.status !== 'queue') await notify(`😕 לא מצאתי תאריכים פתוחים למכירה ב:\n${esc(ev.url)}`, { to: ev.owner });
-      for (const part of parts) await notify(formatReport(part.event, part.options, { targetRow: target }), { to: ev.owner, buttons: buttonsFor(part.event) });
+      for (const part of parts) {
+        const text = part.avail ? formatAvail(part.event, part.avail) : formatReport(part.event, part.options, { targetRow: target });
+        await notify(text, { to: ev.owner, buttons: buttonsFor(part.event) });
+      }
     } catch (e) {
       await notify(`❌ לא הצלחתי לבדוק את המופע\n${esc(ev.url)}\n<i>${esc(e.message.split('\n')[0])}</i>`, { to: ev.owner });
     } finally {
@@ -215,6 +225,11 @@ export function createAgent({ cfg, db, notify, onSale, mode = 'pc' }) {
 
   const handlers = (pending) => ({
     onWatch: (url, q, { from, maxPrice } = {}) => {
+      const site = siteFor(url);
+      if (site && ['blocked', 'down', 'guide'].includes(site.level)) {
+        const why = { blocked: 'חוסם סוכנים אוטומטיים, ואני לא עוקף הגנות כאלה', down: 'לא נגיש מהסוכן', guide: 'הוא מנוע חיפוש שמפנה לאתרים אחרים – שלח לי את הקישור לאתר המכירה עצמו' }[site.level];
+        return `${LEVELS[site.level].icon} <b>${esc(site.name)}</b> ${why}.\n\nלרשימת האתרים שאני עובד איתם: /sites`;
+      }
       const w = watches.add({ url, owner: from, ...(q ? { quantity: q } : {}), ...(maxPrice ? { maxPrice } : {}) });
       pending.push(() => checkNow(watchEvent(cfg, w)));
       const what = q ? `${q} כרטיסים` : `${(cfg.defaults?.quantities || [2]).join('/')} כרטיסים`;
@@ -247,6 +262,7 @@ export function createAgent({ cfg, db, notify, onSale, mode = 'pc' }) {
       return '🔍 בודק את כל המופעים עכשיו...';
     },
     onStatus: () => statusText(),
+    onSites: () => sitesText(),
     onButton: (action, id, from) => {
       const w = watches.get(id);
       if (!w) return 'המופע הזה כבר לא במעקב.';
