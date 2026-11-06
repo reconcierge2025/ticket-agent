@@ -3,6 +3,7 @@ import { eventKey, externalDomains } from './discover.js';
 import { siteFor } from './sites.js';
 import { esc } from './check.js';
 import { log } from './config.js';
+import { matchesArtist } from './translit.js';
 
 const norm = (s) => String(s || '').toLowerCase().replace(/["'״׳]/g, '').trim();
 
@@ -50,7 +51,7 @@ export async function announceNewShows(db, cfg, found, notify) {
   const nameOf = (e) => e.name.split(': ').slice(1).join(': ') || e.name;
   // התראות אישיות לעוקבים
   for (const f of db.follows || []) {
-    const hits = fresh.filter((e) => norm(e.name).includes(norm(f.kw)));
+    const hits = fresh.filter((e) => matchesArtist(f.kw, e.name)); // גם כשהשם באנגלית (לפי צליל)
     if (!hits.length) continue;
     await notify(
       `⭐ <b>עלה מופע חדש של ${esc(f.kw)}!</b>\n\n` + hits.slice(0, 8).map((e) => `🎟️ ${esc(nameOf(e))}`).join('\n'),

@@ -7,6 +7,7 @@ import { siteFor, SITES, sitesText } from '../src/sites.js';
 import { readAvailability } from '../src/adapters/avail.js';
 import { parseListings } from '../src/adapters/ticketnetwork.js';
 import { announceNewShows, follow, unfollow } from '../src/scout.js';
+import { matchesArtist } from '../src/translit.js';
 import { parseCommand } from '../src/bot.js';
 import { parseQueueText } from '../src/queue.js';
 
@@ -117,7 +118,33 @@ test('מופעים חדשים: לומד בפעם הראשונה, מתריע לע
   assert.match(personal.text, /עומר אדם/);
   assert.ok(personal.buttons[0][0].data.startsWith('w:'));
   assert.match(sent.find((m) => !m.to).text, /עלו 1 מופעים חדשים/);
-  assert.equal(unfollow(db, '111', 'עומר  אדם'.replace('  ', ' ')), true);
+  // מופע עם השם באנגלית – עדיין מגיע לעוקב בעברית
+  sent.length = 0;
+  await announceNewShows(db, {}, [ev('Omer Adam Live', 'https://a.co/booking/features/3?prsntId=9')], notify);
+  assert.match(sent.find((m) => m.to === '111')?.text || '', /Omer Adam/);
+  assert.equal(unfollow(db, '111', 'עומר אדם'), true);
+});
+
+test('שם אמן בעברית ↔ אנגלית לפי צליל', () => {
+  const yes = [
+    ['שלמה ארצי', 'Shlomo Artzi - Live in Menora'],
+    ['Shlomo Artzi', 'שלמה ארצי בהיכל התרבות'],
+    ['עומר אדם', 'OMER ADAM | Tel Aviv'],
+    ['נועה קירל', 'Noa Kirel World Tour'],
+    ['עדן חסון', 'Eden Hason'],
+    ['ישי ריבו', 'Ishay Ribo Live'],
+    ['קולדפליי', 'Coldplay: Music of the Spheres'],
+    ['הדג נחש', 'Hadag Nahash'],
+    ['ארצי', 'שלמה ארצי - מופע חדש'],
+  ];
+  for (const [a, e] of yes) assert.equal(matchesArtist(a, e), true, `${a} ↔ ${e}`);
+  const no = [
+    ['שלמה ארצי', 'Shalom Hanoch'],
+    ['עומר אדם', 'Eden Ben Zaken'],
+    ['נועה קירל', 'Noa'],
+    ['Coldplay', 'Cold War Kids'],
+  ];
+  for (const [a, e] of no) assert.equal(matchesArtist(a, e), false, `${a} ≠ ${e}`);
 });
 
 test('קריאת מיקום בתור', () => {

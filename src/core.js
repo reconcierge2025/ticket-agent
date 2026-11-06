@@ -301,7 +301,7 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
       if (!kw) return 'כתוב את שם האמן אחרי הפקודה, למשל:\n<code>/follow שלמה ארצי</code>';
       follow(db, from, kw);
       save(db);
-      return `⭐ <b>עוקב אחרי ${esc(kw)}</b>\nכשיעלה מופע חדש שלו באחד האתרים – אשלח לך הודעה מיד.\n\nהרשימה שלך: /follows`;
+      return `⭐ <b>עוקב אחרי ${esc(kw)}</b>\nכשיעלה מופע חדש שלו באחד האתרים – אשלח לך הודעה מיד.\nאזהה אותו גם כשהשם כתוב באנגלית או בעברית (לפי הצליל).\n\nהרשימה שלך: /follows`;
     },
     onUnfollow: (kw, from) => (unfollow(db, from, kw) ? (save(db), `הפסקתי לעקוב אחרי ${esc(kw)}.`) : 'לא מצאתי את זה ברשימה שלך. שלח /follows.'),
     onFollows: (from) => {
