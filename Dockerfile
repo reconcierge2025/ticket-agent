@@ -14,6 +14,5 @@ RUN npm ci --omit=dev
 COPY src ./src
 COPY config.example.json ./
 
-# /data = Volume קבוע ב-Railway (מעקבים, שיאים, מצב)
-VOLUME ["/data"]
+# /data = Railway Volume (mount it in the service settings with mount path /data) – watches, records, state
 CMD ["node", "src/agent.js", "--server"]
