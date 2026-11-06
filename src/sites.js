@@ -60,7 +60,7 @@ export const SITES = [
   { name: 'Ticketmaster UK', domains: ['ticketmaster.co.uk', 'ticketmaster.ie'], region: 'eu', level: 'api', note: 'Ticketmaster Discovery API' },
   { name: 'See Tickets UK', domains: ['seetickets.com'], region: 'eu', level: 'blocked' },
   { name: 'Gigs and Tours', domains: ['gigsandtours.com'], region: 'eu', level: 'blocked' },
-  { name: 'Skiddle', domains: ['skiddle.com'], region: 'eu', level: 'blocked' },
+  { name: 'Skiddle', domains: ['skiddle.com'], region: 'eu', level: 'api', note: 'Skiddle API (בריטניה)' },
   { name: 'Gigantic', domains: ['gigantic.com'], region: 'eu', level: 'blocked' },
   { name: 'Fnac Spectacles', domains: ['fnacspectacles.com'], region: 'eu', level: 'blocked', note: 'קבוצת Eventim' },
   { name: 'Oeticket', domains: ['oeticket.com'], region: 'eu', level: 'blocked', note: 'קבוצת Eventim' },
@@ -113,7 +113,8 @@ export function sitesText(db = {}, cfg = {}) {
   }
   const tm = process.env.TICKETMASTER_API_KEY || cfg.apis?.ticketmasterKey;
   const sg = process.env.SEATGEEK_CLIENT_ID || cfg.apis?.seatgeekClientId;
-  lines.push('', `<b>🌍 ממשקים רשמיים:</b> Ticketmaster ${tm ? '✅ מחובר' : '⚪ צריך מפתח'} · SeatGeek ${sg ? '✅ מחובר' : '⚪ צריך מפתח'}`);
+  const sk = process.env.SKIDDLE_API_KEY || cfg.apis?.skiddleKey;
+  lines.push('', `<b>🌍 ממשקים רשמיים:</b> Ticketmaster ${tm ? '✅ מחובר' : '⚪ צריך מפתח'} · SeatGeek ${sg ? '✅ מחובר' : '⚪ צריך מפתח'} · Skiddle ${sk ? '✅ מחובר' : '⚪ צריך מפתח'}`);
   const n = (l) => SITES.filter((s) => l.includes(s.level)).length;
   lines.push('', `סה"כ ${SITES.length} אתרים: ${n(['full', 'seats'])} עם מושבים, ${n(['listings', 'avail'])} זמינות/רשימות, ${n(['guide'])} מנועי חיפוש, ${n(['blocked', 'down'])} חוסמים/לא נגישים.`);
   lines.push('', '💡 שלח לי קישור למופע מכל אתר 🟢/🟡 – וגם מאתר שלא ברשימה: אנסה לזהות אותו לבד.');

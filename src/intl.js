@@ -10,6 +10,7 @@ import { matchesArtist } from './translit.js';
 export const keys = (cfg = {}) => ({
   ticketmaster: process.env.TICKETMASTER_API_KEY || cfg.apis?.ticketmasterKey || '',
   seatgeek: process.env.SEATGEEK_CLIENT_ID || cfg.apis?.seatgeekClientId || '',
+  skiddle: process.env.SKIDDLE_API_KEY || cfg.apis?.skiddleKey || '',
 });
 export const intlEnabled = (cfg) => Object.values(keys(cfg)).some(Boolean);
 
@@ -89,11 +90,64 @@ async function searchSeatgeek(clientId, artist) {
   return parseSeatgeek(await res.json(), artist);
 }
 
+// ---------- Skiddle (בריטניה) ----------
+// https://www.skiddle.com/api/v1/events/search/?api_key=…&keyword=…  → { results: [ … ] }
+// שמות השדות לא מתועדים במלואם – הקריאה גמישה (כמה שמות אפשריים לכל שדה).
+const priceFrom = (s) => {
+  const m = String(s ?? '').replace(/,/g, '').match(/(\d+(?:\.\d+)?)/);
+  return m ? Number(m[1]) : null;
+};
+let skiddleShapeLogged = false;
+
+export function parseSkiddle(json, artist) {
+  const results = json?.results || json?.events || [];
+  const shows = results.map((e) => {
+    const v = e.venue || {};
+    const start = e.startdate || e.start_date || e.date || '';
+    const min = e.ticketpricing?.minPrice ?? e.ticketpricing?.min ?? priceFrom(e.entryprice);
+    const max = e.ticketpricing?.maxPrice ?? e.ticketpricing?.max ?? null;
+    return {
+      provider: 'Skiddle',
+      id: `sk:${e.id}`,
+      artist,
+      name: e.eventname || e.name || e.title || '',
+      attractions: (e.artists || []).map((a) => a.name || a.artistname).filter(Boolean),
+      date: (e.date || start).slice(0, 10) || null,
+      time: (start.match(/T(\d{2}:\d{2})/) || [])[1] || e.openingtimes?.doorsopen || null,
+      city: v.town || v.city || '',
+      country: 'GB', // Skiddle = בריטניה
+      venue: v.name || '',
+      url: e.link || e.url || '',
+      status: e.cancelled && e.cancelled !== '0' ? 'cancelled' : e.tickets === false ? 'offsale' : 'onsale',
+      onsale: null,
+      presales: [],
+      minPrice: min,
+      maxPrice: max,
+      currency: 'GBP',
+    };
+  });
+  // בדיקה עצמית: אם יש תוצאות אבל לא הצלחנו לקרוא שמות – מתעדים את המבנה כדי לתקן
+  if (results.length && shows.every((s) => !s.name) && !skiddleShapeLogged) {
+    skiddleShapeLogged = true;
+    log(`  [Skiddle] מבנה לא מוכר – שדות: ${Object.keys(results[0]).join(', ')}`);
+  }
+  return shows.filter((s) => s.name && real(s) && (matchesArtist(artist, s.name) || s.attractions.some((a) => matchesArtist(artist, a))));
+}
+
+async function searchSkiddle(key, artist) {
+  const url = `https://www.skiddle.com/api/v1/events/search/?api_key=${encodeURIComponent(key)}&keyword=${encodeURIComponent(artist)}&eventcode=LIVE&order=date&limit=100&description=1`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Skiddle API ${res.status}`);
+  const json = await res.json();
+  if (json?.error && json.error !== 0) throw new Error(`Skiddle: ${json.errormessage || json.error}`);
+  return parseSkiddle(json, artist);
+}
+
 /** כל ההופעות בחו"ל של אמן, מכל הממשקים שיש להם מפתח. */
 export async function searchArtistAbroad(cfg, artist) {
   const k = keys(cfg);
   const out = [];
-  for (const [name, fn, key] of [['Ticketmaster', searchTicketmaster, k.ticketmaster], ['SeatGeek', searchSeatgeek, k.seatgeek]]) {
+  for (const [name, fn, key] of [['Ticketmaster', searchTicketmaster, k.ticketmaster], ['SeatGeek', searchSeatgeek, k.seatgeek], ['Skiddle', searchSkiddle, k.skiddle]]) {
     if (!key) continue;
     try {
       out.push(...(await fn(key, artist)));
@@ -180,7 +234,7 @@ export function formatChanges(artist, changes) {
 }
 
 export function formatExisting(artist, shows) {
-  if (!shows.length) return `🌍 בחו"ל: כרגע אין הופעות של ${esc(artist)} ב-Ticketmaster/SeatGeek.`;
+  if (!shows.length) return `🌍 בחו"ל: כרגע אין הופעות של ${esc(artist)} (Ticketmaster / SeatGeek / Skiddle).`;
   const sorted = [...shows].sort((a, b) => String(a.date).localeCompare(String(b.date)));
   return [`🌍 <b>${esc(artist)} בחו"ל – ${shows.length} הופעות:</b>`, ...sorted.slice(0, 12).map(showLine), ...(shows.length > 12 ? [`ועוד ${shows.length - 12}...`] : [])].join('\n');
 }

@@ -11,7 +11,7 @@ import { matchesArtist } from '../src/translit.js';
 import { STARS, starFor } from '../src/artists.js';
 import { artistOfPage } from '../src/discover.js';
 import { saveCatalog, existingShowsMessage } from '../src/scout.js';
-import { parseTicketmaster, parseSeatgeek, diffShows, formatChanges } from '../src/intl.js';
+import { parseTicketmaster, parseSeatgeek, parseSkiddle, diffShows, formatChanges } from '../src/intl.js';
 import { parseCommand } from '../src/bot.js';
 import { parseQueueText } from '../src/queue.js';
 
@@ -216,6 +216,21 @@ test('חו"ל: Ticketmaster + SeatGeek, שינויים והודעות', () => {
   assert.match(text, /Wembley Stadium, London/);
   assert.match(text, /🇬🇧/);
   assert.equal(diffShows(db, [{ ...tm[0], minPrice: 70 }], { now }).length, 0, 'לא מזכיר פעמיים');
+});
+
+test('Skiddle: קריאה גמישה של התוצאות', () => {
+  const json = {
+    error: 0,
+    results: [
+      { id: '123', eventname: 'Tom Odell', venue: { name: 'O2 Academy Brixton', town: 'London' }, date: '2027-03-04', startdate: '2027-03-04T19:00:00+00:00', link: 'https://www.skiddle.com/x', entryprice: '£35.50', tickets: true, artists: [{ name: 'Tom Odell' }] },
+      { id: '124', eventname: 'Tom Odell Tribute Night', venue: { name: 'Pub', town: 'Leeds' }, date: '2027-01-01', link: 'u' },
+      { id: '125', name: 'טום אודל', venue: { name: 'Albert Hall', town: 'Manchester' }, startdate: '2027-05-01T20:00:00', ticketpricing: { minPrice: 40, maxPrice: 60 }, url: 'u2' },
+    ],
+  };
+  const s = parseSkiddle(json, 'Tom Odell');
+  assert.equal(s.length, 2, 'מחווה מסוננת; שם בעברית נתפס');
+  assert.deepEqual([s[0].city, s[0].time, s[0].minPrice, s[0].currency, s[0].country], ['London', '19:00', 35.5, 'GBP', 'GB']);
+  assert.deepEqual([s[1].minPrice, s[1].maxPrice, s[1].date], [40, 60, '2027-05-01']);
 });
 
 test('קריאת מיקום בתור', () => {

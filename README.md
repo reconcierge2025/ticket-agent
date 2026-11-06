@@ -21,6 +21,7 @@
 האתרים הגדולים בחו"ל (Ticketmaster, Live Nation, SeatGeek) חוסמים גלישה אוטומטית, והסוכן לא עוקף את החסימה. במקום זה הוא משתמש **בממשקים הרשמיים** שהם מציעים למפתחים, בחינם:
 - **Ticketmaster Discovery API:** Ticketmaster בארה"ב, בבריטניה, באירופה, בקנדה ובאוסטרליה, וגם Live Nation. מחזיר תאריכים, ערים, אולמות, **מתי נפתחת המכירה ופריסיילים**, טווח מחירים ומצב.
 - **SeatGeek API:** **המחיר הכי זול כרגע** וכמה כרטיסים יש בשוק.
+- **Skiddle API (בריטניה):** הופעות בבריטניה, עם מחיר כניסה ומצב הכרטיסים. המפתח חינמי לשימוש לא מסחרי.
 
 **מה מקבלים:**
 - `/abroad Coldplay`: כל ההופעות בחו"ל.
@@ -35,8 +36,9 @@
 **איך משיגים את המפתחות (חינם, 5 דקות):**
 1. **Ticketmaster:** נרשמים ב-**developer.ticketmaster.com** ← My Apps ← מעתיקים את ה-**Consumer Key**.
 2. **SeatGeek:** נכנסים ל-**seatgeek.com/account/develop** ← יוצרים אפליקציה ← מעתיקים את ה-**Client ID**.
-3. מכניסים את המפתחות:
-   - **Railway:** Variables ← `TICKETMASTER_API_KEY` ו-`SEATGEEK_CLIENT_ID`
+3. **Skiddle:** ממלאים את הטופס ב-**skiddle.com/api/join.php**. המפתח מגיע במייל.
+4. מכניסים את המפתחות:
+   - **Railway:** Variables ← `TICKETMASTER_API_KEY`, `SEATGEEK_CLIENT_ID`, `SKIDDLE_API_KEY`
    - **GitHub:** Secrets באותם שמות
    - **במחשב:** ב-`config.json` תחת `"apis"`
 
