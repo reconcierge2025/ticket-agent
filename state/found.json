@@ -4188,15 +4188,15 @@
         "section": "אולם",
         "row": "2",
         "seats": [
-          20,
-          21
+          10,
+          11
         ],
         "prices": [
           159,
           159
         ],
-        "centerDist": 7.5,
-        "foundAt": "2026-11-06T11:55:19.617Z"
+        "centerDist": 2.5,
+        "foundAt": "2026-11-06T18:56:01.781Z"
       },
       "אולם|3": {
         "quantity": 3,
@@ -15381,17 +15381,17 @@
         "quantity": 2,
         "zone": "VIP / תאים",
         "section": "VIP B",
-        "row": "4",
+        "row": "2",
         "seats": [
-          62,
-          63
+          79,
+          80
         ],
         "prices": [
           449,
           449
         ],
-        "centerDist": 8,
-        "foundAt": "2026-11-06T12:19:04.902Z"
+        "centerDist": 9,
+        "foundAt": "2026-11-06T19:23:12.123Z"
       },
       "אולם|2": {
         "quantity": 2,
@@ -15429,19 +15429,19 @@
         "quantity": 3,
         "zone": "VIP / תאים",
         "section": "VIP B",
-        "row": "4",
+        "row": "2",
         "seats": [
-          61,
-          62,
-          63
+          79,
+          80,
+          81
         ],
         "prices": [
           449,
           449,
           449
         ],
-        "centerDist": 8.5,
-        "foundAt": "2026-11-06T12:19:04.902Z"
+        "centerDist": 9.5,
+        "foundAt": "2026-11-06T19:23:12.123Z"
       },
       "אולם|3": {
         "quantity": 3,
@@ -15482,13 +15482,13 @@
       "VIP / תאים|4": {
         "quantity": 4,
         "zone": "VIP / תאים",
-        "section": "VIP D",
+        "section": "VIP B",
         "row": "4",
         "seats": [
-          155,
-          156,
-          157,
-          158
+          66,
+          67,
+          68,
+          69
         ],
         "prices": [
           449,
@@ -15496,8 +15496,8 @@
           449,
           449
         ],
-        "centerDist": 9.5,
-        "foundAt": "2026-11-06T12:19:04.902Z"
+        "centerDist": 3,
+        "foundAt": "2026-11-06T19:23:12.123Z"
       },
       "אולם|4": {
         "quantity": 4,
@@ -15522,13 +15522,13 @@
       "יציע|4": {
         "quantity": 4,
         "zone": "יציע",
-        "section": "גלריה 12",
-        "row": "4",
+        "section": "גלריה 5",
+        "row": "2",
         "seats": [
-          46,
-          47,
-          48,
-          49
+          40,
+          41,
+          42,
+          43
         ],
         "prices": [
           199,
@@ -15536,8 +15536,8 @@
           199,
           199
         ],
-        "centerDist": 17.5,
-        "foundAt": "2026-11-06T12:19:04.902Z"
+        "centerDist": 14,
+        "foundAt": "2026-11-06T19:23:12.123Z"
       },
       "VIP / תאים|5": {
         "quantity": 5,
@@ -15586,14 +15586,14 @@
       "יציע|5": {
         "quantity": 5,
         "zone": "יציע",
-        "section": "גלריה 11",
-        "row": "4",
+        "section": "גלריה 5",
+        "row": "2",
         "seats": [
-          45,
-          46,
-          47,
-          48,
-          49
+          40,
+          41,
+          42,
+          43,
+          44
         ],
         "prices": [
           199,
@@ -15602,8 +15602,8 @@
           199,
           199
         ],
-        "centerDist": 18.5,
-        "foundAt": "2026-11-06T12:19:04.902Z"
+        "centerDist": 14.5,
+        "foundAt": "2026-11-06T19:23:12.123Z"
       }
     },
     "https://tickets.kupat.co.il/booking/features/2671?prsntId=56165": {},
@@ -24550,44 +24550,44 @@
         "section": "יציע",
         "row": "3",
         "seats": [
-          25,
-          26
+          22,
+          23
         ],
         "prices": [
           159,
           159
         ],
-        "centerDist": 10,
-        "foundAt": "2026-11-06T12:29:41.097Z"
+        "centerDist": 7,
+        "foundAt": "2026-11-06T19:35:36.093Z"
       },
       "יציע|3": {
         "quantity": 3,
         "zone": "יציע",
         "section": "יציע",
-        "row": "4",
+        "row": "3",
         "seats": [
-          27,
-          28,
-          29
+          22,
+          23,
+          24
         ],
         "prices": [
           159,
           159,
           159
         ],
-        "centerDist": 11.5,
-        "foundAt": "2026-11-06T12:29:41.097Z"
+        "centerDist": 7.5,
+        "foundAt": "2026-11-06T19:35:36.093Z"
       },
       "יציע|4": {
         "quantity": 4,
         "zone": "יציע",
         "section": "יציע",
-        "row": "4",
+        "row": "3",
         "seats": [
-          27,
-          28,
-          29,
-          30
+          22,
+          23,
+          24,
+          25
         ],
         "prices": [
           159,
@@ -24595,20 +24595,20 @@
           159,
           159
         ],
-        "centerDist": 12,
-        "foundAt": "2026-11-06T12:29:41.097Z"
+        "centerDist": 8,
+        "foundAt": "2026-11-06T19:35:36.093Z"
       },
       "יציע|5": {
         "quantity": 5,
         "zone": "יציע",
         "section": "יציע",
-        "row": "4",
+        "row": "3",
         "seats": [
-          27,
-          28,
-          29,
-          30,
-          31
+          22,
+          23,
+          24,
+          25,
+          26
         ],
         "prices": [
           159,
@@ -24617,8 +24617,8 @@
           159,
           159
         ],
-        "centerDist": 12.5,
-        "foundAt": "2026-11-06T12:29:41.097Z"
+        "centerDist": 8.5,
+        "foundAt": "2026-11-06T19:35:36.093Z"
       }
     },
     "https://tickets.kupat.co.il/booking/features/2978?prsntId=55141": {
@@ -31042,7 +31042,1221 @@
         "foundAt": "2026-11-06T12:33:16.503Z"
       }
     },
-    "https://tickets.kupat.co.il/booking/features/3016?prsntId=55999": {}
+    "https://tickets.kupat.co.il/booking/features/3016?prsntId=55999": {},
+    "https://tickets.comy.co.il/booking/features/826?prsntId=56069": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "19",
+        "seats": [
+          46,
+          47
+        ],
+        "prices": [
+          169,
+          169
+        ],
+        "centerDist": 21.5,
+        "foundAt": "2026-11-06T18:54:03.924Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "21",
+        "seats": [
+          2,
+          3,
+          4
+        ],
+        "prices": [
+          169,
+          169,
+          169
+        ],
+        "centerDist": 23,
+        "foundAt": "2026-11-06T18:54:03.924Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "21",
+        "seats": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "prices": [
+          169,
+          169,
+          169,
+          169
+        ],
+        "centerDist": 23.5,
+        "foundAt": "2026-11-06T18:54:03.924Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "22",
+        "seats": [
+          47,
+          48,
+          49,
+          50,
+          51
+        ],
+        "prices": [
+          169,
+          169,
+          169,
+          169,
+          169
+        ],
+        "centerDist": 22.5,
+        "foundAt": "2026-11-06T18:54:03.924Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/826?prsntId=56074": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "19",
+        "seats": [
+          31,
+          32
+        ],
+        "prices": [
+          169,
+          169
+        ],
+        "centerDist": 14,
+        "foundAt": "2026-11-06T18:54:07.009Z"
+      },
+      "יציע|2": {
+        "quantity": 2,
+        "zone": "יציע",
+        "section": "יציע",
+        "row": "2",
+        "seats": [
+          5,
+          6
+        ],
+        "prices": [
+          169,
+          169
+        ],
+        "centerDist": 15,
+        "foundAt": "2026-11-06T18:54:07.009Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "19",
+        "seats": [
+          31,
+          32,
+          33
+        ],
+        "prices": [
+          169,
+          169,
+          169
+        ],
+        "centerDist": 14.5,
+        "foundAt": "2026-11-06T18:54:07.009Z"
+      },
+      "יציע|3": {
+        "quantity": 3,
+        "zone": "יציע",
+        "section": "יציע",
+        "row": "3",
+        "seats": [
+          6,
+          7,
+          8
+        ],
+        "prices": [
+          169,
+          169,
+          169
+        ],
+        "centerDist": 10.5,
+        "foundAt": "2026-11-06T18:54:07.009Z"
+      },
+      "יציע|4": {
+        "quantity": 4,
+        "zone": "יציע",
+        "section": "יציע",
+        "row": "3",
+        "seats": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "prices": [
+          169,
+          169,
+          169,
+          169
+        ],
+        "centerDist": 11,
+        "foundAt": "2026-11-06T18:54:07.009Z"
+      },
+      "יציע|5": {
+        "quantity": 5,
+        "zone": "יציע",
+        "section": "יציע",
+        "row": "3",
+        "seats": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "prices": [
+          169,
+          169,
+          169,
+          169,
+          169
+        ],
+        "centerDist": 11.5,
+        "foundAt": "2026-11-06T18:54:07.009Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/831?prsntId=55379": {},
+    "https://tickets.comy.co.il/booking/features/831?prsntId=56226": {},
+    "https://tickets.comy.co.il/booking/features/831?prsntId=53013": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          18,
+          19
+        ],
+        "prices": [
+          159,
+          159
+        ],
+        "centerDist": 8.5,
+        "foundAt": "2026-11-06T18:56:30.482Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "2",
+        "seats": [
+          5,
+          6,
+          7
+        ],
+        "prices": [
+          159,
+          159,
+          159
+        ],
+        "centerDist": 5,
+        "foundAt": "2026-11-06T18:56:30.482Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "2",
+        "seats": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "prices": [
+          159,
+          159,
+          159,
+          159
+        ],
+        "centerDist": 5.5,
+        "foundAt": "2026-11-06T18:56:30.482Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "2",
+        "seats": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "prices": [
+          159,
+          159,
+          159,
+          159,
+          159
+        ],
+        "centerDist": 6,
+        "foundAt": "2026-11-06T18:56:30.482Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/1307?prsntId=56299": {},
+    "https://tickets.comy.co.il/booking/features/1307?prsntId=54803": {},
+    "https://tickets.comy.co.il/booking/features/1307?prsntId=56082": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          7,
+          8
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 2.5,
+        "foundAt": "2026-11-06T19:00:34.916Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          6,
+          7,
+          8
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 3,
+        "foundAt": "2026-11-06T19:00:34.916Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 3.5,
+        "foundAt": "2026-11-06T19:00:34.916Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 4,
+        "foundAt": "2026-11-06T19:00:34.916Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/2031?prsntId=56623": {},
+    "https://tickets.comy.co.il/booking/features/2031?prsntId=56624": {},
+    "https://tickets.comy.co.il/booking/features/1677?prsntId=53821": {},
+    "https://tickets.comy.co.il/booking/features/2768?prsntId=56532": {},
+    "https://tickets.comy.co.il/booking/features/2768?prsntId=56533": {},
+    "https://tickets.comy.co.il/booking/features/853?prsntId=56397": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם גולדה",
+        "row": "1",
+        "seats": [
+          9,
+          10
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T19:06:29.481Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם גולדה",
+        "row": "1",
+        "seats": [
+          8,
+          9,
+          10
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-06T19:06:29.481Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם גולדה",
+        "row": "1",
+        "seats": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T19:06:29.481Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם גולדה",
+        "row": "1",
+        "seats": [
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-06T19:06:29.481Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/853?prsntId=56398": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          7,
+          8
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T19:06:32.545Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          6,
+          7,
+          8
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-06T19:06:32.545Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T19:06:32.545Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-06T19:06:32.545Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/2296?prsntId=56692": {},
+    "https://tickets.comy.co.il/booking/features/2296?prsntId=56693": {},
+    "https://tickets.comy.co.il/booking/features/827?prsntId=56544": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          11,
+          12
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 2,
+        "foundAt": "2026-11-06T19:14:20.768Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          11,
+          12,
+          13
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 2.5,
+        "foundAt": "2026-11-06T19:14:20.768Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          11,
+          12,
+          13,
+          14
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 3,
+        "foundAt": "2026-11-06T19:14:20.768Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 3.5,
+        "foundAt": "2026-11-06T19:14:20.768Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/827?prsntId=56380": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          7,
+          8
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 5,
+        "foundAt": "2026-11-06T19:14:23.782Z"
+      },
+      "יציע|2": {
+        "quantity": 2,
+        "zone": "יציע",
+        "section": "גלריה שמאל",
+        "row": "1",
+        "seats": [
+          9,
+          10
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T19:14:23.782Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          6,
+          7,
+          8
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 5.5,
+        "foundAt": "2026-11-06T19:14:23.782Z"
+      },
+      "יציע|3": {
+        "quantity": 3,
+        "zone": "יציע",
+        "section": "גלריה שמאל",
+        "row": "1",
+        "seats": [
+          8,
+          9,
+          10
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-06T19:14:23.782Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 6,
+        "foundAt": "2026-11-06T19:14:23.782Z"
+      },
+      "יציע|4": {
+        "quantity": 4,
+        "zone": "יציע",
+        "section": "גלריה שמאל",
+        "row": "1",
+        "seats": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T19:14:23.782Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 8.5,
+        "foundAt": "2026-11-06T19:14:23.782Z"
+      },
+      "יציע|5": {
+        "quantity": 5,
+        "zone": "יציע",
+        "section": "גלריה שמאל",
+        "row": "1",
+        "seats": [
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-06T19:14:23.782Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/864?prsntId=52356": {},
+    "https://tickets.comy.co.il/booking/features/864?prsntId=56453": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          15,
+          16
+        ],
+        "prices": [
+          169,
+          169
+        ],
+        "centerDist": 4.5,
+        "foundAt": "2026-11-06T19:16:38.069Z"
+      },
+      "יציע|2": {
+        "quantity": 2,
+        "zone": "יציע",
+        "section": "גלריה ימין",
+        "row": "16",
+        "seats": [
+          9,
+          10
+        ],
+        "prices": [
+          169,
+          169
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T19:16:38.069Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          15,
+          16,
+          17
+        ],
+        "prices": [
+          169,
+          169,
+          169
+        ],
+        "centerDist": 5,
+        "foundAt": "2026-11-06T19:16:38.069Z"
+      },
+      "יציע|3": {
+        "quantity": 3,
+        "zone": "יציע",
+        "section": "גלריה ימין",
+        "row": "16",
+        "seats": [
+          8,
+          9,
+          10
+        ],
+        "prices": [
+          169,
+          169,
+          169
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-06T19:16:38.069Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          15,
+          16,
+          17,
+          18
+        ],
+        "prices": [
+          169,
+          169,
+          169,
+          169
+        ],
+        "centerDist": 5.5,
+        "foundAt": "2026-11-06T19:16:38.069Z"
+      },
+      "יציע|4": {
+        "quantity": 4,
+        "zone": "יציע",
+        "section": "גלריה ימין",
+        "row": "16",
+        "seats": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "prices": [
+          169,
+          169,
+          169,
+          169
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-06T19:16:38.069Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "prices": [
+          169,
+          169,
+          169,
+          169,
+          169
+        ],
+        "centerDist": 6,
+        "foundAt": "2026-11-06T19:16:38.069Z"
+      },
+      "יציע|5": {
+        "quantity": 5,
+        "zone": "יציע",
+        "section": "גלריה ימין",
+        "row": "16",
+        "seats": [
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "prices": [
+          169,
+          169,
+          169,
+          169,
+          169
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-06T19:16:38.069Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/2032?prsntId=56277": {},
+    "https://tickets.comy.co.il/booking/features/2032?prsntId=56278": {},
+    "https://tickets.kupat.co.il/booking/features/3015?prsntId=56006": {
+      "VIP / תאים|2": {
+        "quantity": 2,
+        "zone": "VIP / תאים",
+        "section": "VIP B",
+        "row": "2",
+        "seats": [
+          79,
+          80
+        ],
+        "prices": [
+          449,
+          449
+        ],
+        "centerDist": 9,
+        "foundAt": "2026-11-06T19:23:17.266Z"
+      },
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם 1",
+        "row": "8",
+        "seats": [
+          7,
+          8
+        ],
+        "prices": [
+          299,
+          299
+        ],
+        "centerDist": 12.5,
+        "foundAt": "2026-11-06T19:23:17.266Z"
+      },
+      "יציע|2": {
+        "quantity": 2,
+        "zone": "יציע",
+        "section": "גלריה 5",
+        "row": "2",
+        "seats": [
+          40,
+          41
+        ],
+        "prices": [
+          199,
+          199
+        ],
+        "centerDist": 13,
+        "foundAt": "2026-11-06T19:23:17.266Z"
+      },
+      "VIP / תאים|3": {
+        "quantity": 3,
+        "zone": "VIP / תאים",
+        "section": "VIP B",
+        "row": "2",
+        "seats": [
+          79,
+          80,
+          81
+        ],
+        "prices": [
+          449,
+          449,
+          449
+        ],
+        "centerDist": 9.5,
+        "foundAt": "2026-11-06T19:23:17.266Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם 1",
+        "row": "8",
+        "seats": [
+          6,
+          7,
+          8
+        ],
+        "prices": [
+          299,
+          299,
+          299
+        ],
+        "centerDist": 13,
+        "foundAt": "2026-11-06T19:23:17.266Z"
+      },
+      "יציע|3": {
+        "quantity": 3,
+        "zone": "יציע",
+        "section": "גלריה 5",
+        "row": "2",
+        "seats": [
+          40,
+          41,
+          42
+        ],
+        "prices": [
+          199,
+          199,
+          199
+        ],
+        "centerDist": 13.5,
+        "foundAt": "2026-11-06T19:23:17.266Z"
+      },
+      "VIP / תאים|4": {
+        "quantity": 4,
+        "zone": "VIP / תאים",
+        "section": "VIP B",
+        "row": "4",
+        "seats": [
+          66,
+          67,
+          68,
+          69
+        ],
+        "prices": [
+          449,
+          449,
+          449,
+          449
+        ],
+        "centerDist": 3,
+        "foundAt": "2026-11-06T19:23:17.266Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם 1",
+        "row": "8",
+        "seats": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "prices": [
+          299,
+          299,
+          299,
+          299
+        ],
+        "centerDist": 13.5,
+        "foundAt": "2026-11-06T19:23:17.266Z"
+      },
+      "יציע|4": {
+        "quantity": 4,
+        "zone": "יציע",
+        "section": "גלריה 5",
+        "row": "2",
+        "seats": [
+          40,
+          41,
+          42,
+          43
+        ],
+        "prices": [
+          199,
+          199,
+          199,
+          199
+        ],
+        "centerDist": 14,
+        "foundAt": "2026-11-06T19:23:17.266Z"
+      },
+      "VIP / תאים|5": {
+        "quantity": 5,
+        "zone": "VIP / תאים",
+        "section": "VIP B",
+        "row": "4",
+        "seats": [
+          59,
+          60,
+          61,
+          62,
+          63
+        ],
+        "prices": [
+          449,
+          449,
+          449,
+          449,
+          449
+        ],
+        "centerDist": 9.5,
+        "foundAt": "2026-11-06T19:23:17.266Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם 5",
+        "row": "9",
+        "seats": [
+          30,
+          31,
+          32,
+          33,
+          34
+        ],
+        "prices": [
+          299,
+          299,
+          299,
+          299,
+          299
+        ],
+        "centerDist": 11.5,
+        "foundAt": "2026-11-06T19:23:17.266Z"
+      },
+      "יציע|5": {
+        "quantity": 5,
+        "zone": "יציע",
+        "section": "גלריה 5",
+        "row": "2",
+        "seats": [
+          40,
+          41,
+          42,
+          43,
+          44
+        ],
+        "prices": [
+          199,
+          199,
+          199,
+          199,
+          199
+        ],
+        "centerDist": 14.5,
+        "foundAt": "2026-11-06T19:23:17.266Z"
+      }
+    },
+    "https://tickets.kupat.co.il/booking/features/2977?prsntId=55093": {},
+    "https://tickets.kupat.co.il/booking/features/2936?prsntId=54208": {
+      "רחבה / אורקסטרה|2": {
+        "quantity": 2,
+        "zone": "רחבה / אורקסטרה",
+        "section": "אורקסטרה",
+        "row": "1",
+        "seats": [
+          2,
+          3
+        ],
+        "prices": [
+          319,
+          319
+        ],
+        "centerDist": 18,
+        "foundAt": "2026-11-06T19:39:35.419Z"
+      },
+      "רחבה / אורקסטרה|3": {
+        "quantity": 3,
+        "zone": "רחבה / אורקסטרה",
+        "section": "אורקסטרה",
+        "row": "1",
+        "seats": [
+          1,
+          2,
+          3
+        ],
+        "prices": [
+          319,
+          319,
+          319
+        ],
+        "centerDist": 18.5,
+        "foundAt": "2026-11-06T19:39:35.419Z"
+      },
+      "רחבה / אורקסטרה|4": {
+        "quantity": 4,
+        "zone": "רחבה / אורקסטרה",
+        "section": "אורקסטרה",
+        "row": "2",
+        "seats": [
+          21,
+          22,
+          23,
+          24
+        ],
+        "prices": [
+          319,
+          319,
+          319,
+          319
+        ],
+        "centerDist": 2,
+        "foundAt": "2026-11-06T19:39:35.419Z"
+      },
+      "רחבה / אורקסטרה|5": {
+        "quantity": 5,
+        "zone": "רחבה / אורקסטרה",
+        "section": "אורקסטרה",
+        "row": "2",
+        "seats": [
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "prices": [
+          319,
+          319,
+          319,
+          319,
+          319
+        ],
+        "centerDist": 4.5,
+        "foundAt": "2026-11-06T19:39:35.419Z"
+      }
+    },
+    "https://tickets.kupat.co.il/booking/features/2549?prsntId=55279": {},
+    "https://tickets.kupat.co.il/booking/features/2869?prsntId=55392": {},
+    "https://tickets.kupat.co.il/booking/features/2869?prsntId=56094": {}
   },
   "history": [
     {
@@ -64394,6 +65608,1512 @@
         199
       ],
       "centerDist": 3.5
+    },
+    {
+      "foundAt": "2026-11-06T18:54:03.924Z",
+      "event": "קופת ת\"א: המופע של אודי כגן",
+      "url": "https://tickets.comy.co.il/booking/features/826?prsntId=56069",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "19",
+      "seats": [
+        46,
+        47
+      ],
+      "prices": [
+        169,
+        169
+      ],
+      "centerDist": 21.5
+    },
+    {
+      "foundAt": "2026-11-06T18:54:03.924Z",
+      "event": "קופת ת\"א: המופע של אודי כגן",
+      "url": "https://tickets.comy.co.il/booking/features/826?prsntId=56069",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "21",
+      "seats": [
+        2,
+        3,
+        4
+      ],
+      "prices": [
+        169,
+        169,
+        169
+      ],
+      "centerDist": 23
+    },
+    {
+      "foundAt": "2026-11-06T18:54:03.924Z",
+      "event": "קופת ת\"א: המופע של אודי כגן",
+      "url": "https://tickets.comy.co.il/booking/features/826?prsntId=56069",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "21",
+      "seats": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "prices": [
+        169,
+        169,
+        169,
+        169
+      ],
+      "centerDist": 23.5
+    },
+    {
+      "foundAt": "2026-11-06T18:54:03.924Z",
+      "event": "קופת ת\"א: המופע של אודי כגן",
+      "url": "https://tickets.comy.co.il/booking/features/826?prsntId=56069",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "22",
+      "seats": [
+        47,
+        48,
+        49,
+        50,
+        51
+      ],
+      "prices": [
+        169,
+        169,
+        169,
+        169,
+        169
+      ],
+      "centerDist": 22.5
+    },
+    {
+      "foundAt": "2026-11-06T18:54:07.009Z",
+      "event": "קופת ת\"א: המופע של אודי כגן",
+      "url": "https://tickets.comy.co.il/booking/features/826?prsntId=56074",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "19",
+      "seats": [
+        31,
+        32
+      ],
+      "prices": [
+        169,
+        169
+      ],
+      "centerDist": 14
+    },
+    {
+      "foundAt": "2026-11-06T18:54:07.009Z",
+      "event": "קופת ת\"א: המופע של אודי כגן",
+      "url": "https://tickets.comy.co.il/booking/features/826?prsntId=56074",
+      "quantity": 2,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "2",
+      "seats": [
+        5,
+        6
+      ],
+      "prices": [
+        169,
+        169
+      ],
+      "centerDist": 15
+    },
+    {
+      "foundAt": "2026-11-06T18:54:07.009Z",
+      "event": "קופת ת\"א: המופע של אודי כגן",
+      "url": "https://tickets.comy.co.il/booking/features/826?prsntId=56074",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "19",
+      "seats": [
+        31,
+        32,
+        33
+      ],
+      "prices": [
+        169,
+        169,
+        169
+      ],
+      "centerDist": 14.5
+    },
+    {
+      "foundAt": "2026-11-06T18:54:07.009Z",
+      "event": "קופת ת\"א: המופע של אודי כגן",
+      "url": "https://tickets.comy.co.il/booking/features/826?prsntId=56074",
+      "quantity": 3,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "3",
+      "seats": [
+        6,
+        7,
+        8
+      ],
+      "prices": [
+        169,
+        169,
+        169
+      ],
+      "centerDist": 10.5
+    },
+    {
+      "foundAt": "2026-11-06T18:54:07.009Z",
+      "event": "קופת ת\"א: המופע של אודי כגן",
+      "url": "https://tickets.comy.co.il/booking/features/826?prsntId=56074",
+      "quantity": 4,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "3",
+      "seats": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "prices": [
+        169,
+        169,
+        169,
+        169
+      ],
+      "centerDist": 11
+    },
+    {
+      "foundAt": "2026-11-06T18:54:07.009Z",
+      "event": "קופת ת\"א: המופע של אודי כגן",
+      "url": "https://tickets.comy.co.il/booking/features/826?prsntId=56074",
+      "quantity": 5,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "3",
+      "seats": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "prices": [
+        169,
+        169,
+        169,
+        169,
+        169
+      ],
+      "centerDist": 11.5
+    },
+    {
+      "foundAt": "2026-11-06T18:56:01.781Z",
+      "event": "קופת ת\"א: המופע של אסף יצחקי",
+      "url": "https://tickets.comy.co.il/booking/features/831?prsntId=55657",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "2",
+      "seats": [
+        10,
+        11
+      ],
+      "prices": [
+        159,
+        159
+      ],
+      "centerDist": 2.5
+    },
+    {
+      "foundAt": "2026-11-06T18:56:30.482Z",
+      "event": "קופת ת\"א: המופע של אסף יצחקי",
+      "url": "https://tickets.comy.co.il/booking/features/831?prsntId=53013",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        18,
+        19
+      ],
+      "prices": [
+        159,
+        159
+      ],
+      "centerDist": 8.5
+    },
+    {
+      "foundAt": "2026-11-06T18:56:30.482Z",
+      "event": "קופת ת\"א: המופע של אסף יצחקי",
+      "url": "https://tickets.comy.co.il/booking/features/831?prsntId=53013",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "2",
+      "seats": [
+        5,
+        6,
+        7
+      ],
+      "prices": [
+        159,
+        159,
+        159
+      ],
+      "centerDist": 5
+    },
+    {
+      "foundAt": "2026-11-06T18:56:30.482Z",
+      "event": "קופת ת\"א: המופע של אסף יצחקי",
+      "url": "https://tickets.comy.co.il/booking/features/831?prsntId=53013",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "2",
+      "seats": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "prices": [
+        159,
+        159,
+        159,
+        159
+      ],
+      "centerDist": 5.5
+    },
+    {
+      "foundAt": "2026-11-06T18:56:30.482Z",
+      "event": "קופת ת\"א: המופע של אסף יצחקי",
+      "url": "https://tickets.comy.co.il/booking/features/831?prsntId=53013",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "2",
+      "seats": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "prices": [
+        159,
+        159,
+        159,
+        159,
+        159
+      ],
+      "centerDist": 6
+    },
+    {
+      "foundAt": "2026-11-06T19:00:34.916Z",
+      "event": "קופת ת\"א: המופע של דניאל חן",
+      "url": "https://tickets.comy.co.il/booking/features/1307?prsntId=56082",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        7,
+        8
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 2.5
+    },
+    {
+      "foundAt": "2026-11-06T19:00:34.916Z",
+      "event": "קופת ת\"א: המופע של דניאל חן",
+      "url": "https://tickets.comy.co.il/booking/features/1307?prsntId=56082",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        6,
+        7,
+        8
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 3
+    },
+    {
+      "foundAt": "2026-11-06T19:00:34.916Z",
+      "event": "קופת ת\"א: המופע של דניאל חן",
+      "url": "https://tickets.comy.co.il/booking/features/1307?prsntId=56082",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 3.5
+    },
+    {
+      "foundAt": "2026-11-06T19:00:34.916Z",
+      "event": "קופת ת\"א: המופע של דניאל חן",
+      "url": "https://tickets.comy.co.il/booking/features/1307?prsntId=56082",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 4
+    },
+    {
+      "foundAt": "2026-11-06T19:06:29.481Z",
+      "event": "קופת ת\"א: המופע של מני עוזרי",
+      "url": "https://tickets.comy.co.il/booking/features/853?prsntId=56397",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם גולדה",
+      "row": "1",
+      "seats": [
+        9,
+        10
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T19:06:29.481Z",
+      "event": "קופת ת\"א: המופע של מני עוזרי",
+      "url": "https://tickets.comy.co.il/booking/features/853?prsntId=56397",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם גולדה",
+      "row": "1",
+      "seats": [
+        8,
+        9,
+        10
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-06T19:06:29.481Z",
+      "event": "קופת ת\"א: המופע של מני עוזרי",
+      "url": "https://tickets.comy.co.il/booking/features/853?prsntId=56397",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם גולדה",
+      "row": "1",
+      "seats": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T19:06:29.481Z",
+      "event": "קופת ת\"א: המופע של מני עוזרי",
+      "url": "https://tickets.comy.co.il/booking/features/853?prsntId=56397",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם גולדה",
+      "row": "1",
+      "seats": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-06T19:06:32.545Z",
+      "event": "קופת ת\"א: המופע של מני עוזרי",
+      "url": "https://tickets.comy.co.il/booking/features/853?prsntId=56398",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        7,
+        8
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T19:06:32.545Z",
+      "event": "קופת ת\"א: המופע של מני עוזרי",
+      "url": "https://tickets.comy.co.il/booking/features/853?prsntId=56398",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        6,
+        7,
+        8
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-06T19:06:32.545Z",
+      "event": "קופת ת\"א: המופע של מני עוזרי",
+      "url": "https://tickets.comy.co.il/booking/features/853?prsntId=56398",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T19:06:32.545Z",
+      "event": "קופת ת\"א: המופע של מני עוזרי",
+      "url": "https://tickets.comy.co.il/booking/features/853?prsntId=56398",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-06T19:14:20.768Z",
+      "event": "קופת ת\"א: המופע של אורי חזקיה",
+      "url": "https://tickets.comy.co.il/booking/features/827?prsntId=56544",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        11,
+        12
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 2
+    },
+    {
+      "foundAt": "2026-11-06T19:14:20.768Z",
+      "event": "קופת ת\"א: המופע של אורי חזקיה",
+      "url": "https://tickets.comy.co.il/booking/features/827?prsntId=56544",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        11,
+        12,
+        13
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 2.5
+    },
+    {
+      "foundAt": "2026-11-06T19:14:20.768Z",
+      "event": "קופת ת\"א: המופע של אורי חזקיה",
+      "url": "https://tickets.comy.co.il/booking/features/827?prsntId=56544",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 3
+    },
+    {
+      "foundAt": "2026-11-06T19:14:20.768Z",
+      "event": "קופת ת\"א: המופע של אורי חזקיה",
+      "url": "https://tickets.comy.co.il/booking/features/827?prsntId=56544",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 3.5
+    },
+    {
+      "foundAt": "2026-11-06T19:14:23.782Z",
+      "event": "קופת ת\"א: המופע של אורי חזקיה",
+      "url": "https://tickets.comy.co.il/booking/features/827?prsntId=56380",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        7,
+        8
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 5
+    },
+    {
+      "foundAt": "2026-11-06T19:14:23.782Z",
+      "event": "קופת ת\"א: המופע של אורי חזקיה",
+      "url": "https://tickets.comy.co.il/booking/features/827?prsntId=56380",
+      "quantity": 2,
+      "zone": "יציע",
+      "section": "גלריה שמאל",
+      "row": "1",
+      "seats": [
+        9,
+        10
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T19:14:23.782Z",
+      "event": "קופת ת\"א: המופע של אורי חזקיה",
+      "url": "https://tickets.comy.co.il/booking/features/827?prsntId=56380",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        6,
+        7,
+        8
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 5.5
+    },
+    {
+      "foundAt": "2026-11-06T19:14:23.782Z",
+      "event": "קופת ת\"א: המופע של אורי חזקיה",
+      "url": "https://tickets.comy.co.il/booking/features/827?prsntId=56380",
+      "quantity": 3,
+      "zone": "יציע",
+      "section": "גלריה שמאל",
+      "row": "1",
+      "seats": [
+        8,
+        9,
+        10
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-06T19:14:23.782Z",
+      "event": "קופת ת\"א: המופע של אורי חזקיה",
+      "url": "https://tickets.comy.co.il/booking/features/827?prsntId=56380",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 6
+    },
+    {
+      "foundAt": "2026-11-06T19:14:23.782Z",
+      "event": "קופת ת\"א: המופע של אורי חזקיה",
+      "url": "https://tickets.comy.co.il/booking/features/827?prsntId=56380",
+      "quantity": 4,
+      "zone": "יציע",
+      "section": "גלריה שמאל",
+      "row": "1",
+      "seats": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T19:14:23.782Z",
+      "event": "קופת ת\"א: המופע של אורי חזקיה",
+      "url": "https://tickets.comy.co.il/booking/features/827?prsntId=56380",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 8.5
+    },
+    {
+      "foundAt": "2026-11-06T19:14:23.782Z",
+      "event": "קופת ת\"א: המופע של אורי חזקיה",
+      "url": "https://tickets.comy.co.il/booking/features/827?prsntId=56380",
+      "quantity": 5,
+      "zone": "יציע",
+      "section": "גלריה שמאל",
+      "row": "1",
+      "seats": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-06T19:16:38.069Z",
+      "event": "קופת ת\"א: המופע של רשף לוי המופע מצולם",
+      "url": "https://tickets.comy.co.il/booking/features/864?prsntId=56453",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        15,
+        16
+      ],
+      "prices": [
+        169,
+        169
+      ],
+      "centerDist": 4.5
+    },
+    {
+      "foundAt": "2026-11-06T19:16:38.069Z",
+      "event": "קופת ת\"א: המופע של רשף לוי המופע מצולם",
+      "url": "https://tickets.comy.co.il/booking/features/864?prsntId=56453",
+      "quantity": 2,
+      "zone": "יציע",
+      "section": "גלריה ימין",
+      "row": "16",
+      "seats": [
+        9,
+        10
+      ],
+      "prices": [
+        169,
+        169
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T19:16:38.069Z",
+      "event": "קופת ת\"א: המופע של רשף לוי המופע מצולם",
+      "url": "https://tickets.comy.co.il/booking/features/864?prsntId=56453",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        15,
+        16,
+        17
+      ],
+      "prices": [
+        169,
+        169,
+        169
+      ],
+      "centerDist": 5
+    },
+    {
+      "foundAt": "2026-11-06T19:16:38.069Z",
+      "event": "קופת ת\"א: המופע של רשף לוי המופע מצולם",
+      "url": "https://tickets.comy.co.il/booking/features/864?prsntId=56453",
+      "quantity": 3,
+      "zone": "יציע",
+      "section": "גלריה ימין",
+      "row": "16",
+      "seats": [
+        8,
+        9,
+        10
+      ],
+      "prices": [
+        169,
+        169,
+        169
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-06T19:16:38.069Z",
+      "event": "קופת ת\"א: המופע של רשף לוי המופע מצולם",
+      "url": "https://tickets.comy.co.il/booking/features/864?prsntId=56453",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "prices": [
+        169,
+        169,
+        169,
+        169
+      ],
+      "centerDist": 5.5
+    },
+    {
+      "foundAt": "2026-11-06T19:16:38.069Z",
+      "event": "קופת ת\"א: המופע של רשף לוי המופע מצולם",
+      "url": "https://tickets.comy.co.il/booking/features/864?prsntId=56453",
+      "quantity": 4,
+      "zone": "יציע",
+      "section": "גלריה ימין",
+      "row": "16",
+      "seats": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "prices": [
+        169,
+        169,
+        169,
+        169
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-06T19:16:38.069Z",
+      "event": "קופת ת\"א: המופע של רשף לוי המופע מצולם",
+      "url": "https://tickets.comy.co.il/booking/features/864?prsntId=56453",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "prices": [
+        169,
+        169,
+        169,
+        169,
+        169
+      ],
+      "centerDist": 6
+    },
+    {
+      "foundAt": "2026-11-06T19:16:38.069Z",
+      "event": "קופת ת\"א: המופע של רשף לוי המופע מצולם",
+      "url": "https://tickets.comy.co.il/booking/features/864?prsntId=56453",
+      "quantity": 5,
+      "zone": "יציע",
+      "section": "גלריה ימין",
+      "row": "16",
+      "seats": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "prices": [
+        169,
+        169,
+        169,
+        169,
+        169
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-06T19:23:12.123Z",
+      "event": "קופת ת\"א: היסטריה · 25.11 רביעי 21:15 פיס ארנה ירושלים לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/3015?prsntId=56567",
+      "quantity": 2,
+      "zone": "VIP / תאים",
+      "section": "VIP B",
+      "row": "2",
+      "seats": [
+        79,
+        80
+      ],
+      "prices": [
+        449,
+        449
+      ],
+      "centerDist": 9
+    },
+    {
+      "foundAt": "2026-11-06T19:23:12.123Z",
+      "event": "קופת ת\"א: היסטריה · 25.11 רביעי 21:15 פיס ארנה ירושלים לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/3015?prsntId=56567",
+      "quantity": 3,
+      "zone": "VIP / תאים",
+      "section": "VIP B",
+      "row": "2",
+      "seats": [
+        79,
+        80,
+        81
+      ],
+      "prices": [
+        449,
+        449,
+        449
+      ],
+      "centerDist": 9.5
+    },
+    {
+      "foundAt": "2026-11-06T19:23:12.123Z",
+      "event": "קופת ת\"א: היסטריה · 25.11 רביעי 21:15 פיס ארנה ירושלים לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/3015?prsntId=56567",
+      "quantity": 4,
+      "zone": "VIP / תאים",
+      "section": "VIP B",
+      "row": "4",
+      "seats": [
+        66,
+        67,
+        68,
+        69
+      ],
+      "prices": [
+        449,
+        449,
+        449,
+        449
+      ],
+      "centerDist": 3
+    },
+    {
+      "foundAt": "2026-11-06T19:23:12.123Z",
+      "event": "קופת ת\"א: היסטריה · 25.11 רביעי 21:15 פיס ארנה ירושלים לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/3015?prsntId=56567",
+      "quantity": 4,
+      "zone": "יציע",
+      "section": "גלריה 5",
+      "row": "2",
+      "seats": [
+        40,
+        41,
+        42,
+        43
+      ],
+      "prices": [
+        199,
+        199,
+        199,
+        199
+      ],
+      "centerDist": 14
+    },
+    {
+      "foundAt": "2026-11-06T19:23:12.123Z",
+      "event": "קופת ת\"א: היסטריה · 25.11 רביעי 21:15 פיס ארנה ירושלים לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/3015?prsntId=56567",
+      "quantity": 5,
+      "zone": "יציע",
+      "section": "גלריה 5",
+      "row": "2",
+      "seats": [
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "prices": [
+        199,
+        199,
+        199,
+        199,
+        199
+      ],
+      "centerDist": 14.5
+    },
+    {
+      "foundAt": "2026-11-06T19:23:17.266Z",
+      "event": "קופת ת\"א: היסטריה · 25.11 רביעי 21:15 פיס ארנה ירושלים לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/3015?prsntId=56006",
+      "quantity": 2,
+      "zone": "VIP / תאים",
+      "section": "VIP B",
+      "row": "2",
+      "seats": [
+        79,
+        80
+      ],
+      "prices": [
+        449,
+        449
+      ],
+      "centerDist": 9
+    },
+    {
+      "foundAt": "2026-11-06T19:23:17.266Z",
+      "event": "קופת ת\"א: היסטריה · 25.11 רביעי 21:15 פיס ארנה ירושלים לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/3015?prsntId=56006",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם 1",
+      "row": "8",
+      "seats": [
+        7,
+        8
+      ],
+      "prices": [
+        299,
+        299
+      ],
+      "centerDist": 12.5
+    },
+    {
+      "foundAt": "2026-11-06T19:23:17.266Z",
+      "event": "קופת ת\"א: היסטריה · 25.11 רביעי 21:15 פיס ארנה ירושלים לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/3015?prsntId=56006",
+      "quantity": 2,
+      "zone": "יציע",
+      "section": "גלריה 5",
+      "row": "2",
+      "seats": [
+        40,
+        41
+      ],
+      "prices": [
+        199,
+        199
+      ],
+      "centerDist": 13
+    },
+    {
+      "foundAt": "2026-11-06T19:23:17.266Z",
+      "event": "קופת ת\"א: היסטריה · 25.11 רביעי 21:15 פיס ארנה ירושלים לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/3015?prsntId=56006",
+      "quantity": 3,
+      "zone": "VIP / תאים",
+      "section": "VIP B",
+      "row": "2",
+      "seats": [
+        79,
+        80,
+        81
+      ],
+      "prices": [
+        449,
+        449,
+        449
+      ],
+      "centerDist": 9.5
+    },
+    {
+      "foundAt": "2026-11-06T19:23:17.266Z",
+      "event": "קופת ת\"א: היסטריה · 25.11 רביעי 21:15 פיס ארנה ירושלים לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/3015?prsntId=56006",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם 1",
+      "row": "8",
+      "seats": [
+        6,
+        7,
+        8
+      ],
+      "prices": [
+        299,
+        299,
+        299
+      ],
+      "centerDist": 13
+    },
+    {
+      "foundAt": "2026-11-06T19:23:17.266Z",
+      "event": "קופת ת\"א: היסטריה · 25.11 רביעי 21:15 פיס ארנה ירושלים לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/3015?prsntId=56006",
+      "quantity": 3,
+      "zone": "יציע",
+      "section": "גלריה 5",
+      "row": "2",
+      "seats": [
+        40,
+        41,
+        42
+      ],
+      "prices": [
+        199,
+        199,
+        199
+      ],
+      "centerDist": 13.5
+    },
+    {
+      "foundAt": "2026-11-06T19:23:17.266Z",
+      "event": "קופת ת\"א: היסטריה · 25.11 רביעי 21:15 פיס ארנה ירושלים לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/3015?prsntId=56006",
+      "quantity": 4,
+      "zone": "VIP / תאים",
+      "section": "VIP B",
+      "row": "4",
+      "seats": [
+        66,
+        67,
+        68,
+        69
+      ],
+      "prices": [
+        449,
+        449,
+        449,
+        449
+      ],
+      "centerDist": 3
+    },
+    {
+      "foundAt": "2026-11-06T19:23:17.266Z",
+      "event": "קופת ת\"א: היסטריה · 25.11 רביעי 21:15 פיס ארנה ירושלים לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/3015?prsntId=56006",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם 1",
+      "row": "8",
+      "seats": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "prices": [
+        299,
+        299,
+        299,
+        299
+      ],
+      "centerDist": 13.5
+    },
+    {
+      "foundAt": "2026-11-06T19:23:17.266Z",
+      "event": "קופת ת\"א: היסטריה · 25.11 רביעי 21:15 פיס ארנה ירושלים לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/3015?prsntId=56006",
+      "quantity": 4,
+      "zone": "יציע",
+      "section": "גלריה 5",
+      "row": "2",
+      "seats": [
+        40,
+        41,
+        42,
+        43
+      ],
+      "prices": [
+        199,
+        199,
+        199,
+        199
+      ],
+      "centerDist": 14
+    },
+    {
+      "foundAt": "2026-11-06T19:23:17.266Z",
+      "event": "קופת ת\"א: היסטריה · 25.11 רביעי 21:15 פיס ארנה ירושלים לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/3015?prsntId=56006",
+      "quantity": 5,
+      "zone": "VIP / תאים",
+      "section": "VIP B",
+      "row": "4",
+      "seats": [
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "prices": [
+        449,
+        449,
+        449,
+        449,
+        449
+      ],
+      "centerDist": 9.5
+    },
+    {
+      "foundAt": "2026-11-06T19:23:17.266Z",
+      "event": "קופת ת\"א: היסטריה · 25.11 רביעי 21:15 פיס ארנה ירושלים לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/3015?prsntId=56006",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם 5",
+      "row": "9",
+      "seats": [
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "prices": [
+        299,
+        299,
+        299,
+        299,
+        299
+      ],
+      "centerDist": 11.5
+    },
+    {
+      "foundAt": "2026-11-06T19:23:17.266Z",
+      "event": "קופת ת\"א: היסטריה · 25.11 רביעי 21:15 פיס ארנה ירושלים לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/3015?prsntId=56006",
+      "quantity": 5,
+      "zone": "יציע",
+      "section": "גלריה 5",
+      "row": "2",
+      "seats": [
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "prices": [
+        199,
+        199,
+        199,
+        199,
+        199
+      ],
+      "centerDist": 14.5
+    },
+    {
+      "foundAt": "2026-11-06T19:35:36.093Z",
+      "event": "קופת ת\"א: מותק FOREVER · 04.12 - 12.12 סינמה סיטי גלילות אחרונים",
+      "url": "https://tickets.kupat.co.il/booking/features/2978?prsntId=55140",
+      "quantity": 2,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "3",
+      "seats": [
+        22,
+        23
+      ],
+      "prices": [
+        159,
+        159
+      ],
+      "centerDist": 7
+    },
+    {
+      "foundAt": "2026-11-06T19:35:36.093Z",
+      "event": "קופת ת\"א: מותק FOREVER · 04.12 - 12.12 סינמה סיטי גלילות אחרונים",
+      "url": "https://tickets.kupat.co.il/booking/features/2978?prsntId=55140",
+      "quantity": 3,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "3",
+      "seats": [
+        22,
+        23,
+        24
+      ],
+      "prices": [
+        159,
+        159,
+        159
+      ],
+      "centerDist": 7.5
+    },
+    {
+      "foundAt": "2026-11-06T19:35:36.093Z",
+      "event": "קופת ת\"א: מותק FOREVER · 04.12 - 12.12 סינמה סיטי גלילות אחרונים",
+      "url": "https://tickets.kupat.co.il/booking/features/2978?prsntId=55140",
+      "quantity": 4,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "3",
+      "seats": [
+        22,
+        23,
+        24,
+        25
+      ],
+      "prices": [
+        159,
+        159,
+        159,
+        159
+      ],
+      "centerDist": 8
+    },
+    {
+      "foundAt": "2026-11-06T19:35:36.093Z",
+      "event": "קופת ת\"א: מותק FOREVER · 04.12 - 12.12 סינמה סיטי גלילות אחרונים",
+      "url": "https://tickets.kupat.co.il/booking/features/2978?prsntId=55140",
+      "quantity": 5,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "3",
+      "seats": [
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "prices": [
+        159,
+        159,
+        159,
+        159,
+        159
+      ],
+      "centerDist": 8.5
+    },
+    {
+      "foundAt": "2026-11-06T19:39:35.419Z",
+      "event": "קופת ת\"א: שלום חנוך רמי פורטיס ואיפה הילד · 26.04 שני 20:00 אמפי אשדוד לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/2936?prsntId=54208",
+      "quantity": 2,
+      "zone": "רחבה / אורקסטרה",
+      "section": "אורקסטרה",
+      "row": "1",
+      "seats": [
+        2,
+        3
+      ],
+      "prices": [
+        319,
+        319
+      ],
+      "centerDist": 18
+    },
+    {
+      "foundAt": "2026-11-06T19:39:35.419Z",
+      "event": "קופת ת\"א: שלום חנוך רמי פורטיס ואיפה הילד · 26.04 שני 20:00 אמפי אשדוד לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/2936?prsntId=54208",
+      "quantity": 3,
+      "zone": "רחבה / אורקסטרה",
+      "section": "אורקסטרה",
+      "row": "1",
+      "seats": [
+        1,
+        2,
+        3
+      ],
+      "prices": [
+        319,
+        319,
+        319
+      ],
+      "centerDist": 18.5
+    },
+    {
+      "foundAt": "2026-11-06T19:39:35.419Z",
+      "event": "קופת ת\"א: שלום חנוך רמי פורטיס ואיפה הילד · 26.04 שני 20:00 אמפי אשדוד לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/2936?prsntId=54208",
+      "quantity": 4,
+      "zone": "רחבה / אורקסטרה",
+      "section": "אורקסטרה",
+      "row": "2",
+      "seats": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "prices": [
+        319,
+        319,
+        319,
+        319
+      ],
+      "centerDist": 2
+    },
+    {
+      "foundAt": "2026-11-06T19:39:35.419Z",
+      "event": "קופת ת\"א: שלום חנוך רמי פורטיס ואיפה הילד · 26.04 שני 20:00 אמפי אשדוד לרכישת כרטיסים",
+      "url": "https://tickets.kupat.co.il/booking/features/2936?prsntId=54208",
+      "quantity": 5,
+      "zone": "רחבה / אורקסטרה",
+      "section": "אורקסטרה",
+      "row": "2",
+      "seats": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "prices": [
+        319,
+        319,
+        319,
+        319,
+        319
+      ],
+      "centerDist": 4.5
     }
   ],
   "outbox": [
@@ -64407,28 +67127,28 @@
       "fails": 0,
       "lastError": "לא נמצאו מופעים בעמוד הראשי",
       "lastErrorAt": "2026-11-06T03:30:55.842Z",
-      "lastOk": "2026-11-06T11:48:22.272Z"
+      "lastOk": "2026-11-06T18:52:14.143Z"
     },
     "סריקה: Ticketmaster": {
       "fails": 0,
-      "lastOk": "2026-11-06T11:48:22.272Z"
+      "lastOk": "2026-11-06T18:52:14.143Z"
     },
     "ticketmaster": {
       "fails": 0,
-      "lastOk": "2026-11-06T12:34:51.208Z"
+      "lastOk": "2026-11-06T19:41:35.037Z"
     },
     "kupat": {
       "fails": 0,
-      "lastOk": "2026-11-06T12:33:22.781Z",
+      "lastOk": "2026-11-06T19:39:58.168Z",
       "lastError": "האתר החזיר 0 מושבים",
-      "lastErrorAt": "2026-11-06T12:33:08.112Z"
+      "lastErrorAt": "2026-11-06T19:32:48.279Z"
     }
   },
   "stats": {
     "since": "2026-11-06T03:30:46.986Z",
     "cycles": 1,
-    "checks": 125,
-    "errors": 26,
+    "checks": 203,
+    "errors": 50,
     "alerts": 0
   },
   "lastCycle": "2026-11-06T03:47:07.264Z",
@@ -64542,7 +67262,483 @@
     "https://www.ticketmaster.co.il/event/MRN26/ALL/iw": "2026-11-06T11:48:22.272Z",
     "https://www.ticketmaster.co.il/event/MDF31/ALL/iw": "2026-11-06T11:48:22.272Z",
     "https://www.ticketmaster.co.il/event/MEP27/ALL/iw": "2026-11-06T11:48:22.272Z",
-    "https://www.ticketmaster.co.il/event/MDP08/ALL/iw": "2026-11-06T11:48:22.272Z"
+    "https://www.ticketmaster.co.il/event/MDP08/ALL/iw": "2026-11-06T11:48:22.272Z",
+    "tickets.kupat.co.il|2936": "2026-11-06T18:52:14.965Z",
+    "tickets.kupat.co.il|2549": "2026-11-06T18:52:14.965Z",
+    "tickets.kupat.co.il|2869": "2026-11-06T18:52:14.965Z"
   },
-  "knownSeeded": true
+  "knownSeeded": true,
+  "catalog": {
+    "at": "2026-11-06T18:52:14.143Z",
+    "events": [
+      {
+        "name": "קופת ת\"א: המופע של אודי כגן",
+        "url": "https://tickets.comy.co.il/booking/features/826?prsntId=54237"
+      },
+      {
+        "name": "קופת ת\"א: המופע של אסף יצחקי",
+        "url": "https://tickets.comy.co.il/booking/features/831?prsntId=55379"
+      },
+      {
+        "name": "קופת ת\"א: המופע של דניאל חן",
+        "url": "https://tickets.comy.co.il/booking/features/1307?prsntId=54805"
+      },
+      {
+        "name": "קופת ת\"א: המופע של סיבה למסיבה - קומדי בר",
+        "url": "https://tickets.comy.co.il/booking/features/2030?prsntId=56269"
+      },
+      {
+        "name": "קופת ת\"א: המופע של רוני ששון",
+        "url": "https://tickets.comy.co.il/booking/features/2045?prsntId=56306"
+      },
+      {
+        "name": "קופת ת\"א: המופע של המרתון הגדול - קומדי בר",
+        "url": "https://tickets.comy.co.il/booking/features/2031?prsntId=56273"
+      },
+      {
+        "name": "קופת ת\"א: המופע של עודד מנסטר",
+        "url": "https://tickets.comy.co.il/booking/features/1677?prsntId=53821"
+      },
+      {
+        "name": "קופת ת\"א: המופע של אבי נוסבאום",
+        "url": "https://tickets.comy.co.il/booking/features/824?prsntId=54691"
+      },
+      {
+        "name": "קופת ת\"א: המופע של קובי מימון",
+        "url": "https://tickets.comy.co.il/booking/features/815?prsntId=54914"
+      },
+      {
+        "name": "קופת ת\"א: המופע של Shabbos night live - Israeli Stand-up in",
+        "url": "https://tickets.comy.co.il/booking/features/2768?prsntId=56532"
+      },
+      {
+        "name": "קופת ת\"א: המופע של רותם אבוהב",
+        "url": "https://tickets.comy.co.il/booking/features/868?prsntId=55052"
+      },
+      {
+        "name": "קופת ת\"א: המופע של מני עוזרי",
+        "url": "https://tickets.comy.co.il/booking/features/853?prsntId=55446"
+      },
+      {
+        "name": "קופת ת\"א: המופע של נדב אבוקסיס",
+        "url": "https://tickets.comy.co.il/booking/features/855?prsntId=55794"
+      },
+      {
+        "name": "קופת ת\"א: המופע של שיחות עם הברמן",
+        "url": "https://tickets.comy.co.il/booking/features/2296?prsntId=56369"
+      },
+      {
+        "name": "קופת ת\"א: המופע של חן מזרחי",
+        "url": "https://tickets.comy.co.il/booking/features/844?prsntId=53861"
+      },
+      {
+        "name": "קופת ת\"א: המופע של ארז בירנבוים",
+        "url": "https://tickets.comy.co.il/booking/features/873?prsntId=54933"
+      },
+      {
+        "name": "קופת ת\"א: המופע של אורי חזקיה",
+        "url": "https://tickets.comy.co.il/booking/features/827?prsntId=55372"
+      },
+      {
+        "name": "קופת ת\"א: המופע של רשף לוי המופע מצולם",
+        "url": "https://tickets.comy.co.il/booking/features/864?prsntId=55798"
+      },
+      {
+        "name": "קופת ת\"א: המופע של שבוע טוב - קומדי בר",
+        "url": "https://tickets.comy.co.il/booking/features/2032?prsntId=56277"
+      },
+      {
+        "name": "קופת ת\"א: המופע של אדיר מילר",
+        "url": "https://tickets.comy.co.il/booking/features/825?prsntId=53529"
+      },
+      {
+        "name": "קופת ת\"א: המופע של עדי אשכנזי",
+        "url": "https://tickets.comy.co.il/booking/features/2935?prsntId=55643"
+      },
+      {
+        "name": "קופת ת\"א: המופע של בן בן ברוך",
+        "url": "https://tickets.comy.co.il/booking/features/839?prsntId=54956"
+      },
+      {
+        "name": "קופת ת\"א: המופע של אנדי ווטס מציג את רוי יאנג ועמליה וויליא",
+        "url": "https://tickets.grayclub.co.il/booking/features/1338?prsntId=55208"
+      },
+      {
+        "name": "קופת ת\"א: המופע של סינטרה תזמורת הגאז הישראלית עם אלרן דקל",
+        "url": "https://tickets.grayclub.co.il/booking/features/2973?prsntId=55385"
+      },
+      {
+        "name": "קופת ת\"א: המופע של DIRTY POP - מופע מחווה לסצינת הפופ של הנ",
+        "url": "https://tickets.grayclub.co.il/booking/features/2620?prsntId=55861"
+      },
+      {
+        "name": "קופת ת\"א: המופע של שיחות מהבגאז' - תומר הדר ומאור שלום סויס",
+        "url": "https://tickets.grayclub.co.il/booking/features/2757?prsntId=56136"
+      },
+      {
+        "name": "קופת ת\"א: המופע של שם טוב לוי ושלישיית כלי קשת – מופע מיוחד",
+        "url": "https://tickets.grayclub.co.il/booking/features/3033?prsntId=56143"
+      },
+      {
+        "name": "קופת ת\"א: המופע של קובי מימון",
+        "url": "https://tickets.grayclub.co.il/booking/features/815?prsntId=55923"
+      },
+      {
+        "name": "קופת ת\"א: המופע של Mehmet Dash | מהמט דאש - מופע מיוחד הייש",
+        "url": "https://tickets.grayclub.co.il/booking/features/2785?prsntId=56345"
+      },
+      {
+        "name": "קופת ת\"א: המופע של בלוז אנד בוז - Led Zeppelin Night",
+        "url": "https://tickets.grayclub.co.il/booking/features/1953?prsntId=56059"
+      },
+      {
+        "name": "קופת ת\"א: המופע של סטלוס ואורן חן חוגגים 25 שנה",
+        "url": "https://tickets.grayclub.co.il/booking/features/2758?prsntId=55470"
+      },
+      {
+        "name": "קופת ת\"א: המופע של ליאת בנאי",
+        "url": "https://tickets.grayclub.co.il/booking/features/3031?prsntId=56133"
+      },
+      {
+        "name": "קופת ת\"א: המופע של החצר האחורית",
+        "url": "https://tickets.grayclub.co.il/booking/features/1502?prsntId=55874"
+      },
+      {
+        "name": "קופת ת\"א: המופע של ShowTime – מופע מסיבה מבית רוקוויל",
+        "url": "https://tickets.grayclub.co.il/booking/features/3055?prsntId=56405"
+      },
+      {
+        "name": "קופת ת\"א: המופע של ECHOES PINK FLOYD - GREATEST HITS",
+        "url": "https://tickets.grayclub.co.il/booking/features/2053?prsntId=55012"
+      },
+      {
+        "name": "קופת ת\"א: המופע של רותם כהן",
+        "url": "https://tickets.grayclub.co.il/booking/features/1089?prsntId=56084"
+      },
+      {
+        "name": "קופת ת\"א: המופע של רבקה זהר – כל הלהיטים ישן וגם חדש",
+        "url": "https://tickets.grayclub.co.il/booking/features/1064?prsntId=55209"
+      },
+      {
+        "name": "קופת ת\"א: המופע של משה להב הטיש הגדול",
+        "url": "https://tickets.grayclub.co.il/booking/features/1688?prsntId=55393"
+      },
+      {
+        "name": "קופת ת\"א: מושיק עפיה · 19.11 חמישי 20:45 היכל מנורה פרונטלי אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/2518?display=list&prsntId=55984"
+      },
+      {
+        "name": "קופת ת\"א: היסטריה · 25.11 רביעי 21:15 פיס ארנה ירושלים לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/3015?display=list&prsntId=56567"
+      },
+      {
+        "name": "קופת ת\"א: LUMAGICA · 12.11 - 02.01 אמפי תל אביב לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/2671?display=list&prsntId=56158"
+      },
+      {
+        "name": "קופת ת\"א: שלמה ארצי · 27.11 שישי 13:00 היכל התרבות ת\"א אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/441?display=list&prsntId=56045"
+      },
+      {
+        "name": "קופת ת\"א: TOP SECRET פסטיגל · 28.11 - 15.12 ביתן 2 אקספו ת\"א מופעים נוספים ב 13.12-15.12",
+        "url": "https://tickets.kupat.co.il/booking/features/2977?display=list&prsntId=55059"
+      },
+      {
+        "name": "קופת ת\"א: ריטה · 26.12 שבת 21:00 היכל התרבות ת\"א אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/1776?display=list&prsntId=56319"
+      },
+      {
+        "name": "קופת ת\"א: אביב גפן · 30.12 רביעי 21:00 היכל התרבות ת\"א לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/2841?display=list&prsntId=56145"
+      },
+      {
+        "name": "קופת ת\"א: קוקולנד - אליפות הטרנדים · 06.12 ראשון 10:30 תיאטרון האקספו ת״א אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/3072?display=list&prsntId=56506"
+      },
+      {
+        "name": "קופת ת\"א: אופק אדנק · 30.12 רביעי 20:45 היכל מנורה תל אביב אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/2999?display=list&prsntId=56509"
+      },
+      {
+        "name": "קופת ת\"א: חנן בן ארי · 14.11 שבת 21:00 בית ההופעות של חנן | אקספו תל אביב BLACK BOX אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/1446?display=list&prsntId=56260"
+      },
+      {
+        "name": "קופת ת\"א: מירי מסיקה X קרן פלס · 02.01 שבת 20:30 היכל מנורה תל אביב אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/2414?display=list&prsntId=56590"
+      },
+      {
+        "name": "קופת ת\"א: קובי פרץ · 17.11 שלישי 20:45 היכל מנורה פרונטלי אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/2353?display=list&prsntId=55439"
+      },
+      {
+        "name": "קופת ת\"א: ירדנה ארזי · 18.12 שישי 13:30 היכל התרבות ת\"א לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/44?display=list&prsntId=56323"
+      },
+      {
+        "name": "קופת ת\"א: קרקס HUBA CUBA · 27.11 - 12.12 גלובוס סנטר - חוף אשקלון לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/2766?display=list&prsntId=55937"
+      },
+      {
+        "name": "קופת ת\"א: עומרי סבח · 19.11 חמישי 21:30 רדינג 3 לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/3037?display=list&prsntId=56205"
+      },
+      {
+        "name": "קופת ת\"א: ישי ריבו · 21.11 שבת 21:00 תיאטרון האקספו ת״א לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/479?display=list&prsntId=56445"
+      },
+      {
+        "name": "קופת ת\"א: הראל מויאל · 03.12 חמישי 21:30 רדינג 3 לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/3053?display=list&prsntId=56363"
+      },
+      {
+        "name": "קופת ת\"א: רון נשר · 08.12 שלישי 21:30 רדינג 3 לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/3038?display=list&prsntId=56214"
+      },
+      {
+        "name": "קופת ת\"א: חיים איפרגן · 12.12 שבת 22:00 האנגר 11 - תל אביב לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/3057?display=list&prsntId=56421"
+      },
+      {
+        "name": "קופת ת\"א: גידי שמור · 14.12 שני 21:30 האנגר 11 - תל אביב לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/3073?display=list&prsntId=56512"
+      },
+      {
+        "name": "קופת ת\"א: מה קשור - חוגגים 25 · 20.12 ראשון 20:45 ביתן 2 אקספו ת\"א לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/3056?display=list&prsntId=56411"
+      },
+      {
+        "name": "קופת ת\"א: הראל סקעת · 24.12 חמישי 21:00 תיאטרון האקספו ת״א לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/47?display=list&prsntId=56496"
+      },
+      {
+        "name": "קופת ת\"א: פיטר פן - המחזמר · 27.11 - 30.11 מרכז הקונגרסים חיפה - אולם אורן אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/2871?display=list&prsntId=55321"
+      },
+      {
+        "name": "קופת ת\"א: קסם של כוכבים · 21.11 שבת 11:00 אולם מופעים גבעת ברנר לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/3009?display=list&prsntId=55920"
+      },
+      {
+        "name": "קופת ת\"א: אביגיל ויסמן · 07.12 שני 16:00 רדינג 3 לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/2584?display=list&prsntId=56547"
+      },
+      {
+        "name": "קופת ת\"א: ספר הג'ונגל - המחזמר · 05.12 שבת 10:00 מרכז הקונגרסים חיפה - אולם אורן אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/1924?display=list&prsntId=55701"
+      },
+      {
+        "name": "קופת ת\"א: קרקס בראבו מציג - קרקס החלומות · 26.11 חמישי 17:00 מרכז תרבות באר טוביה לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/3013?display=list&prsntId=55878"
+      },
+      {
+        "name": "קופת ת\"א: מותק FOREVER · 04.12 - 12.12 סינמה סיטי גלילות אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/2978?display=list&prsntId=55123"
+      },
+      {
+        "name": "קופת ת\"א: שלום חנוך רמי פורטיס ואיפה הילד · 26.04 שני 20:00 אמפי אשדוד לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/2936?display=list&prsntId=54208"
+      },
+      {
+        "name": "קופת ת\"א: שיר דוד גדסי · 23.12 רביעי 21:30 רדינג 3 לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/2549?display=list&prsntId=55279"
+      },
+      {
+        "name": "קופת ת\"א: ECHOES - PINK FLOYD ANIMALS 50 YEARS · 18.03 חמישי 20:30 היכל התרבות ת\"א לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/3016?display=list&prsntId=55999"
+      },
+      {
+        "name": "קופת ת\"א: ICONIC - לי בירן X לורן פלד · 29.12 שלישי 20:45 היכל התרבות ת\"א אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/2869?display=list&prsntId=55392"
+      },
+      {
+        "name": "Ticketmaster: Spot Light Image",
+        "url": "https://www.ticketmaster.co.il/event/MTA71/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: Spot Light Image",
+        "url": "https://www.ticketmaster.co.il/event/MTA73/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: תמונה ללא תיאור",
+        "url": "https://www.ticketmaster.co.il/event/MBH09/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: תמונה ללא תיאור",
+        "url": "https://www.ticketmaster.co.il/event/MH134/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: Three Legends. One Stage",
+        "url": "https://www.ticketmaster.co.il/event/MTA74/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: תמונה ללא תיאור",
+        "url": "https://www.ticketmaster.co.il/event/MR332/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: תמונה ללא תיאור",
+        "url": "https://www.ticketmaster.co.il/event/MGN01/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: PASS - Red Sea Jazz Festival 11-14/11",
+        "url": "https://www.ticketmaster.co.il/event/MEI04/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: PASS - Red Sea Jazz Festival 12-14/11",
+        "url": "https://www.ticketmaster.co.il/event/MEI05/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: דני גוטפריד והמייסדים",
+        "url": "https://www.ticketmaster.co.il/event/MRN19/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: תמונה ללא תיאור",
+        "url": "https://www.ticketmaster.co.il/event/MDF24/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: עידן רייכל - אבני דרך",
+        "url": "https://www.ticketmaster.co.il/event/MEP21/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: תמונה ללא תיאור",
+        "url": "https://www.ticketmaster.co.il/event/MDP01/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: Keren Ann + Avishai Cohen feat. Big Vicious",
+        "url": "https://www.ticketmaster.co.il/event/MRN20/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: תמונה ללא תיאור",
+        "url": "https://www.ticketmaster.co.il/event/MDF25/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: דודו טסה אורחת מיוחדת: מאיו שבירו",
+        "url": "https://www.ticketmaster.co.il/event/MEP22/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: שלישיית אלון ניר",
+        "url": "https://www.ticketmaster.co.il/event/MDP02/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: מנגנים מתי כספי \"תתחצף ותענה\"",
+        "url": "https://www.ticketmaster.co.il/event/MRN21/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: אבטה בריהון ופרויקט אדיס קן",
+        "url": "https://www.ticketmaster.co.il/event/MDF26/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: תזמורת ירושלים מזרח ומערב ומאסטרו תום כהן מציגים את: מאיה בלזיצמן וגיא מינטוס",
+        "url": "https://www.ticketmaster.co.il/event/MEP23/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: יונתן אבישי אנסמבל - Walk with me",
+        "url": "https://www.ticketmaster.co.il/event/MDP03/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: עומרי מור \"Original Folk Songs\" אורח מיוחד: ז׳וקה פרפיניאן",
+        "url": "https://www.ticketmaster.co.il/event/MRN22/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: חמישיית מיקה ריעני",
+        "url": "https://www.ticketmaster.co.il/event/MDF27/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: גידי גוב B-SIDE מארח את עמיר בניון ורונה קינן",
+        "url": "https://www.ticketmaster.co.il/event/MEP24/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: שלישיית אמיר ברסלר",
+        "url": "https://www.ticketmaster.co.il/event/MDP04/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: Eli Degibri Quartet - My One and Only Love",
+        "url": "https://www.ticketmaster.co.il/event/MRN23/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: GESHEM X אנסמבל מיתר",
+        "url": "https://www.ticketmaster.co.il/event/MDF28/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: מירי מסיקה והביג בנד",
+        "url": "https://www.ticketmaster.co.il/event/MEP25/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: תמונה ללא תיאור",
+        "url": "https://www.ticketmaster.co.il/event/MDP05/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: שלומי שבן והפסנתר מארח את האחים קדוש",
+        "url": "https://www.ticketmaster.co.il/event/MRN24/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: אורי קפלן וליהו מלמד - Reverie Ensemble",
+        "url": "https://www.ticketmaster.co.il/event/MDF29/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: רביד פלוטניק מארח את ישי סוויסה",
+        "url": "https://www.ticketmaster.co.il/event/MEP26/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: חמישיית מורדי פרבר \"The Mordy Ferber Songbook\"",
+        "url": "https://www.ticketmaster.co.il/event/MDP06/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: תמונה ללא תיאור",
+        "url": "https://www.ticketmaster.co.il/event/MRN25/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: תמונה ללא תיאור",
+        "url": "https://www.ticketmaster.co.il/event/MDF30/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: רביעיית אלברט בגר",
+        "url": "https://www.ticketmaster.co.il/event/MDP07/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: מאור כהן ותזמורת הג'אז הישראלית",
+        "url": "https://www.ticketmaster.co.il/event/MRN26/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: שלישיית שרון מנסור",
+        "url": "https://www.ticketmaster.co.il/event/MDF31/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: יוני רכטר - עוד סיפור ועוד",
+        "url": "https://www.ticketmaster.co.il/event/MEP27/ALL/iw"
+      },
+      {
+        "name": "Ticketmaster: שלישיית יוגב שטרית",
+        "url": "https://www.ticketmaster.co.il/event/MDP08/ALL/iw"
+      }
+    ]
+  },
+  "starSeen": {
+    "tickets.kupat.co.il|441": "2026-11-06T18:52:14.274Z",
+    "tickets.kupat.co.il|1776": "2026-11-06T18:52:14.278Z",
+    "tickets.kupat.co.il|2841": "2026-11-06T18:52:14.278Z",
+    "tickets.kupat.co.il|1446": "2026-11-06T18:52:14.285Z",
+    "tickets.kupat.co.il|2414": "2026-11-06T18:52:14.286Z",
+    "tickets.kupat.co.il|2353": "2026-11-06T18:52:14.287Z",
+    "tickets.kupat.co.il|479": "2026-11-06T18:52:14.297Z",
+    "tickets.kupat.co.il|47": "2026-11-06T18:52:14.317Z",
+    "tickets.kupat.co.il|2936": "2026-11-06T18:52:14.337Z",
+    "tickets.kupat.co.il|2869": "2026-11-06T18:52:14.346Z",
+    "https://www.ticketmaster.co.il/event/MEP21/ALL/iw": "2026-11-06T18:52:14.367Z",
+    "https://www.ticketmaster.co.il/event/MEP22/ALL/iw": "2026-11-06T18:52:14.374Z",
+    "https://www.ticketmaster.co.il/event/MRN21/ALL/iw": "2026-11-06T18:52:14.376Z",
+    "https://www.ticketmaster.co.il/event/MEP24/ALL/iw": "2026-11-06T18:52:14.389Z",
+    "https://www.ticketmaster.co.il/event/MEP25/ALL/iw": "2026-11-06T18:52:14.396Z",
+    "https://www.ticketmaster.co.il/event/MEP26/ALL/iw": "2026-11-06T18:52:14.403Z"
+  },
+  "links": {
+    "1": "https://tickets.kupat.co.il/booking/features/441?display=list&prsntId=56045",
+    "2": "https://tickets.kupat.co.il/booking/features/1776?display=list&prsntId=56319",
+    "3": "https://tickets.kupat.co.il/booking/features/2841?display=list&prsntId=56145",
+    "4": "https://tickets.kupat.co.il/booking/features/1446?display=list&prsntId=56260",
+    "5": "https://tickets.kupat.co.il/booking/features/2414?display=list&prsntId=56590",
+    "6": "https://tickets.kupat.co.il/booking/features/2353?display=list&prsntId=55439",
+    "7": "https://tickets.kupat.co.il/booking/features/2549?display=list&prsntId=55279"
+  },
+  "linkSeq": 7
 }
