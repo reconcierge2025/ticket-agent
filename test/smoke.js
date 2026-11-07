@@ -46,7 +46,8 @@ try {
 console.log('✔', ok.join(' | ') || '—');
 if (problems.length) {
   console.error('✖', problems.join('\n✖ '));
-  if (isConfigured(tg)) {
+  // הודעה בטלגרם רק אם ביקשו במפורש (SMOKE_TELEGRAM=1) – ברירת המחדל: רוטינת התיקון מטפלת בשקט
+  if (process.env.SMOKE_TELEGRAM === '1' && isConfigured(tg)) {
     await sendTelegram(tg, `🧪⚠️ <b>בדיקת הלילה מצאה בעיה</b>\n\n${problems.map((p) => `• ${p}`).join('\n')}\n\nכנראה שאתר שינה מבנה – צריך לעדכן את הסוכן.`);
   }
   process.exit(1);

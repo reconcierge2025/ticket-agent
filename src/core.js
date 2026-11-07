@@ -54,10 +54,8 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
   function track(site, ok, error) {
     const h = (db.health[site] ||= { fails: 0 });
     if (ok) {
-      if (h.alerted) {
-        notify(`✅ <b>${esc(SITE_NAMES[site] || site)} חזר לעבוד</b>`);
-        h.alerted = false;
-      }
+      if (h.alerted && cfg.healthAlerts === true) notify(`✅ <b>${esc(SITE_NAMES[site] || site)} חזר לעבוד</b>`);
+      h.alerted = false;
       Object.assign(h, { fails: 0, lastOk: new Date().toISOString() });
     } else {
       h.fails++;
@@ -66,7 +64,15 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
       db.stats.errors++;
     }
   }
+  /**
+   * תקלות באתרים לא נשלחות לטלגרם (ברירת מחדל): הן נרשמות ב-/status ובלוג,
+   * ורוטינת התיקון הלילית מתקנת אותן לבד. להחזרת ההתראות: "healthAlerts": true ב-config.
+   */
   async function healthAlerts() {
+    if (cfg.healthAlerts !== true) {
+      for (const [site, h] of Object.entries(db.health)) if (h.fails >= (cfg.healthFailThreshold ?? 3)) log(`[בריאות] ${site}: ${h.fails} כשלונות – ${h.lastError}`);
+      return;
+    }
     for (const [site, h] of Object.entries(db.health)) {
       if (h.fails >= (cfg.healthFailThreshold ?? 3) && once(db, `health|${site}|${israelNow().date}`)) {
         h.alerted = true;
@@ -294,7 +300,12 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
   async function heartbeat() {
     const now = israelNow();
     if (now.hour < (cfg.heartbeatHour ?? 9) || !once(db, `heartbeat|${now.date}`)) return;
-    await notify(`☀️ <b>בוקר טוב – הסוכן פועל</b>\n\n${statusText().split('\n').slice(2).join('\n')}`, { urgent: true });
+    // סיכום הבוקר בלי שורות של תקלות באתרים (הן מטופלות לבד; מופיעות רק ב-/status)
+    const summary = statusText()
+      .split('\n')
+      .slice(2)
+      .filter((l) => !l.startsWith('⚠️') && l !== '<b>האתרים:</b>' && !l.startsWith('✅'));
+    await notify(`☀️ <b>בוקר טוב – הסוכן פועל</b>\n\n${summary.join('\n').trim()}`, { urgent: true });
     db.stats = { since: new Date().toISOString(), cycles: 0, checks: 0, errors: 0, alerts: 0 };
     save(db);
   }
