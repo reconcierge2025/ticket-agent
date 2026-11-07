@@ -16098,7 +16098,42 @@
         "foundAt": "2026-11-06T12:20:54.826Z"
       }
     },
-    "https://tickets.kupat.co.il/booking/features/1446?prsntId=56260": {},
+    "https://tickets.kupat.co.il/booking/features/1446?prsntId=56260": {
+      "רחבה / אורקסטרה|2": {
+        "quantity": 2,
+        "zone": "רחבה / אורקסטרה",
+        "section": "אורקסטרה",
+        "row": "13",
+        "seats": [
+          34,
+          35
+        ],
+        "prices": [
+          289,
+          289
+        ],
+        "centerDist": 9,
+        "foundAt": "2026-11-07T11:48:53.906Z"
+      },
+      "רחבה / אורקסטרה|3": {
+        "quantity": 3,
+        "zone": "רחבה / אורקסטרה",
+        "section": "אורקסטרה",
+        "row": "13",
+        "seats": [
+          34,
+          35,
+          36
+        ],
+        "prices": [
+          289,
+          289,
+          289
+        ],
+        "centerDist": 9.5,
+        "foundAt": "2026-11-07T11:48:53.906Z"
+      }
+    },
     "https://tickets.kupat.co.il/booking/features/1446?prsntId=56318": {
       "רחבה / אורקסטרה|2": {
         "quantity": 2,
@@ -33571,46 +33606,46 @@
         "quantity": 2,
         "zone": "אולם",
         "section": "אולם",
-        "row": "18",
+        "row": "4",
         "seats": [
-          28,
-          29
+          20,
+          21
         ],
         "prices": [
           149,
           149
         ],
-        "centerDist": 8.5,
-        "foundAt": "2026-11-07T04:44:46.941Z"
+        "centerDist": 4,
+        "foundAt": "2026-11-07T11:43:16.048Z"
       },
       "אולם|3": {
         "quantity": 3,
         "zone": "אולם",
         "section": "אולם",
-        "row": "18",
+        "row": "4",
         "seats": [
-          28,
-          29,
-          30
+          20,
+          21,
+          22
         ],
         "prices": [
           149,
           149,
           149
         ],
-        "centerDist": 9,
-        "foundAt": "2026-11-07T04:44:46.941Z"
+        "centerDist": 4.5,
+        "foundAt": "2026-11-07T11:43:16.048Z"
       },
       "אולם|4": {
         "quantity": 4,
         "zone": "אולם",
         "section": "אולם",
-        "row": "18",
+        "row": "4",
         "seats": [
-          28,
-          29,
-          30,
-          31
+          20,
+          21,
+          22,
+          23
         ],
         "prices": [
           149,
@@ -33618,8 +33653,8 @@
           149,
           149
         ],
-        "centerDist": 9.5,
-        "foundAt": "2026-11-07T04:44:46.941Z"
+        "centerDist": 5,
+        "foundAt": "2026-11-07T11:43:16.048Z"
       },
       "אולם|5": {
         "quantity": 5,
@@ -34258,6 +34293,162 @@
         ],
         "centerDist": 0.5,
         "foundAt": "2026-11-07T04:46:29.103Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/1616?prsntId=55297": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "2",
+        "seats": [
+          26,
+          27
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 12.5,
+        "foundAt": "2026-11-07T11:43:25.314Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "3",
+        "seats": [
+          25,
+          26,
+          27
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 12,
+        "foundAt": "2026-11-07T11:43:25.314Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "8",
+        "seats": [
+          24,
+          25,
+          26,
+          27
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 10.5,
+        "foundAt": "2026-11-07T11:43:25.314Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "10",
+        "seats": [
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 9.5,
+        "foundAt": "2026-11-07T11:43:25.314Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/1616?prsntId=56148": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          2,
+          3
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 5,
+        "foundAt": "2026-11-07T11:43:27.630Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          1,
+          2,
+          3
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 5.5,
+        "foundAt": "2026-11-07T11:43:27.630Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "4",
+        "seats": [
+          24,
+          25,
+          26,
+          27
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 11,
+        "foundAt": "2026-11-07T11:43:27.630Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "4",
+        "seats": [
+          24,
+          25,
+          26,
+          27,
+          28
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 11.5,
+        "foundAt": "2026-11-07T11:43:27.630Z"
       }
     }
   },
@@ -71311,6 +71502,272 @@
         149
       ],
       "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-07T11:43:16.048Z",
+      "event": "קופת ת\"א: המופע של אלי יצפאן-מופע חדש",
+      "url": "https://tickets.comy.co.il/booking/features/1616?prsntId=55293",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "4",
+      "seats": [
+        20,
+        21
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 4
+    },
+    {
+      "foundAt": "2026-11-07T11:43:16.048Z",
+      "event": "קופת ת\"א: המופע של אלי יצפאן-מופע חדש",
+      "url": "https://tickets.comy.co.il/booking/features/1616?prsntId=55293",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "4",
+      "seats": [
+        20,
+        21,
+        22
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 4.5
+    },
+    {
+      "foundAt": "2026-11-07T11:43:16.048Z",
+      "event": "קופת ת\"א: המופע של אלי יצפאן-מופע חדש",
+      "url": "https://tickets.comy.co.il/booking/features/1616?prsntId=55293",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "4",
+      "seats": [
+        20,
+        21,
+        22,
+        23
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 5
+    },
+    {
+      "foundAt": "2026-11-07T11:43:25.314Z",
+      "event": "קופת ת\"א: המופע של אלי יצפאן-מופע חדש",
+      "url": "https://tickets.comy.co.il/booking/features/1616?prsntId=55297",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "2",
+      "seats": [
+        26,
+        27
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 12.5
+    },
+    {
+      "foundAt": "2026-11-07T11:43:25.314Z",
+      "event": "קופת ת\"א: המופע של אלי יצפאן-מופע חדש",
+      "url": "https://tickets.comy.co.il/booking/features/1616?prsntId=55297",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "3",
+      "seats": [
+        25,
+        26,
+        27
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 12
+    },
+    {
+      "foundAt": "2026-11-07T11:43:25.314Z",
+      "event": "קופת ת\"א: המופע של אלי יצפאן-מופע חדש",
+      "url": "https://tickets.comy.co.il/booking/features/1616?prsntId=55297",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "8",
+      "seats": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 10.5
+    },
+    {
+      "foundAt": "2026-11-07T11:43:25.314Z",
+      "event": "קופת ת\"א: המופע של אלי יצפאן-מופע חדש",
+      "url": "https://tickets.comy.co.il/booking/features/1616?prsntId=55297",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "10",
+      "seats": [
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 9.5
+    },
+    {
+      "foundAt": "2026-11-07T11:43:27.630Z",
+      "event": "קופת ת\"א: המופע של אלי יצפאן-מופע חדש",
+      "url": "https://tickets.comy.co.il/booking/features/1616?prsntId=56148",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        2,
+        3
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 5
+    },
+    {
+      "foundAt": "2026-11-07T11:43:27.630Z",
+      "event": "קופת ת\"א: המופע של אלי יצפאן-מופע חדש",
+      "url": "https://tickets.comy.co.il/booking/features/1616?prsntId=56148",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        1,
+        2,
+        3
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 5.5
+    },
+    {
+      "foundAt": "2026-11-07T11:43:27.630Z",
+      "event": "קופת ת\"א: המופע של אלי יצפאן-מופע חדש",
+      "url": "https://tickets.comy.co.il/booking/features/1616?prsntId=56148",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "4",
+      "seats": [
+        24,
+        25,
+        26,
+        27
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 11
+    },
+    {
+      "foundAt": "2026-11-07T11:43:27.630Z",
+      "event": "קופת ת\"א: המופע של אלי יצפאן-מופע חדש",
+      "url": "https://tickets.comy.co.il/booking/features/1616?prsntId=56148",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "4",
+      "seats": [
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 11.5
+    },
+    {
+      "foundAt": "2026-11-07T11:48:53.906Z",
+      "event": "קופת ת\"א: חנן בן ארי · 14.11 שבת 21:00 בית ההופעות של חנן | אקספו תל אביב BLACK BOX אחרונים",
+      "url": "https://tickets.kupat.co.il/booking/features/1446?prsntId=56260",
+      "quantity": 2,
+      "zone": "רחבה / אורקסטרה",
+      "section": "אורקסטרה",
+      "row": "13",
+      "seats": [
+        34,
+        35
+      ],
+      "prices": [
+        289,
+        289
+      ],
+      "centerDist": 9
+    },
+    {
+      "foundAt": "2026-11-07T11:48:53.906Z",
+      "event": "קופת ת\"א: חנן בן ארי · 14.11 שבת 21:00 בית ההופעות של חנן | אקספו תל אביב BLACK BOX אחרונים",
+      "url": "https://tickets.kupat.co.il/booking/features/1446?prsntId=56260",
+      "quantity": 3,
+      "zone": "רחבה / אורקסטרה",
+      "section": "אורקסטרה",
+      "row": "13",
+      "seats": [
+        34,
+        35,
+        36
+      ],
+      "prices": [
+        289,
+        289,
+        289
+      ],
+      "centerDist": 9.5
     }
   ],
   "outbox": [
@@ -71332,28 +71789,28 @@
       "fails": 0,
       "lastError": "לא נמצאו מופעים בעמוד הראשי",
       "lastErrorAt": "2026-11-06T03:30:55.842Z",
-      "lastOk": "2026-11-07T04:20:20.135Z"
+      "lastOk": "2026-11-07T11:17:30.525Z"
     },
     "סריקה: Ticketmaster": {
       "fails": 0,
-      "lastOk": "2026-11-07T04:20:20.135Z"
+      "lastOk": "2026-11-07T11:17:30.525Z"
     },
     "ticketmaster": {
       "fails": 0,
-      "lastOk": "2026-11-07T05:04:35.842Z"
+      "lastOk": "2026-11-07T12:01:29.431Z"
     },
     "kupat": {
       "fails": 0,
-      "lastOk": "2026-11-07T05:02:59.898Z",
+      "lastOk": "2026-11-07T11:59:59.240Z",
       "lastError": "האתר החזיר 0 מושבים",
-      "lastErrorAt": "2026-11-07T04:56:14.136Z"
+      "lastErrorAt": "2026-11-07T11:54:54.298Z"
     }
   },
   "stats": {
     "since": "2026-11-06T03:30:46.986Z",
     "cycles": 1,
-    "checks": 370,
-    "errors": 100,
+    "checks": 461,
+    "errors": 125,
     "alerts": 0
   },
   "lastCycle": "2026-11-06T03:47:07.264Z",
@@ -71481,7 +71938,7 @@
   },
   "knownSeeded": true,
   "catalog": {
-    "at": "2026-11-07T04:20:20.135Z",
+    "at": "2026-11-07T11:17:30.525Z",
     "events": [
       {
         "name": "קופת ת\"א: המופע של נדב אבוקסיס",
@@ -71652,8 +72109,12 @@
         "url": "https://tickets.kupat.co.il/booking/features/2671?display=list&prsntId=56158"
       },
       {
-        "name": "קופת ת\"א: אביב גפן · 30.12 רביעי 21:00 היכל התרבות ת\"א לרכישת כרטיסים",
-        "url": "https://tickets.kupat.co.il/booking/features/2841?display=list&prsntId=56145"
+        "name": "קופת ת\"א: ריטה · 26.12 שבת 21:00 היכל התרבות ת\"א אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/1776?display=list&prsntId=56319"
+      },
+      {
+        "name": "קופת ת\"א: שלמה ארצי · 27.11 שישי 13:00 היכל התרבות ת\"א אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/441?display=list&prsntId=56045"
       },
       {
         "name": "קופת ת\"א: מירי מסיקה X קרן פלס · 02.01 שבת 20:30 היכל מנורה תל אביב אחרונים",
@@ -71662,14 +72123,6 @@
       {
         "name": "קופת ת\"א: חנן בן ארי · 14.11 שבת 21:00 בית ההופעות של חנן | אקספו תל אביב BLACK BOX אחרונים",
         "url": "https://tickets.kupat.co.il/booking/features/1446?display=list&prsntId=56260"
-      },
-      {
-        "name": "קופת ת\"א: שלמה ארצי · 27.11 שישי 13:00 היכל התרבות ת\"א אחרונים",
-        "url": "https://tickets.kupat.co.il/booking/features/441?display=list&prsntId=56045"
-      },
-      {
-        "name": "קופת ת\"א: ריטה · 26.12 שבת 21:00 היכל התרבות ת\"א אחרונים",
-        "url": "https://tickets.kupat.co.il/booking/features/1776?display=list&prsntId=56319"
       },
       {
         "name": "קופת ת\"א: קוקולנד - אליפות הטרנדים · 06.12 ראשון 10:30 תיאטרון האקספו ת״א אחרונים",
@@ -71684,16 +72137,20 @@
         "url": "https://tickets.kupat.co.il/booking/features/2999?display=list&prsntId=56509"
       },
       {
+        "name": "קופת ת\"א: אביב גפן · 30.12 רביעי 21:00 היכל התרבות ת\"א לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/2841?display=list&prsntId=56145"
+      },
+      {
+        "name": "קופת ת\"א: קובי פרץ · 17.11 שלישי 20:45 היכל מנורה פרונטלי אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/2353?display=list&prsntId=55439"
+      },
+      {
         "name": "קופת ת\"א: קרקס HUBA CUBA · 27.11 - 12.12 גלובוס סנטר - חוף אשקלון לרכישת כרטיסים",
         "url": "https://tickets.kupat.co.il/booking/features/2766?display=list&prsntId=55937"
       },
       {
         "name": "קופת ת\"א: ירדנה ארזי · 18.12 שישי 13:30 היכל התרבות ת\"א לרכישת כרטיסים",
         "url": "https://tickets.kupat.co.il/booking/features/44?display=list&prsntId=56323"
-      },
-      {
-        "name": "קופת ת\"א: קובי פרץ · 17.11 שלישי 20:45 היכל מנורה פרונטלי אחרונים",
-        "url": "https://tickets.kupat.co.il/booking/features/2353?display=list&prsntId=55439"
       },
       {
         "name": "קופת ת\"א: עומרי סבח · 19.11 חמישי 21:30 רדינג 3 לרכישת כרטיסים",
@@ -71728,8 +72185,16 @@
         "url": "https://tickets.kupat.co.il/booking/features/47?display=list&prsntId=56496"
       },
       {
+        "name": "קופת ת\"א: קרקס בראבו מציג - קרקס החלומות · 26.11 חמישי 17:00 מרכז תרבות באר טוביה אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/3013?display=list&prsntId=55878"
+      },
+      {
         "name": "קופת ת\"א: קסם של כוכבים · 21.11 שבת 11:00 אולם מופעים גבעת ברנר לרכישת כרטיסים",
         "url": "https://tickets.kupat.co.il/booking/features/3009?display=list&prsntId=55920"
+      },
+      {
+        "name": "קופת ת\"א: ספר הג'ונגל - המחזמר · 05.12 שבת 10:00 מרכז הקונגרסים חיפה - אולם אורן אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/1924?display=list&prsntId=55701"
       },
       {
         "name": "קופת ת\"א: אביגיל ויסמן · 07.12 שני 16:00 רדינג 3 לרכישת כרטיסים",
@@ -71744,24 +72209,16 @@
         "url": "https://tickets.kupat.co.il/booking/features/2871?display=list&prsntId=55321"
       },
       {
-        "name": "קופת ת\"א: קרקס בראבו מציג - קרקס החלומות · 26.11 חמישי 17:00 מרכז תרבות באר טוביה אחרונים",
-        "url": "https://tickets.kupat.co.il/booking/features/3013?display=list&prsntId=55878"
-      },
-      {
-        "name": "קופת ת\"א: ספר הג'ונגל - המחזמר · 05.12 שבת 10:00 מרכז הקונגרסים חיפה - אולם אורן אחרונים",
-        "url": "https://tickets.kupat.co.il/booking/features/1924?display=list&prsntId=55701"
-      },
-      {
-        "name": "קופת ת\"א: מצבי רוח – יצירה לתזמורת בתנועה · 16.12 רביעי 18:00 מוזיאון תל אביב - אולם אסיא לרכישת כרטיסים",
-        "url": "https://tickets.kupat.co.il/booking/features/2714?display=list&prsntId=56075"
-      },
-      {
-        "name": "קופת ת\"א: ECHOES - PINK FLOYD ANIMALS 50 YEARS · 18.03 חמישי 20:30 היכל התרבות ת\"א לרכישת כרטיסים",
-        "url": "https://tickets.kupat.co.il/booking/features/3016?display=list&prsntId=55999"
+        "name": "קופת ת\"א: שיר דוד גדסי · 23.12 רביעי 21:30 רדינג 3 לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/2549?display=list&prsntId=55279"
       },
       {
         "name": "קופת ת\"א: ICONIC - לי בירן X לורן פלד · 29.12 שלישי 20:45 היכל התרבות ת\"א אחרונים",
         "url": "https://tickets.kupat.co.il/booking/features/2869?display=list&prsntId=55392"
+      },
+      {
+        "name": "קופת ת\"א: מצבי רוח – יצירה לתזמורת בתנועה · 16.12 רביעי 18:00 מוזיאון תל אביב - אולם אסיא לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/2714?display=list&prsntId=56075"
       },
       {
         "name": "Ticketmaster: Spot Light Image",
