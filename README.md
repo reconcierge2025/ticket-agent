@@ -172,7 +172,8 @@ npm run login -- "https://www.ticketmaster.co.il" "https://tickets.kupat.co.il"
 | `defaults.quantities` | `[2,3,4,5]` | כמויות לבדיקה |
 | `defaults.targetRow` | `4` | שורת "יעד" 🎯 |
 | `defaults.zones` | VIP / רחבה / אולם / יציע | אזורים ומילים שמזהות אותם |
-| `checkEveryMinutes` | `60` | סבב מלא |
+| `checkEveryMinutes` | `60` | בדיקת המופעים במעקב |
+| `discoverEveryHours` | `12` | סריקה כללית של כל האתרים (הפעולה הכבדה, `/check` מריץ אותה מיד) |
 | `hotEveryMinutes` | `3` | מעקב צפוף |
 | `quietHours` | `23`–`8` | שעות שקט |
 | `heartbeatHour` | `9` | סיכום בוקר |

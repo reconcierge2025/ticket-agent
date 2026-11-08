@@ -172,22 +172,28 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
 
   let running = false;
   /** סבב מלא: המופעים במעקב (התראה כשמשהו השתפר) + סריקה כללית (הודעת סיכום אחת). */
-  async function runCycle() {
+  async function runCycle({ force = false } = {}) {
     if (running) return false;
     running = true;
-    const browser = await launchScanner(cfg);
+    const mine = [...(cfg.events || []).map((e) => withQuantity(resolveEvent(cfg, e), e.quantity)), ...watches.list().map((w) => watchEvent(cfg, w))];
+    // חיסכון: המופעים במעקב נבדקים בכל סבב, הסריקה הכללית (הכבדה) רק כל discoverEveryHours שעות
+    const discoverDue = force || !db.lastDiscovery || Date.now() - Date.parse(db.lastDiscovery) >= (cfg.discoverEveryHours ?? 12) * 3600 * 1000;
+    // אין מה לבדוק בדפדפן – לא מפעילים אותו בכלל
+    const browser = mine.length || discoverDue ? await launchScanner(cfg) : null;
     try {
-      const mine = [...(cfg.events || []).map((e) => withQuantity(resolveEvent(cfg, e), e.quantity)), ...watches.list().map((w) => watchEvent(cfg, w))];
-      const found = await discover(browser, cfg);
-      for (const site of (cfg.sites || []).filter((s) => s.listUrl && s.enabled !== false && !s.scoutOnly)) {
-        const n = found.filter((e) => e.name.startsWith(`${site.name}:`)).length;
-        track(`סריקה: ${site.name}`, n > 0, n ? null : explainEmpty(site.listUrl));
+      const found = discoverDue ? await discover(browser, cfg) : [];
+      if (discoverDue) {
+        for (const site of (cfg.sites || []).filter((s) => s.listUrl && s.enabled !== false && !s.scoutOnly)) {
+          const n = found.filter((e) => e.name.startsWith(`${site.name}:`)).length;
+          track(`סריקה: ${site.name}`, n > 0, n ? null : explainEmpty(site.listUrl));
+        }
+        saveCatalog(db, found);
+        db.lastDiscovery = new Date().toISOString();
+        // אמנים מובילים (גם הופעות קיימות) – ואז "מופעים חדשים" בלי מה שכבר דווח כאן
+        const starShows = await announceStars(db, cfg, found, notify).catch((e) => (log(`שגיאה באמנים מובילים: ${e.message}`), []));
+        const starKeys = new Set(starShows.map((e) => eventKey(e.url)));
+        await announceNewShows(db, cfg, found, notify, starKeys).catch((e) => log(`שגיאה במופעים חדשים: ${e.message}`));
       }
-      saveCatalog(db, found);
-      // אמנים מובילים (גם הופעות קיימות) – ואז "מופעים חדשים" בלי מה שכבר דווח כאן
-      const starShows = await announceStars(db, cfg, found, notify).catch((e) => (log(`שגיאה באמנים מובילים: ${e.message}`), []));
-      const starKeys = new Set(starShows.map((e) => eventKey(e.url)));
-      await announceNewShows(db, cfg, found, notify, starKeys).catch((e) => log(`שגיאה במופעים חדשים: ${e.message}`));
       const myKeys = new Set(mine.map((e) => eventKey(e.url)));
       const events = [...mine, ...found.filter((e) => !myKeys.has(eventKey(e.url)))];
       log(`סבב בדיקה: ${mine.length} במעקב + ${events.length - mine.length} מהסריקה הכללית`);
@@ -206,7 +212,7 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
       }
       const digest = formatDigest(discovered, target);
       if (digest) await notify(digest, { urgent: false });
-      if (cfg.discoverNewSites !== false) await probeNewSites(browser, db, notify).catch((e) => log(`שגיאה בסייר: ${e.message}`));
+      if (discoverDue && cfg.discoverNewSites !== false) await probeNewSites(browser, db, notify).catch((e) => log(`שגיאה בסייר: ${e.message}`));
       await scanAbroad().catch((e) => log(`שגיאה בחו"ל: ${e.message}`));
       db.lastCycle = new Date().toISOString();
       db.stats.cycles++;
@@ -214,7 +220,7 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
       return true;
     } finally {
       save(db);
-      await browser.close();
+      await browser?.close();
       running = false;
     }
   }
@@ -351,7 +357,7 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
     },
     onCheck: () => {
       if (running) return '⏳ סבב בדיקה כבר רץ.';
-      pending.push(() => runCycle());
+      pending.push(() => runCycle({ force: true }));
       return '🔍 בודק את כל המופעים עכשיו...';
     },
     onStatus: () => statusText(),

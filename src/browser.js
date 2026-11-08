@@ -19,8 +19,18 @@ export function proxyFromEnv() {
   return { server, ...(bypass ? { bypass } : {}) };
 }
 
-export function launchScanner(cfg) {
-  return chromium.launch({ headless: cfg.headless !== false, channel: cfg.browserChannel ?? 'msedge', proxy: proxyFromEnv() });
+const HEAVY = new Set(['image', 'media', 'font']);
+
+/** דפדפן הסריקה: בלי תמונות, סרטונים ופונטים – הנתונים מגיעים מטקסט ו-JSON, וככה הוא צורך הרבה פחות. */
+export async function launchScanner(cfg) {
+  const browser = await chromium.launch({ headless: cfg.headless !== false, channel: cfg.browserChannel ?? 'msedge', proxy: proxyFromEnv(), args: ['--disable-gpu', '--disable-dev-shm-usage'] });
+  const newPage = browser.newPage.bind(browser);
+  browser.newPage = async (options) => {
+    const page = await newPage(options);
+    await page.route('**/*', (route) => (HEAVY.has(route.request().resourceType()) ? route.abort() : route.continue()));
+    return page;
+  };
+  return browser;
 }
 
 let buyContext = null;
