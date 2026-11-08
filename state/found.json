@@ -35270,7 +35270,2029 @@
     },
     "https://tickets.kupat.co.il/booking/features/2977?prsntId=55082": {},
     "https://tickets.kupat.co.il/booking/features/2977?prsntId=55087": {},
-    "https://tickets.kupat.co.il/booking/features/2977?prsntId=55088": {}
+    "https://tickets.kupat.co.il/booking/features/2977?prsntId=55088": {},
+    "https://tickets.comy.co.il/booking/features/862?prsntId=55289": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          15,
+          16
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 5,
+        "foundAt": "2026-11-08T00:26:40.115Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          15,
+          16,
+          17
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 5.5,
+        "foundAt": "2026-11-08T00:26:40.115Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          15,
+          16,
+          17,
+          18
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 6,
+        "foundAt": "2026-11-08T00:26:40.115Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 6.5,
+        "foundAt": "2026-11-08T00:26:40.115Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/862?prsntId=55291": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          16,
+          17
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 5,
+        "foundAt": "2026-11-08T00:26:42.806Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          16,
+          17,
+          18
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 5.5,
+        "foundAt": "2026-11-08T00:26:42.806Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          16,
+          17,
+          18,
+          19
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 6,
+        "foundAt": "2026-11-08T00:26:42.806Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 6.5,
+        "foundAt": "2026-11-08T00:26:42.806Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/862?prsntId=53493": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          8,
+          9
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 5,
+        "foundAt": "2026-11-08T00:26:45.492Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          7,
+          8,
+          9
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 5.5,
+        "foundAt": "2026-11-08T00:26:45.492Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 6,
+        "foundAt": "2026-11-08T00:26:45.492Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 6.5,
+        "foundAt": "2026-11-08T00:26:45.492Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/862?prsntId=55318": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          10,
+          11
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 1.5,
+        "foundAt": "2026-11-08T00:26:48.200Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          9,
+          10,
+          11
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 2,
+        "foundAt": "2026-11-08T00:26:48.200Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 2.5,
+        "foundAt": "2026-11-08T00:26:48.200Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 3,
+        "foundAt": "2026-11-08T00:26:48.200Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/862?prsntId=56042": {
+      "יציע|2": {
+        "quantity": 2,
+        "zone": "יציע",
+        "section": "גלריה ימין",
+        "row": "1",
+        "seats": [
+          7,
+          8
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:26:50.890Z"
+      },
+      "יציע|3": {
+        "quantity": 3,
+        "zone": "יציע",
+        "section": "יציע ימין",
+        "row": "1",
+        "seats": [
+          2,
+          3,
+          4
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:26:50.890Z"
+      },
+      "יציע|4": {
+        "quantity": 4,
+        "zone": "יציע",
+        "section": "גלריה ימין",
+        "row": "1",
+        "seats": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:26:50.890Z"
+      },
+      "יציע|5": {
+        "quantity": 5,
+        "zone": "יציע",
+        "section": "יציע ימין",
+        "row": "1",
+        "seats": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:26:50.890Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/862?prsntId=53495": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          9,
+          10
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-08T00:26:53.571Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          9,
+          10,
+          11
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:26:53.571Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-08T00:26:53.571Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:26:53.571Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/862?prsntId=56077": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          8,
+          9
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-08T00:26:56.264Z"
+      },
+      "יציע|2": {
+        "quantity": 2,
+        "zone": "יציע",
+        "section": "יציע",
+        "row": "1",
+        "seats": [
+          7,
+          8
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:26:56.264Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          8,
+          9,
+          10
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:26:56.264Z"
+      },
+      "יציע|3": {
+        "quantity": 3,
+        "zone": "יציע",
+        "section": "יציע",
+        "row": "1",
+        "seats": [
+          6,
+          7,
+          8
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-08T00:26:56.264Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-08T00:26:56.264Z"
+      },
+      "יציע|4": {
+        "quantity": 4,
+        "zone": "יציע",
+        "section": "יציע",
+        "row": "1",
+        "seats": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:26:56.264Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:26:56.264Z"
+      },
+      "יציע|5": {
+        "quantity": 5,
+        "zone": "יציע",
+        "section": "יציע",
+        "row": "1",
+        "seats": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-08T00:26:56.264Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/862?prsntId=56090": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          8,
+          9
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-08T00:26:58.932Z"
+      },
+      "יציע|2": {
+        "quantity": 2,
+        "zone": "יציע",
+        "section": "יציע",
+        "row": "1",
+        "seats": [
+          13,
+          14
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:26:58.932Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          8,
+          9,
+          10
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:26:58.932Z"
+      },
+      "יציע|3": {
+        "quantity": 3,
+        "zone": "יציע",
+        "section": "יציע",
+        "row": "1",
+        "seats": [
+          12,
+          13,
+          14
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-08T00:26:58.932Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-08T00:26:58.932Z"
+      },
+      "יציע|4": {
+        "quantity": 4,
+        "zone": "יציע",
+        "section": "יציע",
+        "row": "1",
+        "seats": [
+          12,
+          13,
+          14,
+          15
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:26:58.932Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:26:58.932Z"
+      },
+      "יציע|5": {
+        "quantity": 5,
+        "zone": "יציע",
+        "section": "יציע",
+        "row": "1",
+        "seats": [
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-08T00:26:58.932Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/862?prsntId=53096": {},
+    "https://tickets.comy.co.il/booking/features/2571?prsntId=54623": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "3",
+        "seats": [
+          1,
+          2
+        ],
+        "prices": [
+          129,
+          129
+        ],
+        "centerDist": 13.5,
+        "foundAt": "2026-11-08T00:31:32.281Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "9",
+        "seats": [
+          4,
+          5,
+          6
+        ],
+        "prices": [
+          129,
+          129,
+          129
+        ],
+        "centerDist": 11,
+        "foundAt": "2026-11-08T00:31:32.281Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "9",
+        "seats": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "prices": [
+          129,
+          129,
+          129,
+          129
+        ],
+        "centerDist": 11.5,
+        "foundAt": "2026-11-08T00:31:32.281Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "9",
+        "seats": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "prices": [
+          129,
+          129,
+          129,
+          129,
+          129
+        ],
+        "centerDist": 12,
+        "foundAt": "2026-11-08T00:31:32.281Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/2571?prsntId=56241": {},
+    "https://tickets.comy.co.il/booking/features/2254?prsntId=55200": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          16,
+          17
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 6.5,
+        "foundAt": "2026-11-08T00:33:19.644Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          16,
+          17,
+          18
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 7,
+        "foundAt": "2026-11-08T00:33:19.644Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          16,
+          17,
+          18,
+          19
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 7.5,
+        "foundAt": "2026-11-08T00:33:19.644Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "3",
+        "seats": [
+          17,
+          18,
+          19,
+          20,
+          21
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 8,
+        "foundAt": "2026-11-08T00:33:19.644Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/2254?prsntId=55894": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          11,
+          12
+        ],
+        "prices": [
+          149,
+          149
+        ],
+        "centerDist": 1.5,
+        "foundAt": "2026-11-08T00:33:22.343Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          11,
+          12,
+          13
+        ],
+        "prices": [
+          149,
+          149,
+          149
+        ],
+        "centerDist": 2,
+        "foundAt": "2026-11-08T00:33:22.343Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "2",
+        "seats": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 7.5,
+        "foundAt": "2026-11-08T00:33:22.343Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "2",
+        "seats": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "prices": [
+          149,
+          149,
+          149,
+          149,
+          149
+        ],
+        "centerDist": 8,
+        "foundAt": "2026-11-08T00:33:22.343Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/2624?prsntId=55315": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "7",
+        "seats": [
+          1,
+          2
+        ],
+        "prices": [
+          164,
+          164
+        ],
+        "centerDist": 11.5,
+        "foundAt": "2026-11-08T00:33:28.294Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "9",
+        "seats": [
+          2,
+          3,
+          4
+        ],
+        "prices": [
+          164,
+          164,
+          164
+        ],
+        "centerDist": 8.5,
+        "foundAt": "2026-11-08T00:33:28.294Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "9",
+        "seats": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 9,
+        "foundAt": "2026-11-08T00:33:28.294Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/2624?prsntId=55316": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "13",
+        "seats": [
+          32,
+          33
+        ],
+        "prices": [
+          164,
+          164
+        ],
+        "centerDist": 15.5,
+        "foundAt": "2026-11-08T00:33:31.030Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "15",
+        "seats": [
+          29,
+          30,
+          31
+        ],
+        "prices": [
+          164,
+          164,
+          164
+        ],
+        "centerDist": 12.5,
+        "foundAt": "2026-11-08T00:33:31.030Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "15",
+        "seats": [
+          29,
+          30,
+          31,
+          32
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 13,
+        "foundAt": "2026-11-08T00:33:31.030Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "15",
+        "seats": [
+          29,
+          30,
+          31,
+          32,
+          33
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 13.5,
+        "foundAt": "2026-11-08T00:33:31.030Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/2624?prsntId=55317": {
+      "יציע|2": {
+        "quantity": 2,
+        "zone": "יציע",
+        "section": "יציע",
+        "row": "1",
+        "seats": [
+          5,
+          6
+        ],
+        "prices": [
+          164,
+          164
+        ],
+        "centerDist": 2,
+        "foundAt": "2026-11-08T00:33:33.697Z"
+      },
+      "יציע|3": {
+        "quantity": 3,
+        "zone": "יציע",
+        "section": "יציע",
+        "row": "1",
+        "seats": [
+          4,
+          5,
+          6
+        ],
+        "prices": [
+          164,
+          164,
+          164
+        ],
+        "centerDist": 2.5,
+        "foundAt": "2026-11-08T00:33:33.697Z"
+      },
+      "יציע|4": {
+        "quantity": 4,
+        "zone": "יציע",
+        "section": "יציע",
+        "row": "1",
+        "seats": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 3,
+        "foundAt": "2026-11-08T00:33:33.697Z"
+      },
+      "יציע|5": {
+        "quantity": 5,
+        "zone": "יציע",
+        "section": "יציע",
+        "row": "1",
+        "seats": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 3.5,
+        "foundAt": "2026-11-08T00:33:33.697Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/2624?prsntId=56238": {
+      "יציע|2": {
+        "quantity": 2,
+        "zone": "יציע",
+        "section": "גלריה ימין",
+        "row": "1",
+        "seats": [
+          7,
+          8
+        ],
+        "prices": [
+          164,
+          164
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:33:36.369Z"
+      },
+      "יציע|3": {
+        "quantity": 3,
+        "zone": "יציע",
+        "section": "יציע ימין",
+        "row": "1",
+        "seats": [
+          2,
+          3,
+          4
+        ],
+        "prices": [
+          164,
+          164,
+          164
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:33:36.369Z"
+      },
+      "יציע|4": {
+        "quantity": 4,
+        "zone": "יציע",
+        "section": "גלריה ימין",
+        "row": "1",
+        "seats": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:33:36.369Z"
+      },
+      "יציע|5": {
+        "quantity": 5,
+        "zone": "יציע",
+        "section": "יציע ימין",
+        "row": "1",
+        "seats": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:33:36.369Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/2624?prsntId=56217": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          14,
+          15
+        ],
+        "prices": [
+          164,
+          164
+        ],
+        "centerDist": 5.5,
+        "foundAt": "2026-11-08T00:33:39.051Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          14,
+          15,
+          16
+        ],
+        "prices": [
+          164,
+          164,
+          164
+        ],
+        "centerDist": 6,
+        "foundAt": "2026-11-08T00:33:39.051Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          14,
+          15,
+          16,
+          17
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 6.5,
+        "foundAt": "2026-11-08T00:33:39.051Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "2",
+        "seats": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 8,
+        "foundAt": "2026-11-08T00:33:39.051Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/2624?prsntId=56218": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          13,
+          14
+        ],
+        "prices": [
+          164,
+          164
+        ],
+        "centerDist": 2,
+        "foundAt": "2026-11-08T00:33:41.728Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          13,
+          14,
+          15
+        ],
+        "prices": [
+          164,
+          164,
+          164
+        ],
+        "centerDist": 2.5,
+        "foundAt": "2026-11-08T00:33:41.728Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          13,
+          14,
+          15,
+          16
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 3,
+        "foundAt": "2026-11-08T00:33:41.728Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 3.5,
+        "foundAt": "2026-11-08T00:33:41.728Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/2624?prsntId=56219": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          10,
+          11
+        ],
+        "prices": [
+          164,
+          164
+        ],
+        "centerDist": 2,
+        "foundAt": "2026-11-08T00:33:44.649Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          10,
+          11,
+          12
+        ],
+        "prices": [
+          164,
+          164,
+          164
+        ],
+        "centerDist": 2.5,
+        "foundAt": "2026-11-08T00:33:44.649Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 3,
+        "foundAt": "2026-11-08T00:33:44.649Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 3.5,
+        "foundAt": "2026-11-08T00:33:44.649Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/2624?prsntId=56391": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          6,
+          7
+        ],
+        "prices": [
+          164,
+          164
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-08T00:33:47.308Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          6,
+          7,
+          8
+        ],
+        "prices": [
+          164,
+          164,
+          164
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:33:47.308Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-08T00:33:47.308Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:33:47.308Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/2624?prsntId=56384": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          6,
+          7
+        ],
+        "prices": [
+          164,
+          164
+        ],
+        "centerDist": 2,
+        "foundAt": "2026-11-08T00:33:50.184Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          5,
+          6,
+          7
+        ],
+        "prices": [
+          164,
+          164,
+          164
+        ],
+        "centerDist": 2.5,
+        "foundAt": "2026-11-08T00:33:50.184Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 3,
+        "foundAt": "2026-11-08T00:33:50.184Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 3.5,
+        "foundAt": "2026-11-08T00:33:50.184Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/2624?prsntId=56385": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          13,
+          14
+        ],
+        "prices": [
+          164,
+          164
+        ],
+        "centerDist": 3.5,
+        "foundAt": "2026-11-08T00:33:52.854Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          13,
+          14,
+          15
+        ],
+        "prices": [
+          164,
+          164,
+          164
+        ],
+        "centerDist": 4,
+        "foundAt": "2026-11-08T00:33:52.854Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          13,
+          14,
+          15,
+          16
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 4.5,
+        "foundAt": "2026-11-08T00:33:52.854Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 5,
+        "foundAt": "2026-11-08T00:33:52.854Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/2624?prsntId=56386": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          9,
+          10
+        ],
+        "prices": [
+          164,
+          164
+        ],
+        "centerDist": 1.5,
+        "foundAt": "2026-11-08T00:33:55.512Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          9,
+          10,
+          11
+        ],
+        "prices": [
+          164,
+          164,
+          164
+        ],
+        "centerDist": 2,
+        "foundAt": "2026-11-08T00:33:55.512Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 2.5,
+        "foundAt": "2026-11-08T00:33:55.512Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 3,
+        "foundAt": "2026-11-08T00:33:55.512Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/2624?prsntId=56387": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          4,
+          5
+        ],
+        "prices": [
+          164,
+          164
+        ],
+        "centerDist": 4.5,
+        "foundAt": "2026-11-08T00:33:58.228Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          3,
+          4,
+          5
+        ],
+        "prices": [
+          164,
+          164,
+          164
+        ],
+        "centerDist": 5,
+        "foundAt": "2026-11-08T00:33:58.228Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 5.5,
+        "foundAt": "2026-11-08T00:33:58.228Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "1",
+        "seats": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "prices": [
+          164,
+          164,
+          164,
+          164,
+          164
+        ],
+        "centerDist": 6,
+        "foundAt": "2026-11-08T00:33:58.228Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/2027?prsntId=56262": {},
+    "https://tickets.comy.co.il/booking/features/2027?prsntId=56263": {},
+    "https://tickets.comy.co.il/booking/features/2027?prsntId=56264": {},
+    "https://tickets.comy.co.il/booking/features/2027?prsntId=56609": {},
+    "https://tickets.comy.co.il/booking/features/2027?prsntId=56610": {},
+    "https://tickets.comy.co.il/booking/features/2027?prsntId=56611": {},
+    "https://tickets.comy.co.il/booking/features/2027?prsntId=56612": {},
+    "https://tickets.comy.co.il/booking/features/2237?prsntId=56310": {
+      "אולם|2": {
+        "quantity": 2,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "6",
+        "seats": [
+          13,
+          14
+        ],
+        "prices": [
+          120,
+          120
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:38:28.482Z"
+      },
+      "אולם|3": {
+        "quantity": 3,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "6",
+        "seats": [
+          12,
+          13,
+          14
+        ],
+        "prices": [
+          120,
+          120,
+          120
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-08T00:38:28.482Z"
+      },
+      "אולם|4": {
+        "quantity": 4,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "6",
+        "seats": [
+          12,
+          13,
+          14,
+          15
+        ],
+        "prices": [
+          120,
+          120,
+          120,
+          120
+        ],
+        "centerDist": 0,
+        "foundAt": "2026-11-08T00:38:28.482Z"
+      },
+      "אולם|5": {
+        "quantity": 5,
+        "zone": "אולם",
+        "section": "אולם",
+        "row": "6",
+        "seats": [
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "prices": [
+          120,
+          120,
+          120,
+          120,
+          120
+        ],
+        "centerDist": 0.5,
+        "foundAt": "2026-11-08T00:38:28.482Z"
+      }
+    },
+    "https://tickets.comy.co.il/booking/features/2237?prsntId=56608": {},
+    "https://tickets.comy.co.il/booking/features/2028?prsntId=56266": {},
+    "https://tickets.comy.co.il/booking/features/2028?prsntId=56267": {},
+    "https://tickets.comy.co.il/booking/features/2028?prsntId=56268": {},
+    "https://tickets.comy.co.il/booking/features/2028?prsntId=56613": {},
+    "https://tickets.comy.co.il/booking/features/2028?prsntId=56614": {},
+    "https://tickets.comy.co.il/booking/features/2028?prsntId=56615": {},
+    "https://tickets.comy.co.il/booking/features/2028?prsntId=56616": {},
+    "https://tickets.grayclub.co.il/booking/features/3066?prsntId=56458": {},
+    "https://tickets.grayclub.co.il/booking/features/3066?prsntId=56459": {},
+    "https://tickets.grayclub.co.il/booking/features/3066?prsntId=56460": {}
   },
   "history": [
     {
@@ -74822,42 +76844,2207 @@
         349
       ],
       "centerDist": 12
+    },
+    {
+      "foundAt": "2026-11-08T00:26:40.115Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=55289",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        15,
+        16
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:40.115Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=55289",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        15,
+        16,
+        17
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 5.5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:40.115Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=55289",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 6
+    },
+    {
+      "foundAt": "2026-11-08T00:26:40.115Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=55289",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 6.5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:42.806Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=55291",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        16,
+        17
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:42.806Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=55291",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        16,
+        17,
+        18
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 5.5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:42.806Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=55291",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 6
+    },
+    {
+      "foundAt": "2026-11-08T00:26:42.806Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=55291",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 6.5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:45.492Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=53493",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        8,
+        9
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:45.492Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=53493",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        7,
+        8,
+        9
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 5.5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:45.492Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=53493",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 6
+    },
+    {
+      "foundAt": "2026-11-08T00:26:45.492Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=53493",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 6.5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:48.200Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=55318",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        10,
+        11
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 1.5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:48.200Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=55318",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        9,
+        10,
+        11
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 2
+    },
+    {
+      "foundAt": "2026-11-08T00:26:48.200Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=55318",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 2.5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:48.200Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=55318",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 3
+    },
+    {
+      "foundAt": "2026-11-08T00:26:50.890Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56042",
+      "quantity": 2,
+      "zone": "יציע",
+      "section": "גלריה ימין",
+      "row": "1",
+      "seats": [
+        7,
+        8
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:26:50.890Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56042",
+      "quantity": 3,
+      "zone": "יציע",
+      "section": "יציע ימין",
+      "row": "1",
+      "seats": [
+        2,
+        3,
+        4
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:26:50.890Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56042",
+      "quantity": 4,
+      "zone": "יציע",
+      "section": "גלריה ימין",
+      "row": "1",
+      "seats": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:26:50.890Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56042",
+      "quantity": 5,
+      "zone": "יציע",
+      "section": "יציע ימין",
+      "row": "1",
+      "seats": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:26:53.571Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=53495",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        9,
+        10
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:53.571Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=53495",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        9,
+        10,
+        11
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:26:53.571Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=53495",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:53.571Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=53495",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:26:56.264Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56077",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        8,
+        9
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:56.264Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56077",
+      "quantity": 2,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "1",
+      "seats": [
+        7,
+        8
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:26:56.264Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56077",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        8,
+        9,
+        10
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:26:56.264Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56077",
+      "quantity": 3,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "1",
+      "seats": [
+        6,
+        7,
+        8
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:56.264Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56077",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:56.264Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56077",
+      "quantity": 4,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "1",
+      "seats": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:26:56.264Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56077",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:26:56.264Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56077",
+      "quantity": 5,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "1",
+      "seats": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:58.932Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56090",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        8,
+        9
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:58.932Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56090",
+      "quantity": 2,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "1",
+      "seats": [
+        13,
+        14
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:26:58.932Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56090",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        8,
+        9,
+        10
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:26:58.932Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56090",
+      "quantity": 3,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "1",
+      "seats": [
+        12,
+        13,
+        14
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:58.932Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56090",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-08T00:26:58.932Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56090",
+      "quantity": 4,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "1",
+      "seats": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:26:58.932Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56090",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:26:58.932Z",
+      "event": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+      "url": "https://tickets.comy.co.il/booking/features/862?prsntId=56090",
+      "quantity": 5,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "1",
+      "seats": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-08T00:31:32.281Z",
+      "event": "קופת ת\"א: המופע של נו מה עכשיו - צח רוקח ונועם אונגר",
+      "url": "https://tickets.comy.co.il/booking/features/2571?prsntId=54623",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "3",
+      "seats": [
+        1,
+        2
+      ],
+      "prices": [
+        129,
+        129
+      ],
+      "centerDist": 13.5
+    },
+    {
+      "foundAt": "2026-11-08T00:31:32.281Z",
+      "event": "קופת ת\"א: המופע של נו מה עכשיו - צח רוקח ונועם אונגר",
+      "url": "https://tickets.comy.co.il/booking/features/2571?prsntId=54623",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "9",
+      "seats": [
+        4,
+        5,
+        6
+      ],
+      "prices": [
+        129,
+        129,
+        129
+      ],
+      "centerDist": 11
+    },
+    {
+      "foundAt": "2026-11-08T00:31:32.281Z",
+      "event": "קופת ת\"א: המופע של נו מה עכשיו - צח רוקח ונועם אונגר",
+      "url": "https://tickets.comy.co.il/booking/features/2571?prsntId=54623",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "9",
+      "seats": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "prices": [
+        129,
+        129,
+        129,
+        129
+      ],
+      "centerDist": 11.5
+    },
+    {
+      "foundAt": "2026-11-08T00:31:32.281Z",
+      "event": "קופת ת\"א: המופע של נו מה עכשיו - צח רוקח ונועם אונגר",
+      "url": "https://tickets.comy.co.il/booking/features/2571?prsntId=54623",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "9",
+      "seats": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "prices": [
+        129,
+        129,
+        129,
+        129,
+        129
+      ],
+      "centerDist": 12
+    },
+    {
+      "foundAt": "2026-11-08T00:33:19.644Z",
+      "event": "קופת ת\"א: המופע של תמיר בר",
+      "url": "https://tickets.comy.co.il/booking/features/2254?prsntId=55200",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        16,
+        17
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 6.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:19.644Z",
+      "event": "קופת ת\"א: המופע של תמיר בר",
+      "url": "https://tickets.comy.co.il/booking/features/2254?prsntId=55200",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        16,
+        17,
+        18
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 7
+    },
+    {
+      "foundAt": "2026-11-08T00:33:19.644Z",
+      "event": "קופת ת\"א: המופע של תמיר בר",
+      "url": "https://tickets.comy.co.il/booking/features/2254?prsntId=55200",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 7.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:19.644Z",
+      "event": "קופת ת\"א: המופע של תמיר בר",
+      "url": "https://tickets.comy.co.il/booking/features/2254?prsntId=55200",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "3",
+      "seats": [
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 8
+    },
+    {
+      "foundAt": "2026-11-08T00:33:22.343Z",
+      "event": "קופת ת\"א: המופע של תמיר בר",
+      "url": "https://tickets.comy.co.il/booking/features/2254?prsntId=55894",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        11,
+        12
+      ],
+      "prices": [
+        149,
+        149
+      ],
+      "centerDist": 1.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:22.343Z",
+      "event": "קופת ת\"א: המופע של תמיר בר",
+      "url": "https://tickets.comy.co.il/booking/features/2254?prsntId=55894",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        11,
+        12,
+        13
+      ],
+      "prices": [
+        149,
+        149,
+        149
+      ],
+      "centerDist": 2
+    },
+    {
+      "foundAt": "2026-11-08T00:33:22.343Z",
+      "event": "קופת ת\"א: המופע של תמיר בר",
+      "url": "https://tickets.comy.co.il/booking/features/2254?prsntId=55894",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "2",
+      "seats": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 7.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:22.343Z",
+      "event": "קופת ת\"א: המופע של תמיר בר",
+      "url": "https://tickets.comy.co.il/booking/features/2254?prsntId=55894",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "2",
+      "seats": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "prices": [
+        149,
+        149,
+        149,
+        149,
+        149
+      ],
+      "centerDist": 8
+    },
+    {
+      "foundAt": "2026-11-08T00:33:28.294Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=55315",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "7",
+      "seats": [
+        1,
+        2
+      ],
+      "prices": [
+        164,
+        164
+      ],
+      "centerDist": 11.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:28.294Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=55315",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "9",
+      "seats": [
+        2,
+        3,
+        4
+      ],
+      "prices": [
+        164,
+        164,
+        164
+      ],
+      "centerDist": 8.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:28.294Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=55315",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "9",
+      "seats": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 9
+    },
+    {
+      "foundAt": "2026-11-08T00:33:31.030Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=55316",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "13",
+      "seats": [
+        32,
+        33
+      ],
+      "prices": [
+        164,
+        164
+      ],
+      "centerDist": 15.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:31.030Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=55316",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "15",
+      "seats": [
+        29,
+        30,
+        31
+      ],
+      "prices": [
+        164,
+        164,
+        164
+      ],
+      "centerDist": 12.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:31.030Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=55316",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "15",
+      "seats": [
+        29,
+        30,
+        31,
+        32
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 13
+    },
+    {
+      "foundAt": "2026-11-08T00:33:31.030Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=55316",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "15",
+      "seats": [
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 13.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:33.697Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=55317",
+      "quantity": 2,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "1",
+      "seats": [
+        5,
+        6
+      ],
+      "prices": [
+        164,
+        164
+      ],
+      "centerDist": 2
+    },
+    {
+      "foundAt": "2026-11-08T00:33:33.697Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=55317",
+      "quantity": 3,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "1",
+      "seats": [
+        4,
+        5,
+        6
+      ],
+      "prices": [
+        164,
+        164,
+        164
+      ],
+      "centerDist": 2.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:33.697Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=55317",
+      "quantity": 4,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "1",
+      "seats": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 3
+    },
+    {
+      "foundAt": "2026-11-08T00:33:33.697Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=55317",
+      "quantity": 5,
+      "zone": "יציע",
+      "section": "יציע",
+      "row": "1",
+      "seats": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 3.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:36.369Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56238",
+      "quantity": 2,
+      "zone": "יציע",
+      "section": "גלריה ימין",
+      "row": "1",
+      "seats": [
+        7,
+        8
+      ],
+      "prices": [
+        164,
+        164
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:33:36.369Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56238",
+      "quantity": 3,
+      "zone": "יציע",
+      "section": "יציע ימין",
+      "row": "1",
+      "seats": [
+        2,
+        3,
+        4
+      ],
+      "prices": [
+        164,
+        164,
+        164
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:33:36.369Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56238",
+      "quantity": 4,
+      "zone": "יציע",
+      "section": "גלריה ימין",
+      "row": "1",
+      "seats": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:33:36.369Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56238",
+      "quantity": 5,
+      "zone": "יציע",
+      "section": "יציע ימין",
+      "row": "1",
+      "seats": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:33:39.051Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56217",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        14,
+        15
+      ],
+      "prices": [
+        164,
+        164
+      ],
+      "centerDist": 5.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:39.051Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56217",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        14,
+        15,
+        16
+      ],
+      "prices": [
+        164,
+        164,
+        164
+      ],
+      "centerDist": 6
+    },
+    {
+      "foundAt": "2026-11-08T00:33:39.051Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56217",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 6.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:39.051Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56217",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "2",
+      "seats": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 8
+    },
+    {
+      "foundAt": "2026-11-08T00:33:41.728Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56218",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        13,
+        14
+      ],
+      "prices": [
+        164,
+        164
+      ],
+      "centerDist": 2
+    },
+    {
+      "foundAt": "2026-11-08T00:33:41.728Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56218",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        13,
+        14,
+        15
+      ],
+      "prices": [
+        164,
+        164,
+        164
+      ],
+      "centerDist": 2.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:41.728Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56218",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 3
+    },
+    {
+      "foundAt": "2026-11-08T00:33:41.728Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56218",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 3.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:44.649Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56219",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        10,
+        11
+      ],
+      "prices": [
+        164,
+        164
+      ],
+      "centerDist": 2
+    },
+    {
+      "foundAt": "2026-11-08T00:33:44.649Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56219",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        10,
+        11,
+        12
+      ],
+      "prices": [
+        164,
+        164,
+        164
+      ],
+      "centerDist": 2.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:44.649Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56219",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 3
+    },
+    {
+      "foundAt": "2026-11-08T00:33:44.649Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56219",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 3.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:47.308Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56391",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        6,
+        7
+      ],
+      "prices": [
+        164,
+        164
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:47.308Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56391",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        6,
+        7,
+        8
+      ],
+      "prices": [
+        164,
+        164,
+        164
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:33:47.308Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56391",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:47.308Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56391",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:33:50.184Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56384",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        6,
+        7
+      ],
+      "prices": [
+        164,
+        164
+      ],
+      "centerDist": 2
+    },
+    {
+      "foundAt": "2026-11-08T00:33:50.184Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56384",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        5,
+        6,
+        7
+      ],
+      "prices": [
+        164,
+        164,
+        164
+      ],
+      "centerDist": 2.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:50.184Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56384",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 3
+    },
+    {
+      "foundAt": "2026-11-08T00:33:50.184Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56384",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 3.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:52.854Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56385",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        13,
+        14
+      ],
+      "prices": [
+        164,
+        164
+      ],
+      "centerDist": 3.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:52.854Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56385",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        13,
+        14,
+        15
+      ],
+      "prices": [
+        164,
+        164,
+        164
+      ],
+      "centerDist": 4
+    },
+    {
+      "foundAt": "2026-11-08T00:33:52.854Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56385",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 4.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:52.854Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56385",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:55.512Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56386",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        9,
+        10
+      ],
+      "prices": [
+        164,
+        164
+      ],
+      "centerDist": 1.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:55.512Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56386",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        9,
+        10,
+        11
+      ],
+      "prices": [
+        164,
+        164,
+        164
+      ],
+      "centerDist": 2
+    },
+    {
+      "foundAt": "2026-11-08T00:33:55.512Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56386",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 2.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:55.512Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56386",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 3
+    },
+    {
+      "foundAt": "2026-11-08T00:33:58.228Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56387",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        4,
+        5
+      ],
+      "prices": [
+        164,
+        164
+      ],
+      "centerDist": 4.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:58.228Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56387",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        3,
+        4,
+        5
+      ],
+      "prices": [
+        164,
+        164,
+        164
+      ],
+      "centerDist": 5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:58.228Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56387",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 5.5
+    },
+    {
+      "foundAt": "2026-11-08T00:33:58.228Z",
+      "event": "קופת ת\"א: המופע של יובל סמו",
+      "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=56387",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "1",
+      "seats": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "prices": [
+        164,
+        164,
+        164,
+        164,
+        164
+      ],
+      "centerDist": 6
+    },
+    {
+      "foundAt": "2026-11-08T00:38:28.482Z",
+      "event": "קופת ת\"א: המופע של אורן זוזל",
+      "url": "https://tickets.comy.co.il/booking/features/2237?prsntId=56310",
+      "quantity": 2,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "6",
+      "seats": [
+        13,
+        14
+      ],
+      "prices": [
+        120,
+        120
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:38:28.482Z",
+      "event": "קופת ת\"א: המופע של אורן זוזל",
+      "url": "https://tickets.comy.co.il/booking/features/2237?prsntId=56310",
+      "quantity": 3,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "6",
+      "seats": [
+        12,
+        13,
+        14
+      ],
+      "prices": [
+        120,
+        120,
+        120
+      ],
+      "centerDist": 0.5
+    },
+    {
+      "foundAt": "2026-11-08T00:38:28.482Z",
+      "event": "קופת ת\"א: המופע של אורן זוזל",
+      "url": "https://tickets.comy.co.il/booking/features/2237?prsntId=56310",
+      "quantity": 4,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "6",
+      "seats": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "prices": [
+        120,
+        120,
+        120,
+        120
+      ],
+      "centerDist": 0
+    },
+    {
+      "foundAt": "2026-11-08T00:38:28.482Z",
+      "event": "קופת ת\"א: המופע של אורן זוזל",
+      "url": "https://tickets.comy.co.il/booking/features/2237?prsntId=56310",
+      "quantity": 5,
+      "zone": "אולם",
+      "section": "אולם",
+      "row": "6",
+      "seats": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "prices": [
+        120,
+        120,
+        120,
+        120,
+        120
+      ],
+      "centerDist": 0.5
     }
   ],
-  "outbox": [],
+  "outbox": [
+    {
+      "text": "🆕 <b>עלו 7 מופעים חדשים</b>\n\n🎟️ <a href=\"https://tickets.comy.co.il/booking/features/862?prsntId=55289\">המופע של רביטל ויטלזון יעקבס</a>\n🎟️ <a href=\"https://tickets.comy.co.il/booking/features/2571?prsntId=54624\">המופע של נו מה עכשיו - צח רוקח ונועם אונגר</a>\n🎟️ <a href=\"https://tickets.comy.co.il/booking/features/2624?prsntId=55315\">המופע של יובל סמו</a>\n🎟️ <a href=\"https://tickets.comy.co.il/booking/features/2027?prsntId=56262\">המופע של עושים צחוק מרתון סטנד אפ - קומדי בר</a>\n🎟️ <a href=\"https://tickets.comy.co.il/booking/features/2237?prsntId=56309\">המופע של אורן זוזל</a>\n🎟️ <a href=\"https://tickets.comy.co.il/booking/features/2028?prsntId=56266\">המופע של נותנים בראש - קומדי בר</a>\n🎟️ <a href=\"https://tickets.grayclub.co.il/booking/features/3066?prsntId=56458\">המופע של הפרויקט של רביבו – קרוב ללב</a>\n\n💡 <code>/follow שם אמן</code> – ואודיע לך אישית כשעולה לו מופע.",
+      "to": null
+    }
+  ],
   "health": {
     "סריקה: קופת ת\"א": {
       "fails": 0,
       "lastError": "לא נמצאו מופעים בעמוד הראשי",
       "lastErrorAt": "2026-11-06T03:30:55.842Z",
-      "lastOk": "2026-11-07T20:43:24.962Z",
+      "lastOk": "2026-11-08T00:13:05.524Z",
       "alerted": false
     },
     "סריקה: Ticketmaster": {
       "fails": 0,
-      "lastOk": "2026-11-07T20:43:24.962Z",
+      "lastOk": "2026-11-08T00:13:05.524Z",
       "lastError": "לא נמצאו מופעים בעמוד הראשי",
       "lastErrorAt": "2026-11-07T17:00:57.204Z",
       "alerted": false
     },
     "ticketmaster": {
       "fails": 0,
-      "lastOk": "2026-11-07T21:27:34.705Z",
+      "lastOk": "2026-11-08T01:00:16.719Z",
       "alerted": false
     },
     "kupat": {
       "fails": 0,
-      "lastOk": "2026-11-07T21:26:07.303Z",
+      "lastOk": "2026-11-08T00:58:37.065Z",
       "lastError": "האתר החזיר 0 מושבים",
-      "lastErrorAt": "2026-11-07T21:25:55.228Z",
+      "lastErrorAt": "2026-11-08T00:52:15.340Z",
       "alerted": false
     }
   },
   "stats": {
     "since": "2026-11-07T17:45:25.184Z",
     "cycles": 0,
-    "checks": 89,
-    "errors": 24,
+    "checks": 171,
+    "errors": 48,
     "alerts": 0
   },
   "lastCycle": "2026-11-07T17:45:24.962Z",
@@ -74982,75 +79169,26 @@
     "tickets.grayclub.co.il|2988": "2026-11-06T23:40:58.013Z",
     "tickets.comy.co.il|859": "2026-11-07T04:20:20.323Z",
     "tickets.comy.co.il|1616": "2026-11-07T04:20:20.323Z",
-    "tickets.comy.co.il|1301": "2026-11-07T17:00:57.810Z"
+    "tickets.comy.co.il|1301": "2026-11-07T17:00:57.810Z",
+    "tickets.comy.co.il|862": "2026-11-08T00:13:05.777Z",
+    "tickets.comy.co.il|2571": "2026-11-08T00:13:05.777Z",
+    "tickets.comy.co.il|2624": "2026-11-08T00:13:05.777Z",
+    "tickets.comy.co.il|2027": "2026-11-08T00:13:05.777Z",
+    "tickets.comy.co.il|2237": "2026-11-08T00:13:05.777Z",
+    "tickets.comy.co.il|2028": "2026-11-08T00:13:05.777Z",
+    "tickets.grayclub.co.il|3066": "2026-11-08T00:13:05.777Z"
   },
   "knownSeeded": true,
   "catalog": {
-    "at": "2026-11-07T20:43:24.962Z",
+    "at": "2026-11-08T00:13:05.524Z",
     "events": [
-      {
-        "name": "קופת ת\"א: המופע של אודי כגן",
-        "url": "https://tickets.comy.co.il/booking/features/826?prsntId=54176"
-      },
-      {
-        "name": "קופת ת\"א: המופע של נדב אבוקסיס",
-        "url": "https://tickets.comy.co.il/booking/features/855?prsntId=55794"
-      },
-      {
-        "name": "קופת ת\"א: המופע של רותם אבוהב",
-        "url": "https://tickets.comy.co.il/booking/features/868?prsntId=55052"
-      },
-      {
-        "name": "קופת ת\"א: המופע של עודד מנסטר",
-        "url": "https://tickets.comy.co.il/booking/features/1677?prsntId=53821"
-      },
-      {
-        "name": "קופת ת\"א: המופע של קובי מימון",
-        "url": "https://tickets.comy.co.il/booking/features/815?prsntId=54914"
-      },
-      {
-        "name": "קופת ת\"א: המופע של דניאל חן",
-        "url": "https://tickets.comy.co.il/booking/features/1307?prsntId=56013"
-      },
-      {
-        "name": "קופת ת\"א: המופע של מני עוזרי",
-        "url": "https://tickets.comy.co.il/booking/features/853?prsntId=55446"
-      },
-      {
-        "name": "קופת ת\"א: המופע של אבי נוסבאום",
-        "url": "https://tickets.comy.co.il/booking/features/824?prsntId=54691"
-      },
-      {
-        "name": "קופת ת\"א: המופע של שיחות עם הברמן",
-        "url": "https://tickets.comy.co.il/booking/features/2296?prsntId=56369"
-      },
-      {
-        "name": "קופת ת\"א: המופע של Shabbos night live - Israeli Stand-up in",
-        "url": "https://tickets.comy.co.il/booking/features/2768?prsntId=56532"
-      },
-      {
-        "name": "קופת ת\"א: המופע של רשף לוי המופע מצולם",
-        "url": "https://tickets.comy.co.il/booking/features/864?prsntId=55798"
-      },
-      {
-        "name": "קופת ת\"א: המופע של אורי חזקיה",
-        "url": "https://tickets.comy.co.il/booking/features/827?prsntId=55372"
-      },
-      {
-        "name": "קופת ת\"א: המופע של ארז בירנבוים",
-        "url": "https://tickets.comy.co.il/booking/features/873?prsntId=54933"
-      },
-      {
-        "name": "קופת ת\"א: המופע של חן מזרחי",
-        "url": "https://tickets.comy.co.il/booking/features/844?prsntId=53861"
-      },
-      {
-        "name": "קופת ת\"א: המופע של שבוע טוב - קומדי בר",
-        "url": "https://tickets.comy.co.il/booking/features/2032?prsntId=56277"
-      },
       {
         "name": "קופת ת\"א: המופע של אדיר מילר",
         "url": "https://tickets.comy.co.il/booking/features/825?prsntId=53529"
+      },
+      {
+        "name": "קופת ת\"א: המופע של דניאל חן",
+        "url": "https://tickets.comy.co.il/booking/features/1307?prsntId=53752"
       },
       {
         "name": "קופת ת\"א: המופע של בן בן ברוך",
@@ -75059,6 +79197,14 @@
       {
         "name": "קופת ת\"א: המופע של עדי אשכנזי",
         "url": "https://tickets.comy.co.il/booking/features/2935?prsntId=55643"
+      },
+      {
+        "name": "קופת ת\"א: המופע של שיחות עם הברמן",
+        "url": "https://tickets.comy.co.il/booking/features/2296?prsntId=56370"
+      },
+      {
+        "name": "קופת ת\"א: המופע של אודי כגן",
+        "url": "https://tickets.comy.co.il/booking/features/826?prsntId=54233"
       },
       {
         "name": "קופת ת\"א: המופע של במה פתוחה בהנחיית דניאל כהן - קומדי בר",
@@ -75071,6 +79217,50 @@
       {
         "name": "קופת ת\"א: המופע של ערן זרחוביץ",
         "url": "https://tickets.comy.co.il/booking/features/859?prsntId=54769"
+      },
+      {
+        "name": "קופת ת\"א: המופע של רביטל ויטלזון יעקבס",
+        "url": "https://tickets.comy.co.il/booking/features/862?prsntId=55289"
+      },
+      {
+        "name": "קופת ת\"א: המופע של מני עוזרי",
+        "url": "https://tickets.comy.co.il/booking/features/853?prsntId=55447"
+      },
+      {
+        "name": "קופת ת\"א: המופע של אלי יצפאן-מופע חדש",
+        "url": "https://tickets.comy.co.il/booking/features/1616?prsntId=55293"
+      },
+      {
+        "name": "קופת ת\"א: המופע של נו מה עכשיו - צח רוקח ונועם אונגר",
+        "url": "https://tickets.comy.co.il/booking/features/2571?prsntId=54624"
+      },
+      {
+        "name": "קופת ת\"א: המופע של תמיר בר",
+        "url": "https://tickets.comy.co.il/booking/features/2254?prsntId=56239"
+      },
+      {
+        "name": "קופת ת\"א: המופע של יובל סמו",
+        "url": "https://tickets.comy.co.il/booking/features/2624?prsntId=55315"
+      },
+      {
+        "name": "קופת ת\"א: המופע של רשף לוי המופע מצולם",
+        "url": "https://tickets.comy.co.il/booking/features/864?prsntId=53707"
+      },
+      {
+        "name": "קופת ת\"א: המופע של עושים צחוק מרתון סטנד אפ - קומדי בר",
+        "url": "https://tickets.comy.co.il/booking/features/2027?prsntId=56262"
+      },
+      {
+        "name": "קופת ת\"א: המופע של אורי חזקיה",
+        "url": "https://tickets.comy.co.il/booking/features/827?prsntId=55373"
+      },
+      {
+        "name": "קופת ת\"א: המופע של אורן זוזל",
+        "url": "https://tickets.comy.co.il/booking/features/2237?prsntId=56309"
+      },
+      {
+        "name": "קופת ת\"א: המופע של נותנים בראש - קומדי בר",
+        "url": "https://tickets.comy.co.il/booking/features/2028?prsntId=56266"
       },
       {
         "name": "קופת ת\"א: המופע של שיחות מהבגאז' - תומר הדר ומאור שלום סויס",
@@ -75137,8 +79327,12 @@
         "url": "https://tickets.grayclub.co.il/booking/features/1498?prsntId=54895"
       },
       {
-        "name": "קופת ת\"א: ריטה · 26.12 שבת 21:00 היכל התרבות ת\"א אחרונים",
-        "url": "https://tickets.kupat.co.il/booking/features/1776?display=list&prsntId=56319"
+        "name": "קופת ת\"א: המופע של הפרויקט של רביבו – קרוב ללב",
+        "url": "https://tickets.grayclub.co.il/booking/features/3066?prsntId=56458"
+      },
+      {
+        "name": "קופת ת\"א: קוקולנד - אליפות הטרנדים · 06.12 ראשון 10:30 תיאטרון האקספו ת״א אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/3072?display=list&prsntId=56506"
       },
       {
         "name": "קופת ת\"א: היסטריה · 25.11 רביעי 21:15 פיס ארנה ירושלים לרכישת כרטיסים",
@@ -75149,24 +79343,12 @@
         "url": "https://tickets.kupat.co.il/booking/features/2671?display=list&prsntId=56158"
       },
       {
-        "name": "קופת ת\"א: אביב גפן · 30.12 רביעי 21:00 היכל התרבות ת\"א לרכישת כרטיסים",
-        "url": "https://tickets.kupat.co.il/booking/features/2841?display=list&prsntId=56145"
-      },
-      {
-        "name": "קופת ת\"א: TOP SECRET פסטיגל · 28.11 - 15.12 ביתן 2 אקספו ת\"א מופעים נוספים ב 13.12-15.12",
-        "url": "https://tickets.kupat.co.il/booking/features/2977?display=list&prsntId=55059"
-      },
-      {
-        "name": "קופת ת\"א: מירי מסיקה X קרן פלס · 02.01 שבת 20:30 היכל מנורה תל אביב אחרונים",
-        "url": "https://tickets.kupat.co.il/booking/features/2414?display=list&prsntId=56590"
+        "name": "קופת ת\"א: חנן בן ארי · 14.11 שבת 21:00 בית ההופעות של חנן | אקספו תל אביב BLACK BOX אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/1446?display=list&prsntId=56260"
       },
       {
         "name": "קופת ת\"א: מושיק עפיה · 19.11 חמישי 20:45 היכל מנורה פרונטלי אחרונים",
         "url": "https://tickets.kupat.co.il/booking/features/2518?display=list&prsntId=55984"
-      },
-      {
-        "name": "קופת ת\"א: קוקולנד - אליפות הטרנדים · 06.12 ראשון 10:30 תיאטרון האקספו ת״א אחרונים",
-        "url": "https://tickets.kupat.co.il/booking/features/3072?display=list&prsntId=56506"
       },
       {
         "name": "קופת ת\"א: אופק אדנק · 30.12 רביעי 20:45 היכל מנורה תל אביב אחרונים",
@@ -75177,20 +79359,32 @@
         "url": "https://tickets.kupat.co.il/booking/features/441?display=list&prsntId=56045"
       },
       {
-        "name": "קופת ת\"א: חנן בן ארי · 14.11 שבת 21:00 בית ההופעות של חנן | אקספו תל אביב BLACK BOX אחרונים",
-        "url": "https://tickets.kupat.co.il/booking/features/1446?display=list&prsntId=56260"
+        "name": "קופת ת\"א: ריטה · 26.12 שבת 21:00 היכל התרבות ת\"א אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/1776?display=list&prsntId=56319"
+      },
+      {
+        "name": "קופת ת\"א: TOP SECRET פסטיגל · 28.11 - 15.12 ביתן 2 אקספו ת\"א מופעים נוספים ב 13.12-15.12",
+        "url": "https://tickets.kupat.co.il/booking/features/2977?display=list&prsntId=55059"
+      },
+      {
+        "name": "קופת ת\"א: אביב גפן · 30.12 רביעי 21:00 היכל התרבות ת\"א לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/2841?display=list&prsntId=56145"
+      },
+      {
+        "name": "קופת ת\"א: מירי מסיקה X קרן פלס · 02.01 שבת 20:30 היכל מנורה תל אביב אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/2414?display=list&prsntId=56590"
       },
       {
         "name": "קופת ת\"א: ירדנה ארזי · 18.12 שישי 13:30 היכל התרבות ת\"א לרכישת כרטיסים",
         "url": "https://tickets.kupat.co.il/booking/features/44?display=list&prsntId=56323"
       },
       {
-        "name": "קופת ת\"א: קרקס HUBA CUBA · 27.11 - 12.12 גלובוס סנטר - חוף אשקלון לרכישת כרטיסים",
-        "url": "https://tickets.kupat.co.il/booking/features/2766?display=list&prsntId=55937"
-      },
-      {
         "name": "קופת ת\"א: קובי פרץ · 17.11 שלישי 20:45 היכל מנורה פרונטלי אחרונים",
         "url": "https://tickets.kupat.co.il/booking/features/2353?display=list&prsntId=55439"
+      },
+      {
+        "name": "קופת ת\"א: קרקס HUBA CUBA · 27.11 - 12.12 גלובוס סנטר - חוף אשקלון לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/2766?display=list&prsntId=55937"
       },
       {
         "name": "קופת ת\"א: עומרי סבח · 19.11 חמישי 21:30 רדינג 3 לרכישת כרטיסים",
@@ -75229,40 +79423,40 @@
         "url": "https://tickets.kupat.co.il/booking/features/3013?display=list&prsntId=55878"
       },
       {
-        "name": "קופת ת\"א: פיטר פן - המחזמר · 27.11 - 30.11 מרכז הקונגרסים חיפה - אולם אורן אחרונים",
-        "url": "https://tickets.kupat.co.il/booking/features/2871?display=list&prsntId=55321"
+        "name": "קופת ת\"א: קסם של כוכבים · 21.11 שבת 11:00 אולם מופעים גבעת ברנר לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/3009?display=list&prsntId=55920"
       },
       {
         "name": "קופת ת\"א: אביגיל ויסמן · 07.12 שני 16:00 רדינג 3 לרכישת כרטיסים",
         "url": "https://tickets.kupat.co.il/booking/features/2584?display=list&prsntId=56547"
       },
       {
-        "name": "קופת ת\"א: מותק FOREVER · 04.12 - 12.12 סינמה סיטי גלילות אחרונים",
-        "url": "https://tickets.kupat.co.il/booking/features/2978?display=list&prsntId=55123"
-      },
-      {
-        "name": "קופת ת\"א: קסם של כוכבים · 21.11 שבת 11:00 אולם מופעים גבעת ברנר לרכישת כרטיסים",
-        "url": "https://tickets.kupat.co.il/booking/features/3009?display=list&prsntId=55920"
-      },
-      {
         "name": "קופת ת\"א: ספר הג'ונגל - המחזמר · 05.12 שבת 10:00 מרכז הקונגרסים חיפה - אולם אורן אחרונים",
         "url": "https://tickets.kupat.co.il/booking/features/1924?display=list&prsntId=55701"
       },
       {
-        "name": "קופת ת\"א: ICONIC - לי בירן X לורן פלד · 29.12 שלישי 20:45 היכל התרבות ת\"א אחרונים",
-        "url": "https://tickets.kupat.co.il/booking/features/2869?display=list&prsntId=55392"
+        "name": "קופת ת\"א: פיטר פן - המחזמר · 27.11 - 30.11 מרכז הקונגרסים חיפה - אולם אורן אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/2871?display=list&prsntId=55321"
       },
       {
-        "name": "קופת ת\"א: חנן בן ארי - הינדיקים · 19.11 חמישי 21:30 בית ההופעות של חנן | אקספו תל אביב בלקבוקס לרכישת כרטיסים",
-        "url": "https://tickets.kupat.co.il/booking/features/2802?display=list&prsntId=56388"
+        "name": "קופת ת\"א: מותק FOREVER · 04.12 - 12.12 סינמה סיטי גלילות אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/2978?display=list&prsntId=55123"
+      },
+      {
+        "name": "קופת ת\"א: מצבי רוח – יצירה לתזמורת בתנועה · 16.12 רביעי 18:00 מוזיאון תל אביב - אולם אסיא אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/2714?display=list&prsntId=56075"
       },
       {
         "name": "קופת ת\"א: ECHOES - PINK FLOYD ANIMALS 50 YEARS · 18.03 חמישי 20:30 היכל התרבות ת\"א לרכישת כרטיסים",
         "url": "https://tickets.kupat.co.il/booking/features/3016?display=list&prsntId=55999"
       },
       {
-        "name": "קופת ת\"א: שלום חנוך רמי פורטיס ואיפה הילד · 26.04 שני 20:00 אמפי אשדוד לרכישת כרטיסים",
-        "url": "https://tickets.kupat.co.il/booking/features/2936?display=list&prsntId=54208"
+        "name": "קופת ת\"א: ICONIC - לי בירן X לורן פלד · 29.12 שלישי 20:45 היכל התרבות ת\"א אחרונים",
+        "url": "https://tickets.kupat.co.il/booking/features/2869?display=list&prsntId=55392"
+      },
+      {
+        "name": "קופת ת\"א: שיר דוד גדסי · 23.12 רביעי 21:30 רדינג 3 לרכישת כרטיסים",
+        "url": "https://tickets.kupat.co.il/booking/features/2549?display=list&prsntId=55279"
       },
       {
         "name": "Ticketmaster: Spot Light Image",
@@ -75461,9 +79655,14 @@
     "13": "https://tickets.comy.co.il/booking/features/859?prsntId=54769",
     "14": "https://tickets.comy.co.il/booking/features/1616?prsntId=55293",
     "15": "https://tickets.kupat.co.il/booking/features/2802?display=list&prsntId=56388",
-    "16": "https://tickets.comy.co.il/booking/features/1301?prsntId=54896"
+    "16": "https://tickets.comy.co.il/booking/features/1301?prsntId=54896",
+    "17": "https://tickets.comy.co.il/booking/features/862?prsntId=55289",
+    "18": "https://tickets.comy.co.il/booking/features/2571?prsntId=54624",
+    "19": "https://tickets.comy.co.il/booking/features/2624?prsntId=55315",
+    "20": "https://tickets.comy.co.il/booking/features/2027?prsntId=56262",
+    "21": "https://tickets.comy.co.il/booking/features/2237?prsntId=56309"
   },
-  "linkSeq": 16,
+  "linkSeq": 21,
   "candidates": {
     "ticket4u.co.il": {
       "from": "kupat.co.il",
