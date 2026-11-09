@@ -82943,12 +82943,12 @@
   },
   "stats": {
     "since": "2026-11-07T17:45:25.184Z",
-    "cycles": 1,
+    "cycles": 2,
     "checks": 422,
     "errors": 120,
     "alerts": 0
   },
-  "lastCycle": "2026-11-08T22:38:12.395Z",
+  "lastCycle": "2026-11-09T02:19:49.154Z",
   "known": {
     "tickets.comy.co.il|826": "2026-11-06T11:48:22.272Z",
     "tickets.comy.co.il|1307": "2026-11-06T11:48:22.272Z",
