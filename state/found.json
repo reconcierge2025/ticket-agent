@@ -1,6 +1,7 @@
 {
   "seen": {
-    "heartbeat|2026-11-07": "2026-11-07T17:45:24.992Z"
+    "heartbeat|2026-11-07": "2026-11-07T17:45:24.992Z",
+    "heartbeat|2026-11-09": "2026-11-09T20:55:22.010Z"
   },
   "best": {
     "https://www.ticketmaster.co.il/performance/MTA71/001/ALL/iw": {
@@ -84559,12 +84560,7 @@
       "centerDist": 3
     }
   ],
-  "outbox": [
-    {
-      "text": "🆕 <b>עלו 7 מופעים חדשים</b>\n\n🎟️ <a href=\"https://tickets.comy.co.il/booking/features/862?prsntId=55289\">המופע של רביטל ויטלזון יעקבס</a>\n🎟️ <a href=\"https://tickets.comy.co.il/booking/features/2571?prsntId=54624\">המופע של נו מה עכשיו - צח רוקח ונועם אונגר</a>\n🎟️ <a href=\"https://tickets.comy.co.il/booking/features/2624?prsntId=55315\">המופע של יובל סמו</a>\n🎟️ <a href=\"https://tickets.comy.co.il/booking/features/2027?prsntId=56262\">המופע של עושים צחוק מרתון סטנד אפ - קומדי בר</a>\n🎟️ <a href=\"https://tickets.comy.co.il/booking/features/2237?prsntId=56309\">המופע של אורן זוזל</a>\n🎟️ <a href=\"https://tickets.comy.co.il/booking/features/2028?prsntId=56266\">המופע של נותנים בראש - קומדי בר</a>\n🎟️ <a href=\"https://tickets.grayclub.co.il/booking/features/3066?prsntId=56458\">המופע של הפרויקט של רביבו – קרוב ללב</a>\n\n💡 <code>/follow שם אמן</code> – ואודיע לך אישית כשעולה לו מופע.",
-      "to": null
-    }
-  ],
+  "outbox": [],
   "health": {
     "סריקה: קופת ת\"א": {
       "fails": 0,
@@ -84594,13 +84590,13 @@
     }
   },
   "stats": {
-    "since": "2026-11-07T17:45:25.184Z",
-    "cycles": 2,
-    "checks": 501,
-    "errors": 145,
+    "since": "2026-11-09T20:55:22.369Z",
+    "cycles": 0,
+    "checks": 0,
+    "errors": 0,
     "alerts": 0
   },
-  "lastCycle": "2026-11-09T02:19:49.154Z",
+  "lastCycle": "2026-11-09T20:55:21.988Z",
   "known": {
     "tickets.comy.co.il|826": "2026-11-06T11:48:22.272Z",
     "tickets.comy.co.il|1307": "2026-11-06T11:48:22.272Z",
