@@ -88298,12 +88298,12 @@
   },
   "stats": {
     "since": "2026-11-10T11:31:29.552Z",
-    "cycles": 0,
+    "cycles": 1,
     "checks": 81,
     "errors": 28,
     "alerts": 0
   },
-  "lastCycle": "2026-11-10T11:31:28.961Z",
+  "lastCycle": "2026-11-10T23:52:01.019Z",
   "known": {
     "tickets.comy.co.il|826": "2026-11-06T11:48:22.272Z",
     "tickets.comy.co.il|1307": "2026-11-06T11:48:22.272Z",
