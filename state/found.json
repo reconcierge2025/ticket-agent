@@ -1,7 +1,8 @@
 {
   "seen": {
     "heartbeat|2026-11-07": "2026-11-07T17:45:24.992Z",
-    "heartbeat|2026-11-09": "2026-11-09T20:55:22.010Z"
+    "heartbeat|2026-11-09": "2026-11-09T20:55:22.010Z",
+    "heartbeat|2026-11-10": "2026-11-10T11:31:28.978Z"
   },
   "best": {
     "https://www.ticketmaster.co.il/performance/MTA71/001/ALL/iw": {
@@ -85227,12 +85228,7 @@
       "centerDist": 13
     }
   ],
-  "outbox": [
-    {
-      "text": "🆕 <b>עלו 3 מופעים חדשים</b>\n\n🎟️ <a href=\"https://tickets.grayclub.co.il/booking/features/1893?prsntId=55018\">המופע של אסף מור יוסף.במופע סטנד אפ</a>\n🎟️ <a href=\"https://tickets.grayclub.co.il/booking/features/3024?prsntId=56050\">המופע של סגיב כהן מארח את בועז מעודה</a>\n🎟️ <a href=\"https://tickets.grayclub.co.il/booking/features/3026?prsntId=56060\">המופע של ג׳קו אייזנברג - Pearl Jam Tribute Night</a>\n\n💡 <code>/follow שם אמן</code> – ואודיע לך אישית כשעולה לו מופע.",
-      "to": null
-    }
-  ],
+  "outbox": [],
   "health": {
     "סריקה: קופת ת\"א": {
       "fails": 0,
@@ -85262,13 +85258,13 @@
     }
   },
   "stats": {
-    "since": "2026-11-09T20:55:22.369Z",
+    "since": "2026-11-10T11:31:29.552Z",
     "cycles": 0,
-    "checks": 81,
-    "errors": 27,
+    "checks": 0,
+    "errors": 0,
     "alerts": 0
   },
-  "lastCycle": "2026-11-09T20:55:21.988Z",
+  "lastCycle": "2026-11-10T11:31:28.961Z",
   "known": {
     "tickets.comy.co.il|826": "2026-11-06T11:48:22.272Z",
     "tickets.comy.co.il|1307": "2026-11-06T11:48:22.272Z",
