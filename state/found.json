@@ -2,7 +2,8 @@
   "seen": {
     "heartbeat|2026-11-07": "2026-11-07T17:45:24.992Z",
     "heartbeat|2026-11-09": "2026-11-09T20:55:22.010Z",
-    "heartbeat|2026-11-10": "2026-11-10T11:31:28.978Z"
+    "heartbeat|2026-11-10": "2026-11-10T11:31:28.978Z",
+    "heartbeat|2026-11-11": "2026-11-11T19:30:20.553Z"
   },
   "best": {
     "https://www.ticketmaster.co.il/performance/MTA71/001/ALL/iw": {
@@ -89256,13 +89257,13 @@
     }
   },
   "stats": {
-    "since": "2026-11-10T11:31:29.552Z",
-    "cycles": 2,
-    "checks": 158,
-    "errors": 57,
+    "since": "2026-11-11T19:30:20.897Z",
+    "cycles": 0,
+    "checks": 0,
+    "errors": 0,
     "alerts": 0
   },
-  "lastCycle": "2026-11-11T04:19:07.710Z",
+  "lastCycle": "2026-11-11T19:30:20.535Z",
   "known": {
     "tickets.comy.co.il|826": "2026-11-06T11:48:22.272Z",
     "tickets.comy.co.il|1307": "2026-11-06T11:48:22.272Z",
