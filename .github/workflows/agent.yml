@@ -18,9 +18,10 @@ concurrency:
 
 jobs:
   run:
-    # כשהשרת ב-Railway פועל: Settings → Secrets and variables → Actions → Variables → USE_SERVER = true
-    # (אחרת שניהם יקראו את אותן הודעות מהבוט)
-    if: vars.USE_SERVER != 'true'
+    # ברירת מחדל: כבוי. הסוכן רץ ב-Railway, ו-GitHub רץ רק אם מפעילים במפורש:
+    # Settings → Secrets and variables → Actions → Variables → USE_GITHUB_AGENT = true
+    # (שניהם יחד יקראו את אותן הודעות מהבוט ויענו פעמיים)
+    if: vars.USE_GITHUB_AGENT == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 55
     steps:
