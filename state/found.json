@@ -3,7 +3,8 @@
     "heartbeat|2026-11-07": "2026-11-07T17:45:24.992Z",
     "heartbeat|2026-11-09": "2026-11-09T20:55:22.010Z",
     "heartbeat|2026-11-10": "2026-11-10T11:31:28.978Z",
-    "heartbeat|2026-11-11": "2026-11-11T19:30:20.553Z"
+    "heartbeat|2026-11-11": "2026-11-11T19:30:20.553Z",
+    "heartbeat|2026-11-12": "2026-11-12T09:08:47.421Z"
   },
   "best": {
     "https://www.ticketmaster.co.il/performance/MTA71/001/ALL/iw": {
@@ -91181,16 +91182,7 @@
       "centerDist": 12
     }
   ],
-  "outbox": [
-    {
-      "text": "⭐ <b>הופעות של אמנים מובילים (2)</b>\n\n🎤 <b>יובל דיין</b>\n   <a href=\"https://tickets.grayclub.co.il/booking/features/56?prsntId=53846\">המופע של יובל דיין</a> · קופת ת\"א\n\n🎤 <b>פלד</b>\n   <a href=\"https://www.ticketmaster.co.il/event/MRN29/ALL/iw\">פלד מארח את עלמה גוב ועדן דרסו</a> · Ticketmaster\n\nלחץ 👀 כדי שאבדוק את המקומות הכי קרובים ואעקוב אחרי המופע.",
-      "to": null
-    },
-    {
-      "text": "🆕 <b>עלו 11 מופעים חדשים</b>\n\n🎟️ <a href=\"https://tickets.comy.co.il/booking/features/1935?prsntId=54699\">המופע של אלי פיניש - מופע חדש!</a>\n🎟️ <a href=\"https://tickets.grayclub.co.il/booking/features/3027?prsntId=56061\">המופע של גיא ויהל - מופע להקה - מופע עמידה</a>\n🎟️ <a href=\"https://tickets.grayclub.co.il/booking/features/2989?prsntId=55380\">המופע של אבנר גדסי</a>\n🎟️ <a href=\"https://www.ticketmaster.co.il/event/MRN27/ALL/iw\">תמונה ללא תיאור</a>\n🎟️ <a href=\"https://www.ticketmaster.co.il/event/MDF32/ALL/iw\">רביעיית טוקי שטרן</a>\n🎟️ <a href=\"https://www.ticketmaster.co.il/event/MEP28/ALL/iw\">תמונה ללא תיאור</a>\n🎟️ <a href=\"https://www.ticketmaster.co.il/event/MRN28/ALL/iw\">יוסי פיין וחברים</a>\n🎟️ <a href=\"https://www.ticketmaster.co.il/event/MDF33/ALL/iw\">שלישיית סתיו אחאי</a>\n🎟️ <a href=\"https://www.ticketmaster.co.il/event/MDP09/ALL/iw\">רביעיית קטיה טובול</a>\n🎟️ <a href=\"https://www.ticketmaster.co.il/event/MEP29/ALL/iw\">בלקן ביט בוקס מארחים את קרולינה וטדי נגוסה</a>\n🎟️ <a href=\"https://www.ticketmaster.co.il/event/OJC13/ALL/iw\">כיתת אמן ארהלה קמינסקי</a>\n\n💡 <code>/follow שם אמן</code> – ואודיע לך אישית כשעולה לו מופע.",
-      "to": null
-    }
-  ],
+  "outbox": [],
   "health": {
     "סריקה: קופת ת\"א": {
       "fails": 0,
@@ -91220,13 +91212,13 @@
     }
   },
   "stats": {
-    "since": "2026-11-11T19:30:20.897Z",
+    "since": "2026-11-12T09:08:47.719Z",
     "cycles": 0,
-    "checks": 76,
-    "errors": 28,
+    "checks": 0,
+    "errors": 0,
     "alerts": 0
   },
-  "lastCycle": "2026-11-11T19:30:20.535Z",
+  "lastCycle": "2026-11-12T09:08:47.409Z",
   "known": {
     "tickets.comy.co.il|826": "2026-11-06T11:48:22.272Z",
     "tickets.comy.co.il|1307": "2026-11-06T11:48:22.272Z",
