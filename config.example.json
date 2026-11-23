@@ -8,7 +8,7 @@
   "checkEveryMinutes": 60,
   "apis": { "ticketmasterKey": "", "seatgeekClientId": "", "skiddleKey": "" },
   "intl": { "everyHours": 4, "countries": [], "israeliStars": false },
-  "hotEveryMinutes": 3,
+  "hotEveryMinutes": 15,
   "politeDelayMs": 1500,
   "heartbeatHour": 9,
   "quietHours": { "from": 23, "to": 8 },
