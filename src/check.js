@@ -8,7 +8,7 @@ import { inQueue, waitThroughQueue } from './queue.js';
 import { getBuyContext } from './browser.js';
 import { log } from './config.js';
 
-const SITE_ADAPTERS = ['kupat', 'ticketmaster', 'bravo', 'leaan', 'ticketnetwork'];
+const SITE_ADAPTERS = ['kupat', 'ticketmaster', 'bravo', 'leaan', 'ticketnetwork', 'tickchak'];
 
 export async function pickAdapter(event) {
   if (event.site && !['auto', 'generic'].includes(event.site)) return import(`./adapters/${event.site}.js`);
@@ -56,6 +56,13 @@ export async function checkEvent(browser, event, ctx) {
         }
       }
       return { event, status: 'multi', parts: all, options: all.flatMap((r) => r.options), improved: all.flatMap((r) => r.improved) };
+    }
+
+    // עמוד אירוע עם כמה מופעים (טיקצ'אק) → סטטוס כל מופע, והתראה כשמשהו נפתח למכירה
+    if (adapter.getSubEvents) {
+      const subs = await adapter.getSubEvents(page, event.url);
+      const subChanges = adapter.diffSubEvents(db, event.url, subs, { firstRun: !db.subs?.[event.url] });
+      return { event, status: subs.some((s) => s.status === 'buy') ? 'available' : 'none', seats: [], options: [], improved: [], subs, subChanges };
     }
 
     const seats = await adapter.getSeats(page, event, data);

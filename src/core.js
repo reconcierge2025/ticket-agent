@@ -9,6 +9,7 @@ import { rowNum } from './seats.js';
 import { announceNewShows, announceStars, probeNewSites, follow, unfollow, followsOf, linkFor, saveCatalog, existingShowsMessage } from './scout.js';
 import { starsText, STARS } from './artists.js';
 import { intlEnabled, searchArtistAbroad, diffShows, formatChanges, formatExisting } from './intl.js';
+import { formatSubChanges, formatSubList } from './adapters/tickchak.js';
 import { discover, eventKey, explainEmpty } from './discover.js';
 import * as watches from './watches.js';
 
@@ -107,7 +108,7 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
         db.stats.checks++;
         const parts = flat(r);
         const seats = parts.reduce((n, p) => n + (p.seats?.length || 0), 0);
-        const readOk = seats > 0 || parts.some((p) => p.avail?.checked);
+        const readOk = seats > 0 || parts.some((p) => p.avail?.checked || p.subs?.length);
         // תור או אין תאריכים פתוחים = לא תקלה
         if (r.status !== 'queue' && parts.length) track(site, readOk, readOk ? null : 'האתר החזיר 0 מושבים');
         if (readOk) learn(ev.url, seats > 0 ? 'seats' : 'avail', site);
@@ -134,6 +135,17 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
 
   async function reportImprovements(r) {
     for (const part of flat(r)) {
+      // עמוד עם כמה מופעים (טיקצ'אק): התראה על מופע שנפתח למכירה או שנוסף
+      if (part.subChanges?.length) {
+        db.stats.alerts++;
+        const opened = part.subChanges.some((c) => c.kind === 'opened');
+        await notify(formatSubChanges(part.event.name, part.subChanges), {
+          to: part.event.owner,
+          urgent: opened || !!part.event.hot,
+          buttons: buttonsFor(part.event),
+        });
+        continue;
+      }
       if (part.avail && ['opened', 'cheaper'].includes(part.availChange)) {
         db.stats.alerts++;
         await notify(formatAvail(part.event, part.avail, part.availChange), { to: part.event.owner, urgent: true, buttons: buttonsFor(part.event) });
@@ -159,7 +171,11 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
       const parts = flat(r).filter((p) => p.status !== 'queue');
       if (!parts.length && r.status !== 'queue') await notify(`😕 לא מצאתי תאריכים פתוחים למכירה ב:\n${esc(ev.url)}`, { to: ev.owner });
       for (const part of parts) {
-        const text = part.avail ? formatAvail(part.event, part.avail) : formatReport(part.event, part.options, { targetRow: target });
+        const text = part.subs
+          ? formatSubList(part.event.name, part.subs)
+          : part.avail
+            ? formatAvail(part.event, part.avail)
+            : formatReport(part.event, part.options, { targetRow: target });
         await notify(text, { to: ev.owner, buttons: buttonsFor(part.event) });
       }
     } catch (e) {
@@ -266,16 +282,20 @@ export function createAgent({ cfg, db, notify, onSale, onGrab, onCancel, mode = 
   let hotRunning = false;
   /** מעקב צפוף: רק המופעים שסימנת 🔥 (נקרא כל כמה דקות). */
   async function checkHot() {
-    const hot = watches.list().filter((w) => w.hot);
+    // מופעים צמודים: מה שסומן 🔥 בטלגרם, וגם מה שמוגדר ב-config עם "hot": true
+    const hot = [
+      ...watches.list().filter((w) => w.hot).map((w) => ({ url: w.url, build: () => watchEvent(cfg, w) })),
+      ...(cfg.events || []).filter((e) => e.hot).map((e) => ({ url: e.url, build: () => resolveEvent(cfg, e) })),
+    ];
     if (hotRunning || !hot.length) return;
     hotRunning = true;
     const browser = await launchScanner(cfg);
     try {
-      for (const w of hot) {
+      for (const h of hot) {
         try {
-          await reportImprovements(await checkTracked(browser, watchEvent(cfg, w)));
+          await reportImprovements(await checkTracked(browser, h.build()));
         } catch (e) {
-          log(`  [hot] שגיאה ב-${w.url}: ${e.message.split('\n')[0]}`);
+          log(`  [hot] שגיאה ב-${h.url}: ${e.message.split('\n')[0]}`);
         }
       }
       await healthAlerts();

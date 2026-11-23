@@ -30,7 +30,7 @@ export const SITES = [
   { name: 'Eventer', domains: ['eventer.co.il'], region: 'il', level: 'avail', adapter: 'avail' },
   { name: 'GetIn', domains: ['get-in.com', 'getin.xyz'], region: 'il', level: 'avail', adapter: 'avail' },
   { name: 'MegaTickets', domains: ['megatickets.co.il'], region: 'il', level: 'avail', adapter: 'avail' },
-  { name: "טיקצ'אק", domains: ['tickchak.co.il'], region: 'il', level: 'avail', adapter: 'avail', note: 'LIVE = אינדקס שמפנה לאתרים אחרים' },
+  { name: "טיקצ'אק", domains: ['tickchak.co.il'], region: 'il', level: 'avail', adapter: 'tickchak', note: 'עמודי אירוע עם כמה מופעים: סטטוס כל מופע והתראה כשנפתח למכירה' },
   { name: 'לייב טיקטס', domains: ['livetickets.co.il'], region: 'il', level: 'avail', adapter: 'avail', note: 'חבילות לחו"ל' },
   { name: 'טיקט פלייס', domains: ['ticketplace.co.il'], region: 'il', level: 'avail', adapter: 'avail', note: 'כרטיסים לחו"ל' },
   { name: 'טיקט האוס', domains: ['ticket-house.com'], region: 'il', level: 'avail', adapter: 'avail', note: 'כרטיסים לחו"ל' },
